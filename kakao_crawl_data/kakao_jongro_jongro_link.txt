@@ -1,0 +1,501 @@
+,place_name,place_link,place_page
+0,경복궁,https://place.map.kakao.com/18619553,https://www.royalpalace.go.kr/
+1,청와대 본관,https://place.map.kakao.com/1917455244,https://www.opencheongwadae.kr/
+2,북한산둘레길 6구간평창마을길,https://place.map.kakao.com/12544579,http://www.knps.or.kr/portal/dulegil/bukhansan/index.do
+3,북촌한옥마을,https://place.map.kakao.com/781129546,http://bukchon.seoul.go.kr/
+4,광화문,https://place.map.kakao.com/8234642,none
+5,광화문광장,https://place.map.kakao.com/8193961,https://gwanghwamun.seoul.go.kr/
+6,청계천,https://place.map.kakao.com/10849847,http://www.sisul.or.kr/open_content/cheonggye/
+7,창덕궁,https://place.map.kakao.com/10771162,https://www.cdg.go.kr/default.jsp
+8,인사동거리,https://place.map.kakao.com/8053121,http://www.insadong.info/
+9,쌈지길,https://place.map.kakao.com/7984319,http://blog.naver.com/ssamzigil
+10,흥인지문,https://place.map.kakao.com/8638884,none
+11,창경궁,https://place.map.kakao.com/11156260,http://cgg.cha.go.kr/
+12,석파정,https://place.map.kakao.com/11141124,http://www.seoulmuseum.org/
+13,인왕산 수성동계곡,https://place.map.kakao.com/17990926,none
+14,인왕산,https://place.map.kakao.com/10740679,none
+15,열린송현녹지광장,https://place.map.kakao.com/1356925875,none
+16,익선동한옥거리,https://place.map.kakao.com/467710256,none
+17,돈의문박물관마을,https://place.map.kakao.com/219411423,http://www.dmvillage.info/
+18,서촌한옥마을,https://place.map.kakao.com/18937478,none
+19,종묘,https://place.map.kakao.com/8075129,http://jm.cha.go.kr/
+20,다이나믹메이즈 서울인사동점,https://place.map.kakao.com/27215154,none
+21,창덕궁 후원,https://place.map.kakao.com/7813428,https://www.cdg.go.kr/
+22,보신각터,https://place.map.kakao.com/7899027,http://tour.jongno.go.kr/tour/tour/indvdlz/view.do?nttId=26981&searchCnd=&searchWrd=&menuNo=2010&sdate=&edate=&viewType=1&preview=&groupId=&setCategory=&groupId=&campaignId=184&categoryId=&dongCode=&subway=&pageIndex=3&campaignId=184
+23,경희궁,https://place.map.kakao.com/10166255,http://www.museum.seoul.kr/www/intro/annexIntro/annex_20/annex_20_01.jsp?sso=ok
+24,광장시장 전골목,https://place.map.kakao.com/101141684,none
+25,운현궁,https://place.map.kakao.com/8465462,http://www.unhyeongung.or.kr/
+26,인사동 문화의거리,https://place.map.kakao.com/21273056,none
+27,서울 한양도성 인왕산구간4코스,https://place.map.kakao.com/18741275,http://seoulcitywall.seoul.go.kr/
+28,광화문광장 이순신 장군 동상,https://place.map.kakao.com/17807114,none
+29,백사실계곡,https://place.map.kakao.com/7891659,none
+30,창경궁 대온실,https://place.map.kakao.com/11002870,http://cgg.cha.go.kr/
+31,북악산,https://place.map.kakao.com/8342732,none
+32,혜화문,https://place.map.kakao.com/8683748,none
+33,광화문광장 세종대왕동상,https://place.map.kakao.com/17557685,none
+34,딜쿠샤,https://place.map.kakao.com/19182821,none
+35,창덕궁 돈화문,https://place.map.kakao.com/8263988,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=35&check_no=8&c_relation=4&c_relation2=66
+36,삼청동거리,https://place.map.kakao.com/8383806,none
+37,동대문생선구이골목,https://place.map.kakao.com/7843397,none
+38,창의문,https://place.map.kakao.com/8578705,none
+39,가회동백인제가옥,https://place.map.kakao.com/7887672,none
+40,청와대 춘추문,https://place.map.kakao.com/1855872490,none
+41,청와대 영빈관,https://place.map.kakao.com/1916745171,none
+42,동대문닭한마리골목,https://place.map.kakao.com/12706273,none
+43,세검정터,https://place.map.kakao.com/7956514,none
+44,사직단,https://place.map.kakao.com/7909242,"http://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=13,01210000,11"
+45,성균관,https://place.map.kakao.com/17091814,http://www.skk.or.kr/
+46,홍화문,https://place.map.kakao.com/10972261,none
+47,인왕산 숲속쉼터,https://place.map.kakao.com/1853028181,none
+48,경교장,https://place.map.kakao.com/10173252,https://korean.visitkorea.or.kr/kor/bz15/where/where_tour.jsp?cid=945824
+49,명륜당,https://place.map.kakao.com/7870738,none
+50,이화장,https://place.map.kakao.com/8048490,none
+51,평화의소녀상,https://place.map.kakao.com/18685563,none
+52,숙정문,https://place.map.kakao.com/7958336,https://www.chf.or.kr/cms/content/view/260
+53,젊음의거리,https://place.map.kakao.com/8138423,https://tour.jongno.go.kr/
+54,세종마을 음식문화거리,https://place.map.kakao.com/21854570,none
+55,호랑이동상,https://place.map.kakao.com/1652694990,none
+56,청계천 애완동물거리,https://place.map.kakao.com/27479253,none
+57,조계사 일주문,https://place.map.kakao.com/17572472,none
+58,무무대전망대,https://place.map.kakao.com/1711653106,none
+59,경복궁 경회루,https://place.map.kakao.com/18619551,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1111102240000
+60,돈의문터,https://place.map.kakao.com/19182808,none
+61,종로귀금속거리,https://place.map.kakao.com/10788332,none
+62,인왕산 선바위,https://place.map.kakao.com/7944963,none
+63,굴보쌈골목,https://place.map.kakao.com/22017010,none
+64,서울 한양도성 백악구간,https://place.map.kakao.com/18741274,http://seoulcitywall.seoul.go.kr/
+65,피맛골,https://place.map.kakao.com/27073478,none
+66,인왕산둘레길,https://place.map.kakao.com/1847315467,none
+67,인왕산정상,https://place.map.kakao.com/15171191,none
+68,경복궁 근정전,https://place.map.kakao.com/17343711,http://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1111102230000
+69,청운대안내소,https://place.map.kakao.com/2023101887,none
+70,이상의집,https://place.map.kakao.com/26196931,https://nationaltrustkorea.org/
+71,청와대 춘추관,https://place.map.kakao.com/1916196697,https://www.opencheongwadae.kr/main
+72,홍지문및탕춘대성,https://place.map.kakao.com/10973145,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=21,00330000,11&pageNo=1_1_1_0"
+73,칠궁,https://place.map.kakao.com/1915993861,http://www.royalpalace.go.kr/content/preview/preview04.asp
+74,동대문종합시장 먹거리장터,https://place.map.kakao.com/441239178,none
+75,돈의동갈매기살골목,https://place.map.kakao.com/924441213,none
+76,청와대 연풍문,https://place.map.kakao.com/1866699753,none
+77,수족관거리,https://place.map.kakao.com/2067274444,none
+78,비봉,https://place.map.kakao.com/7903348,none
+79,락희거리,https://place.map.kakao.com/133553180,none
+80,윤동주시인의언덕,https://place.map.kakao.com/18936894,http://cafe.daum.net/ilovedongju/
+81,말바위안내소,https://place.map.kakao.com/19175180,none
+82,낙산공원 제1전망광장,https://place.map.kakao.com/17558075,none
+83,북한산국립공원 구기탐방지원센터,https://place.map.kakao.com/21025420,none
+84,청와대 시화문,https://place.map.kakao.com/1867260181,none
+85,낙산,https://place.map.kakao.com/25192446,none
+86,칠궁뒷길,https://place.map.kakao.com/1090256580,https://www.opencheongwadae.kr/trail-course
+87,종로5가곱창골목,https://place.map.kakao.com/26455447,none
+88,북한산국립공원 비봉코스,https://place.map.kakao.com/21627107,http://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121500&menuNo=7020092
+89,북촌한옥청,https://place.map.kakao.com/171169970,none
+90,창덕궁 낙선재,https://place.map.kakao.com/1639116021,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=42&check_no=8&c_relation=11&c_relation2=73
+91,홍난파가옥,https://place.map.kakao.com/8159486,https://lanpa.co.kr/
+92,청와대 연무관,https://place.map.kakao.com/1867087367,none
+93,서울 둘레길 스탬프 8-3구간,https://place.map.kakao.com/137923852,none
+94,국사당,https://place.map.kakao.com/8200383,http://tour.jongno.go.kr/tour/tour/indvdlz/view.do?nttId=27051&menuNo=2009
+95,창의문안내소,https://place.map.kakao.com/25986426,https://tour.jongno.go.kr/tour/main/contents.do?menuNo=400767
+96,전태일동상,https://place.map.kakao.com/17384206,none
+97,삼청동길,https://place.map.kakao.com/12699510,none
+98,부암동백석동천,https://place.map.kakao.com/12776878,"http://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?mc=NS_04_03_01&VdkVgwKey=15,00360000,11"
+99,경복궁 향원정,https://place.map.kakao.com/8610929,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1121117610000
+100,경복궁 신무문,https://place.map.kakao.com/7975638,http://www.royalpalace.go.kr/content/data/data_03.asp
+101,황학정,https://place.map.kakao.com/8623102,http://www.hwanghakjeong.org/
+102,향로봉,https://place.map.kakao.com/8148230,none
+103,인왕산둘레길,https://place.map.kakao.com/26564580,none
+104,홍건익가옥,https://place.map.kakao.com/1134329840,https://www.instagram.com/seoul.hanok/
+105,한국천주교회창립터 표지석,https://place.map.kakao.com/1760146954,none
+106,사모바위,https://place.map.kakao.com/7915543,none
+107,비천당,https://place.map.kakao.com/17565788,none
+108,경희궁 흥화문,https://place.map.kakao.com/10166256,none
+109,청와대 영빈문,https://place.map.kakao.com/1867760198,none
+110,인왕산 기차바위,https://place.map.kakao.com/15166737,none
+111,형제봉,https://place.map.kakao.com/8665653,none
+112,기생충 포토존,https://place.map.kakao.com/1939829340,none
+113,평창계곡,https://place.map.kakao.com/17932958,none
+114,광화문광장 북측광장,https://place.map.kakao.com/25766419,none
+115,서울명예도로 송해길,https://place.map.kakao.com/1859752981,none
+116,의금부 터,https://place.map.kakao.com/25027904,none
+117,우정총국,https://place.map.kakao.com/1198228236,none
+118,윤동주하숙집터,https://place.map.kakao.com/26245338,none
+119,윤보선가,https://place.map.kakao.com/8032163,"http://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?mc=NS_04_03_02&VdkVgwKey=13,04380000,11"
+120,북촌마을안내소,https://place.map.kakao.com/103527547,none
+121,청와대 대정원,https://place.map.kakao.com/1867364606,none
+122,만남의장소,https://place.map.kakao.com/2064815509,none
+123,단군성전,https://place.map.kakao.com/8221451,none
+124,하늘전망대,https://place.map.kakao.com/492112565,none
+125,장면가옥,https://place.map.kakao.com/19700777,none
+126,다시세운광장,https://place.map.kakao.com/684651861,http://sewoon.org/
+127,창덕궁 종합관람지원센터,https://place.map.kakao.com/1241859723,none
+128,대학로거리,https://place.map.kakao.com/7825699,none
+129,계동배렴가옥,https://place.map.kakao.com/7889869,https://seoulbrhouse.com/
+130,탕춘대성암문,https://place.map.kakao.com/2036480314,none
+131,서울도보관광코스 북촌한옥마을,https://place.map.kakao.com/26563934,none
+132,인왕산 범바위,https://place.map.kakao.com/24579874,none
+133,석파정별당,https://place.map.kakao.com/10485017,none
+134,보현봉,https://place.map.kakao.com/7900467,none
+135,경복궁 건청궁,https://place.map.kakao.com/17808588,http://www.royalpalace.go.kr/content/data/data_03_11.asp
+136,경기감영터,https://place.map.kakao.com/25027878,none
+137,창경궁 춘당지,https://place.map.kakao.com/8116578,http://cgg.cha.go.kr/n_cgg
+138,종묘 외대문,https://place.map.kakao.com/8023892,none
+139,최규식경무관동상,https://place.map.kakao.com/25049222,none
+140,원서동빨래터,https://place.map.kakao.com/7922209,none
+141,탕춘대성,https://place.map.kakao.com/8110808,"https://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=21,00330000,11"
+142,북한산 진흥왕 순수비지,https://place.map.kakao.com/10453489,none
+143,전옥서 터,https://place.map.kakao.com/965914719,none
+144,밤을 걷는 밤 5화(홍제천),https://place.map.kakao.com/721606675,https://tv.kakao.com/channel/3647494/video
+145,서울원각사지십층석탑,https://place.map.kakao.com/8034648,none
+146,경복궁 흥례문,https://place.map.kakao.com/8694223,none
+147,삼청안내소,https://place.map.kakao.com/1062287768,https://www.chf.or.kr/cms/content/view/246
+148,낙원동아구찜거리,https://place.map.kakao.com/25623277,none
+149,낙산공원 제2전망광장,https://place.map.kakao.com/17980223,none
+150,좌포도청터,https://place.map.kakao.com/900370988,none
+151,서울문묘의은행나무,https://place.map.kakao.com/12721154,none
+152,청계천,https://place.map.kakao.com/25730252,none
+153,원서동고희동가옥,https://place.map.kakao.com/19263470,"http://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?mc=NS_04_03_01&VdkVgwKey=79,00840000,11"
+154,동관왕묘,https://place.map.kakao.com/10507526,none
+155,종묘 정전,https://place.map.kakao.com/8075132,"http://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=11,02270000,11&amp;pageNo=5_1_1_0"
+156,운경고택,https://place.map.kakao.com/578458681,none
+157,돌산마을 조망점,https://place.map.kakao.com/490253006,none
+158,청와대 상춘재,https://place.map.kakao.com/1867340333,https://www.opencheongwadae.kr/
+159,우포도청터,https://place.map.kakao.com/25016732,none
+160,석정보름우물,https://place.map.kakao.com/13101403,none
+161,동십자각,https://place.map.kakao.com/7840802,none
+162,권율장군집터,https://place.map.kakao.com/19182816,none
+163,세운옥상,https://place.map.kakao.com/691115620,http://sewoon.org/
+164,형조 터,https://place.map.kakao.com/626835356,none
+165,창경궁 함양문,https://place.map.kakao.com/17578525,none
+166,보현산신각,https://place.map.kakao.com/12747351,none
+167,서울도보관광코스 낙산성곽,https://place.map.kakao.com/26563972,none
+168,한화불꽃길,https://place.map.kakao.com/27068488,none
+169,3.1운동기념터 보신각앞,https://place.map.kakao.com/1131720825,none
+170,평창공원 지킴터,https://place.map.kakao.com/18607983,none
+171,기린교,https://place.map.kakao.com/1847634961,none
+172,청와대 대통령관저,https://place.map.kakao.com/1916370823,https://www.opencheongwadae.kr/introduce-map03
+173,지봉선생비우당옛터,https://place.map.kakao.com/8095914,none
+174,인왕산 성덕사약수터,https://place.map.kakao.com/15168194,none
+175,밤을 걷는 밤 8화(행촌동 송월동),https://place.map.kakao.com/1665892121,https://tv.kakao.com/channel/3647494/video
+176,혜화동 필리핀시장,https://place.map.kakao.com/26966296,none
+177,서울한양도성,https://place.map.kakao.com/49033380,http://seoulcitywall.seoul.go.kr/
+178,창신동족발골목,https://place.map.kakao.com/22301151,none
+179,청운대쉼터,https://place.map.kakao.com/420623538,none
+180,사직단 대문,https://place.map.kakao.com/7936752,none
+181,경복궁 교태전,https://place.map.kakao.com/20893851,none
+182,핸더스,https://place.map.kakao.com/1869801000,none
+183,창덕궁 인정전,https://place.map.kakao.com/17808585,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=38&check_no=8&c_relation=7&c_relation2=69
+184,백악마루,https://place.map.kakao.com/19175155,none
+185,경복궁 생물방,https://place.map.kakao.com/997374830,none
+186,동대문성곽공원 광장,https://place.map.kakao.com/1367968343,none
+187,경복궁 영추문,https://place.map.kakao.com/12373362,none
+188,백송터,https://place.map.kakao.com/20660711,none
+189,인왕산길,https://place.map.kakao.com/694424070,none
+190,남인사 안내소,https://place.map.kakao.com/26600286,none
+191,흥례문광장,https://place.map.kakao.com/962657586,none
+192,청와대 대통령비서실,https://place.map.kakao.com/1916321688,none
+193,운현궁 양관,https://place.map.kakao.com/182424572,http://www.unhyeongung.or.kr/
+194,돈화문 한옥마을,https://place.map.kakao.com/2021650815,none
+195,3.1독립선언광장,https://place.map.kakao.com/222214311,http://seoul100.kr/
+196,청계천,https://place.map.kakao.com/25730245,none
+197,필운대,https://place.map.kakao.com/26458510,none
+198,서울문묘와성균관,https://place.map.kakao.com/8362509,http://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=5_1_1_0&ccbaCpno=1331101430000
+199,경복궁 집옥재,https://place.map.kakao.com/8094398,http://www.royalpalace.go.kr/html/about/about01.jsp?dep1=5&dep2=1
+200,밤을 걷는 밤 15화(창신동),https://place.map.kakao.com/795644556,https://tv.kakao.com/channel/3647494/video
+201,경복궁 강녕전,https://place.map.kakao.com/8672619,http://www.royalpalace.go.kr/html/data/data_03_04.jsp?dep1=3&dep2=3
+202,청계천,https://place.map.kakao.com/25730256,none
+203,오간수문지,https://place.map.kakao.com/8016331,none
+204,서울 고종 어극 40년 칭경기념비,https://place.map.kakao.com/8189901,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=13,01710000,11&pageNo=1_1_1_0"
+205,광화문관광안내소,https://place.map.kakao.com/1800037022,http://www.sta.or.kr/new_home/
+206,옥인동박노수가옥,https://place.map.kakao.com/8019165,"https://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=31,00010000,11"
+207,이화달팽이길,https://place.map.kakao.com/1321024179,none
+208,청운대,https://place.map.kakao.com/19175159,none
+209,승가봉,https://place.map.kakao.com/8412672,none
+210,인왕산 해골바위,https://place.map.kakao.com/855708560,none
+211,인왕정,https://place.map.kakao.com/278282828,none
+212,우미관터,https://place.map.kakao.com/1033429354,none
+213,밤을 걷는 밤 14화(종로),https://place.map.kakao.com/1077299979,https://tv.kakao.com/channel/3647494/video
+214,토전김익영도자예술,https://place.map.kakao.com/1786577800,http://toujun.co.kr/
+215,창덕궁 금호문,https://place.map.kakao.com/8236759,https://www.cdg.go.kr/bulletin/list01.htm?TbCode=10
+216,동망봉,https://place.map.kakao.com/765334850,none
+217,인왕산 인왕천약수터,https://place.map.kakao.com/15168195,none
+218,경복궁 계조당,https://place.map.kakao.com/235742505,none
+219,무계동언덕,https://place.map.kakao.com/2125519668,https://story.kakao.com/
+220,광화문124위 시복터,https://place.map.kakao.com/626824962,none
+221,창의궁 터,https://place.map.kakao.com/1137469621,none
+222,북한산국립공원 사모바위코스,https://place.map.kakao.com/21627108,http://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121500&menuNo=7020092
+223,안평대군이용집터,https://place.map.kakao.com/12765307,none
+224,해공신익희가옥,https://place.map.kakao.com/12765630,http://www.haegong.kr/
+225,궁궐담장길,https://place.map.kakao.com/269490976,none
+226,보성사터,https://place.map.kakao.com/12651377,none
+227,단군성전,https://place.map.kakao.com/23289829,none
+228,김상옥의거터,https://place.map.kakao.com/971195397,none
+229,창덕궁 대조전,https://place.map.kakao.com/7830619,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=41&check_no=8&c_relation=10&c_relation2=72
+230,송석원 터,https://place.map.kakao.com/25028660,none
+231,네팔음식거리,https://place.map.kakao.com/52725578,none
+232,밤을 걷는 밤 1화(청운효자동~옥인동),https://place.map.kakao.com/1703202153,https://tv.kakao.com/program/3647494
+233,삼일문,https://place.map.kakao.com/7927382,none
+234,흥화문터,https://place.map.kakao.com/25027922,none
+235,복정우물,https://place.map.kakao.com/1331477460,none
+236,경복궁 자경전,https://place.map.kakao.com/8060262,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1121108090000
+237,우암송시열집터,https://place.map.kakao.com/8023185,none
+238,창경궁 옥천교,https://place.map.kakao.com/18983768,none
+239,가회동한씨가옥,https://place.map.kakao.com/8125339,none
+240,횡보염상섭 동상,https://place.map.kakao.com/26103117,none
+241,맹사성집터,https://place.map.kakao.com/8357298,none
+242,경복궁 건춘문,https://place.map.kakao.com/17808597,http://www.royalpalace.go.kr/content/data/data_03.asp
+243,조선어학회터,https://place.map.kakao.com/1119422601,none
+244,운현궁 노락당,https://place.map.kakao.com/8252251,none
+245,자선당유구,https://place.map.kakao.com/26991119,none
+246,곡장,https://place.map.kakao.com/19175173,https://tour.jongno.go.kr/tour/main/contents.do?menuNo=400767
+247,캠벨선교사주택,https://place.map.kakao.com/605193546,none
+248,북촌1경,https://place.map.kakao.com/27323849,none
+249,반계윤웅렬별장,https://place.map.kakao.com/12765563,none
+250,대성전,https://place.map.kakao.com/8266789,none
+251,서울명예도로 감고당길,https://place.map.kakao.com/90988882,none
+252,종묘 영녕전,https://place.map.kakao.com/17808941,http://jm.cha.go.kr/
+253,북한산 관봉,https://place.map.kakao.com/17766781,none
+254,창경궁 통명전,https://place.map.kakao.com/8107810,http://cgg.cha.go.kr/
+255,관상감관천대,https://place.map.kakao.com/8184355,"https://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=13,02960000,11"
+256,박자혜 산파 터,https://place.map.kakao.com/1158892155,none
+257,한성정부유적지 표석,https://place.map.kakao.com/478199032,none
+258,서문,https://place.map.kakao.com/7940957,none
+259,김상옥열사의상,https://place.map.kakao.com/565427508,none
+260,백세청풍 각자,https://place.map.kakao.com/1409580410,none
+261,종묘 공민왕신당,https://place.map.kakao.com/8663223,http://jm.cha.go.kr/
+262,이준구가옥,https://place.map.kakao.com/8128616,"https://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=31,00020000,11"
+263,경복궁 수정전,https://place.map.kakao.com/7957492,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1121117600000
+264,박수근집터,https://place.map.kakao.com/22246150,none
+265,서울다누림관광센터,https://place.map.kakao.com/1869650786,http://www.seouldanurim.net/
+266,춘생문터,https://place.map.kakao.com/1026748411,none
+267,서울테마산책길 삼청공원 순환산책길,https://place.map.kakao.com/1092255883,none
+268,창경궁 명정전,https://place.map.kakao.com/7873650,http://cgg.cha.go.kr/agapp/public/html/HtmlPage.do?pg=/cgg/01/virtual_01.jsp&pageNo=79010000&siteCd=CGG
+269,창덕궁 규장각,https://place.map.kakao.com/17582650,none
+270,홍제천,https://place.map.kakao.com/27499714,none
+271,경복궁 흥복전,https://place.map.kakao.com/24890325,none
+272,인왕산 석굴암1약수터,https://place.map.kakao.com/15166652,none
+273,낙산정,https://place.map.kakao.com/1180286620,none
+274,정업원터,https://place.map.kakao.com/1377699512,http://www.heritage.go.kr/heri/cul/culSelectDetail.do?culPageNo=1&region=1&searchCondition=%EC%A0%95%EC%97%85%EC%9B%90&searchCondition2=&ccbaKdcd=21&ccbaAsno=00050000&ccbaCtcd=11&ccbaCpno=2111100050000&ccbaCndt=&ccbaLcto=&stCcbaAsdt=&endCcbaAsdt=&header=view&returnUrl=%2Fheri%2Fcul%2FculSelectViewList.do&pageNo=1_1_1_0&p=multiSch&sortType=&sortOrd=&s_kdcdArr=00&s_ctcdArr=00&ccbaPcd1Arr=99&ccbaGcodeArr=00
+275,삼청로관광안내소,https://place.map.kakao.com/2013148642,none
+276,심심헌,https://place.map.kakao.com/27562153,http://www.simsimheon.com/
+277,척화비있던곳,https://place.map.kakao.com/839448202,none
+278,만세동방약수터,https://place.map.kakao.com/758535628,none
+279,인왕산 해맞이명소,https://place.map.kakao.com/1100668496,none
+280,청와대 녹지원,https://place.map.kakao.com/1914942270,https://www.opencheongwadae.kr/main
+281,창경궁 문정전,https://place.map.kakao.com/7872875,none
+282,경복궁 근정문,https://place.map.kakao.com/8223811,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1121108120000
+283,진명여중고교터 표시석,https://place.map.kakao.com/1460784039,none
+284,구기계곡,https://place.map.kakao.com/25731320,none
+285,손병희선생동상,https://place.map.kakao.com/8455738,none
+286,체부동홍종문가옥,https://place.map.kakao.com/8100399,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=24,00290000,11&pageNo__=5_1_1_0&pageNo=1_1_2_0"
+287,창신동인장거리,https://place.map.kakao.com/871317809,none
+288,승가사석조승가대사상,https://place.map.kakao.com/26297835,none
+289,봉제골목,https://place.map.kakao.com/575737442,none
+290,정명당,https://place.map.kakao.com/26419371,none
+291,경복궁 협생문,https://place.map.kakao.com/26974306,none
+292,경희궁 숭정문,https://place.map.kakao.com/17581529,none
+293,창덕궁 희정당,https://place.map.kakao.com/8677489,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=40&check_no=8&c_relation=9&c_relation2=71
+294,목은이색선생영당,https://place.map.kakao.com/8339337,none
+295,경복궁 자선당,https://place.map.kakao.com/11563060,http://www.royalpalace.go.kr/content/data/data_03_07.asp
+296,4.19최초발포현장,https://place.map.kakao.com/854169828,none
+297,여행자지원센터 안내소,https://place.map.kakao.com/798012525,https://tiac.or.kr/lang_kr/index.php
+298,경복궁 안내소,https://place.map.kakao.com/73190540,https://www.royalpalace.go.kr/content/guide/guide01_tab01.asp
+299,서울도보관광코스 1코스(청계천),https://place.map.kakao.com/26558570,none
+300,천경자 가옥,https://place.map.kakao.com/1904700552,none
+301,치마바위,https://place.map.kakao.com/26324584,none
+302,동네골목길관광코스 9코스(종로1.2.3.4가),https://place.map.kakao.com/26558551,none
+303,경복궁 사정전,https://place.map.kakao.com/7916535,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&ccbaCpno=1121117590000
+304,청와대 여민2관,https://place.map.kakao.com/1848013742,none
+305,구대한의원 본관,https://place.map.kakao.com/8193790,none
+306,서울중심점표지석,https://place.map.kakao.com/1316351823,http://futureheritage.seoul.go.kr/web/investigate/HeritageView.do?htId=202
+307,경우궁터,https://place.map.kakao.com/25048901,none
+308,백운동천,https://place.map.kakao.com/27455321,none
+309,3.1독립운동기념터,https://place.map.kakao.com/901578139,none
+310,북인사관광안내소,https://place.map.kakao.com/10739841,http://congoha.cafe24.com/
+311,청와대 여민1관,https://place.map.kakao.com/1855789472,none
+312,구 평화극장 터,https://place.map.kakao.com/710074354,none
+313,한성부 중부관아터,https://place.map.kakao.com/775389074,none
+314,현진건 집터,https://place.map.kakao.com/8161370,none
+315,한성도서주식회사터,https://place.map.kakao.com/1148851345,none
+316,서울천주교순례길 말씀의길,https://place.map.kakao.com/26564597,none
+317,국립민속박물관 오촌댁,https://place.map.kakao.com/26988653,http://www.nfm.go.kr/
+318,삼일독립선언유적지,https://place.map.kakao.com/25028659,none
+319,서울대학교병원 세종대왕동상,https://place.map.kakao.com/17572071,none
+320,한글가온길,https://place.map.kakao.com/25538690,none
+321,어니스트베델의 집터,https://place.map.kakao.com/7887248,none
+322,순화궁터,https://place.map.kakao.com/1088607792,none
+323,동네골목길관광코스 5코스(평창동),https://place.map.kakao.com/26558542,none
+324,창덕궁 연경당,https://place.map.kakao.com/17808105,https://www.cdg.go.kr/main/main.htm
+325,이상재선생동상,https://place.map.kakao.com/1151517532,none
+326,경희궁 숭정전,https://place.map.kakao.com/12735945,none
+327,이율곡선생살던집터,https://place.map.kakao.com/11300694,none
+328,태화궁 터,https://place.map.kakao.com/799986961,none
+329,동네골목길관광코스 문학둘레길,https://place.map.kakao.com/26563922,none
+330,세종대왕나신곳 표지석,https://place.map.kakao.com/731857721,none
+331,궁중문화축전,https://place.map.kakao.com/699964074,http://www.royalculturefestival.org/
+332,여운형집터,https://place.map.kakao.com/25038303,none
+333,대통령관저 청안당,https://place.map.kakao.com/1828190149,none
+334,경희궁지,https://place.map.kakao.com/8199791,"https://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=13,02710000,11"
+335,종묘 북신문,https://place.map.kakao.com/370224713,none
+336,국립민속박물관 효자각,https://place.map.kakao.com/26988639,http://www.nfm.go.kr/
+337,송진우집터,https://place.map.kakao.com/1173569160,none
+338,6.10독립만세선창터,https://place.map.kakao.com/1130724381,none
+339,부용지,https://place.map.kakao.com/7907048,none
+340,clayu,https://place.map.kakao.com/26572390,none
+341,서북학회터,https://place.map.kakao.com/1159842610,none
+342,자생식물학습장,https://place.map.kakao.com/8059682,none
+343,탕춘대터,https://place.map.kakao.com/779889177,none
+344,박인환집터,https://place.map.kakao.com/897870584,none
+345,김상용집터,https://place.map.kakao.com/8231260,none
+346,소파방정환선생 생가터,https://place.map.kakao.com/27305894,none
+347,옥호정 터,https://place.map.kakao.com/1076468577,none
+348,제중원 터,https://place.map.kakao.com/779279564,none
+349,원서동백홍범가옥,https://place.map.kakao.com/8034745,none
+350,세창서관 터,https://place.map.kakao.com/780995061,none
+351,운니동김승현가,https://place.map.kakao.com/12765605,none
+352,초교터,https://place.map.kakao.com/765440108,none
+353,서울재동백송,https://place.map.kakao.com/12721192,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=16,00080000,11&pageNo=1_1_1_0"
+354,인평대군집터,https://place.map.kakao.com/809504847,none
+355,경복궁 용성문,https://place.map.kakao.com/26974304,none
+356,경기감영터,https://place.map.kakao.com/774669910,none
+357,곡장안내소,https://place.map.kakao.com/2014116510,none
+358,손병희선생집터,https://place.map.kakao.com/852965854,none
+359,법흥사 터,https://place.map.kakao.com/760726966,none
+360,창덕궁 단봉문,https://place.map.kakao.com/8206208,none
+361,서울경모궁지,https://place.map.kakao.com/12776869,none
+362,운현궁 이로당,https://place.map.kakao.com/8040331,none
+363,종로국제서당,https://place.map.kakao.com/668190601,none
+364,경운동 민병옥 가옥,https://place.map.kakao.com/7888449,"http://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=24,00150000,11&pageNo=1_1_1_0"
+365,기차바위 능성,https://place.map.kakao.com/14979456,none
+366,경복궁 외소주방,https://place.map.kakao.com/26810186,none
+367,부용정,https://place.map.kakao.com/7914319,none
+368,1.21사태 소나무,https://place.map.kakao.com/217863405,none
+369,하마비와 탕평비각,https://place.map.kakao.com/243209316,none
+370,남이장군집터,https://place.map.kakao.com/8227748,none
+371,옥류동천,https://place.map.kakao.com/27459749,none
+372,김정희 본가 터,https://place.map.kakao.com/8213241,none
+373,창덕궁 중희당터,https://place.map.kakao.com/993950125,none
+374,자수궁터,https://place.map.kakao.com/778728075,none
+375,겸재정선집터,https://place.map.kakao.com/270135682,none
+376,종친부 경근당,https://place.map.kakao.com/25665927,https://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_1_1&ccbaCpno=1121121510000
+377,백사이항복집터,https://place.map.kakao.com/7886679,http://sca.seoul.go.kr/korean/culturalAsset.jsp?sCode=100091&sClssCode=1&sClssCode2=4
+378,경희궁 금천교,https://place.map.kakao.com/27078964,none
+379,서울북악산일원,https://place.map.kakao.com/12777445,none
+380,동네골목길관광코스 3코스(삼청동),https://place.map.kakao.com/26558537,none
+381,동령폭포,https://place.map.kakao.com/992686932,none
+382,쌈지샛길,https://place.map.kakao.com/1107278717,none
+383,경복궁 안내,https://place.map.kakao.com/1919315824,https://www.royalpalace.go.kr/content/guide/guide01_tab06.asp
+384,김옥균집터,https://place.map.kakao.com/1140374227,none
+385,박종화의집,https://place.map.kakao.com/7889768,none
+386,어영청터,https://place.map.kakao.com/896782836,none
+387,민영환의집터,https://place.map.kakao.com/11067766,none
+388,창덕궁 원역처소,https://place.map.kakao.com/19977958,none
+389,백운장 터,https://place.map.kakao.com/1014068735,none
+390,이현궁터,https://place.map.kakao.com/777986229,none
+391,안동별궁 터,https://place.map.kakao.com/864624511,none
+392,경성궤도회사터,https://place.map.kakao.com/797822761,none
+393,구동아일보,https://place.map.kakao.com/11950872,none
+394,창덕궁 영화당,https://place.map.kakao.com/8493027,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=44&check_no=9&c_relation=14&c_relation2=76
+395,전봉준동상,https://place.map.kakao.com/1131813763,none
+396,대한천일은행본점터,https://place.map.kakao.com/1075973848,none
+397,형평사 터,https://place.map.kakao.com/891490155,none
+398,번사창,https://place.map.kakao.com/12736016,none
+399,대한매일신보창간사옥터,https://place.map.kakao.com/1152591226,none
+400,경복궁 계무문,https://place.map.kakao.com/22879392,none
+401,신흥대학 터,https://place.map.kakao.com/898828000,none
+402,선희궁터,https://place.map.kakao.com/10486020,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=21,00320000,11&pageNo=1_1_1_0"
+403,3.1운동 유적지 상춘원터,https://place.map.kakao.com/1168475502,none
+404,한성부 북부관아터,https://place.map.kakao.com/766222143,none
+405,서울테마산책길 진경산수화길,https://place.map.kakao.com/1416816147,none
+406,독립운동가길,https://place.map.kakao.com/659314917,none
+407,훈련도감터,https://place.map.kakao.com/749941210,none
+408,창경궁 풍기대,https://place.map.kakao.com/13122293,none
+409,창경궁 월근문,https://place.map.kakao.com/8028879,none
+410,서울 장의사지 당간지주,https://place.map.kakao.com/12753651,none
+411,김창숙선생집터,https://place.map.kakao.com/1167331012,none
+412,서울명예도로 소나무길,https://place.map.kakao.com/95182613,none
+413,돈의문박물관마을 안내소,https://place.map.kakao.com/1565894272,none
+414,안창호선생 흉상,https://place.map.kakao.com/237313598,none
+415,운현궁 수직사,https://place.map.kakao.com/12559342,none
+416,해머링맨,https://place.map.kakao.com/1383786148,none
+417,탑골공원 원각사비,https://place.map.kakao.com/17807540,none
+418,서울여자경찰서 터,https://place.map.kakao.com/766143896,none
+419,경복궁 태원전,https://place.map.kakao.com/12558343,http://www.royalpalace.go.kr/html/data/data_03_10.jsp?dep1=3&dep2=3
+420,서울대문리대터,https://place.map.kakao.com/853306737,none
+421,창덕궁 성정각,https://place.map.kakao.com/17808960,https://www.cdg.go.kr/bulletin/list01.htm?TbCode=10
+422,신간회본부터,https://place.map.kakao.com/2074058,none
+423,취운정 터,https://place.map.kakao.com/1182353546,none
+424,사직정,https://place.map.kakao.com/1836907521,none
+425,동궁권역,https://place.map.kakao.com/7843547,none
+426,송기교 터,https://place.map.kakao.com/763981085,none
+427,동아일보 창간사옥터,https://place.map.kakao.com/1153780204,none
+428,지청천장군생가터,https://place.map.kakao.com/27305913,none
+429,창경궁 팔각칠층석탑,https://place.map.kakao.com/12760691,"http://m.cha.go.kr/public/commentary/culSelectDetail.do?VdkVgwKey=12,11190000,11&pageNo=77010000"
+430,낙산성곽길,https://place.map.kakao.com/26965027,none
+431,감고당터,https://place.map.kakao.com/896872305,none
+432,김성수선생옛집,https://place.map.kakao.com/8051705,none
+433,창덕궁 선정전,https://place.map.kakao.com/7939997,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=39&check_no=8&c_relation=8&c_relation2=70
+434,주시경흉상,https://place.map.kakao.com/27095953,none
+435,충무공 이순신 백의종군로 출발지,https://place.map.kakao.com/879152373,none
+436,김형태가옥,https://place.map.kakao.com/12771984,none
+437,화신백화점터,https://place.map.kakao.com/1069669460,none
+438,서울역사박물관 전차381호,https://place.map.kakao.com/27277184,http://www.museum.seoul.kr/www/NR_index.do?sso=ok
+439,궁정파출소 터,https://place.map.kakao.com/854701617,none
+440,구서울대학교 본관,https://place.map.kakao.com/10139951,"https://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=13,02780000,11"
+441,청와대 수궁터,https://place.map.kakao.com/1866794202,https://www.opencheongwadae.kr/introduce-map04
+442,옥호루,https://place.map.kakao.com/1317383605,none
+443,서광범집터,https://place.map.kakao.com/772288980,none
+444,창경궁 선인문,https://place.map.kakao.com/7945154,none
+445,사동궁터,https://place.map.kakao.com/1138381079,none
+446,옛휘문고교터,https://place.map.kakao.com/560659014,none
+447,경복궁 집경당,https://place.map.kakao.com/17808556,https://www.royalpalace.go.kr/
+448,여단 터,https://place.map.kakao.com/765419870,none
+449,충훈부터,https://place.map.kakao.com/889625100,none
+450,육의전터,https://place.map.kakao.com/1085974696,none
+451,제생원터,https://place.map.kakao.com/751602368,none
+452,경복궁 아미산,https://place.map.kakao.com/7991032,http://www.royalpalace.go.kr/html/main/main.jsp
+453,전의감터,https://place.map.kakao.com/750414520,none
+454,한남서림 터,https://place.map.kakao.com/1073197038,none
+455,창덕궁 부용정,https://place.map.kakao.com/7907699,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=44&check_no=9&c_relation=14&c_relation2=76
+456,유심사터,https://place.map.kakao.com/266058885,none
+457,건순각,https://place.map.kakao.com/26431687,none
+458,지석영선생집터,https://place.map.kakao.com/8080068,none
+459,3.1독립운동기념터 중앙학림,https://place.map.kakao.com/1167905903,none
+460,창경궁 관천대,https://place.map.kakao.com/10151851,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=12,08510000,11&pageNo=1_1_1_0"
+461,조지서터,https://place.map.kakao.com/755646132,none
+462,창덕궁 인정문,https://place.map.kakao.com/8050056,https://www.cdg.go.kr/cms_for_cdg/show.jsp?show_no=38&check_no=8&c_relation=7&c_relation2=69
+463,조계사목석가불좌상,https://place.map.kakao.com/27160832,none
+464,앙부일구,https://place.map.kakao.com/12639164,none
+465,종로관성묘,https://place.map.kakao.com/12678084,none
+466,국보위터,https://place.map.kakao.com/675519141,none
+467,창덕궁 옥류천일원,https://place.map.kakao.com/12898488,https://www.cdg.go.kr/bulletin/list01.htm?TbCode=10
+468,응란교터,https://place.map.kakao.com/765511663,none
+469,조계사 백송,https://place.map.kakao.com/12721136,"https://www.heritage.go.kr/heri/cul/culSelectDetail.do?VdkVgwKey=16,00090000,11&pageNo=1_1_1_0"
+470,창덕궁 청의정,https://place.map.kakao.com/12898521,https://www.cdg.go.kr/
+471,홍제천,https://place.map.kakao.com/25731042,none
+472,태화관길,https://place.map.kakao.com/66105607,none
+473,금위영터,https://place.map.kakao.com/752325112,none
+474,한성부동부관아터,https://place.map.kakao.com/769759721,none
+475,구공업전습소 본관,https://place.map.kakao.com/8193420,"http://www.cha.go.kr/korea/heritage/search/Culresult_Db_View.jsp?VdkVgwKey=13,02790000,11"
+476,서울도보관광코스 창덕궁~생태코스,https://place.map.kakao.com/26563952,none
+477,세계어린이운동발상지 기념비,https://place.map.kakao.com/913934484,none
+478,전차차고터,https://place.map.kakao.com/1155897205,none
+479,의영고터,https://place.map.kakao.com/772707469,none
+480,구기천,https://place.map.kakao.com/27492043,none
+481,독립협회 창립총회 터,https://place.map.kakao.com/898350073,none
+482,혜정교 터,https://place.map.kakao.com/763096090,none
+483,창덕궁 구선원전,https://place.map.kakao.com/8665230,https://www.cdg.go.kr/main/main.htm
+484,서울명예도로 박수근길,https://place.map.kakao.com/2124221889,none
+485,창경궁 경춘전,https://place.map.kakao.com/8175540,none
+486,정종수경사 순직비,https://place.map.kakao.com/1618974892,none
+487,청와대 소정원,https://place.map.kakao.com/1867366294,none
+488,조양교터,https://place.map.kakao.com/780565708,none
+489,협률사원각사터,https://place.map.kakao.com/756286316,none
+490,서울지구 병사구사령부 터,https://place.map.kakao.com/865629260,none
+491,창덕궁 애련지,https://place.map.kakao.com/12898580,https://www.cdg.go.kr/bulletin/list01.htm?TbCode=10
+492,조선일보창간사옥터,https://place.map.kakao.com/1158493656,none
+493,청송당 바위,https://place.map.kakao.com/1268463761,none
+494,창덕궁 주합루,https://place.map.kakao.com/8511137,https://www.cdg.go.kr/bulletin/list01.htm?TbCode=10
+495,석조여래좌상,https://place.map.kakao.com/7946348,http://www.heritage.go.kr/heri/cul/culSelectDetail.do?culPageNo=1&region=1&searchCondition=%EB%B0%A9%ED%98%95%EB%8C%80%EC%A2%8C&searchCondition2=&ccbaKdcd=12&ccbaAsno=19770000&ccbaCtcd=11&ccbaCpno=1121119770000&ccbaCndt=&ccbaLcto=&stCcbaAsdt=&endCcbaAsdt=&header=view&returnUrl=%2Fheri%2Fcul%2FculSelectViewList.do&pageNo=1_1_1_0&p=multiSch&sortType=&sortOrd=&sngl=Y&s_kdcdArr=00&s_ctcdArr=00&ccbaPcd1Arr=99&ccbaGcodeArr=00
+496,전사청,https://place.map.kakao.com/1820841094,none
+497,혜화동김상협가,https://place.map.kakao.com/8656254,none
+498,창덕궁 관람정,https://place.map.kakao.com/12898461,https://www.cdg.go.kr/default.jsp
+499,진사식당,https://place.map.kakao.com/23881752,none
