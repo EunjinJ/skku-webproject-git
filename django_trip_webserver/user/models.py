@@ -9,7 +9,7 @@ from django.db import models
 from main.models import TripCategory
 
 class User(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.CharField(max_length=255, primary_key=True)
     user_name = models.CharField(max_length=255)
     user_password = models.CharField(max_length=255)
     user_type = models.IntegerField()
