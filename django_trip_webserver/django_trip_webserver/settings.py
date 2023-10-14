@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "board.apps.BoardConfig",
     "main.apps.MainConfig",
     "user.apps.UserConfig",
+    "search.apps.SearchConfig",
 ]
 
 MIDDLEWARE = [
@@ -80,8 +81,8 @@ DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
         "NAME" : "django_trip_webserver",
-        "USER" : "tripful",
-        "PASSWORD" : 'trip*ful*13',
+        "USER" : "root",
+        "PASSWORD" : '0000',
         "HOST" : '127.0.0.1',
         "PORT" : '3306'
     }
