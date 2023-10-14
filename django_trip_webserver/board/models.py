@@ -11,6 +11,7 @@ def validate_star_range(value):
 # ~~~ 데이터 베이스 ~~~
 from django.db import models
 from main.models import TripCategory
+from main.models import AreaM
 from user.models import User
 
 class Trip(models.Model):
@@ -19,11 +20,8 @@ class Trip(models.Model):
     trip_category_detail = models.CharField(max_length=255)
     trip_name = models.CharField(max_length=255)
     trip_address = models.TextField()
-    trip_open = models.TimeField() # 영업 시작시간
-    trip_closed = models.TimeField() # 영업 종료시간
-    trip_break_start = models.TimeField()
-    trip_break_end = models.TimeField()
-    trip_last_order = models.TimeField()
+    area_m_id = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
+    trip_time = models.TimeField() # 영업시간, 브레이크타임, 라스트오더
     trip_phone = models.CharField(max_length=255) # 031-000-0000 이렇게 문자열로
     trip_homepage = models.TextField()
     is_deleted = models.BooleanField()

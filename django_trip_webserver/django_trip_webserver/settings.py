@@ -76,14 +76,27 @@ WSGI_APPLICATION = "django_trip_webserver.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# 성균관대
+# DATABASES = {
+#     "default":{
+#         "ENGINE" : "django.db.backends.mysql",
+#         "NAME" : "django_trip_webserver",
+#         "USER" : "root",
+#         "PASSWORD" : '9999',
+#         "HOST" : '127.0.0.1',
+#         "PORT" : '9999'
+#     }
+# }
+
+# 집
 DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
         "NAME" : "django_trip_webserver",
         "USER" : "root",
-        "PASSWORD" : '9999',
+        "PASSWORD" : 'alstjr326',
         "HOST" : '127.0.0.1',
-        "PORT" : '9999'
+        "PORT" : '3306'
     }
 }
 
