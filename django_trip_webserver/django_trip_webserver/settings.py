@@ -80,8 +80,13 @@ DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
         "NAME" : "django_trip_webserver",
+<<<<<<< HEAD
         "USER" : "root",
         "PASSWORD" : '0000',
+=======
+        "USER" : "tripful",
+        "PASSWORD" : 'trip*ful*13',
+>>>>>>> a0e52b205e8ebf89faf0a8e927cf8ef6ee3be35f
         "HOST" : '127.0.0.1',
         "PORT" : '3306'
     }
