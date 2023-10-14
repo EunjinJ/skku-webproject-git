@@ -76,7 +76,7 @@ WSGI_APPLICATION = "django_trip_webserver.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# 성균관대
+# 성균관대 (SKKU)
 # DATABASES = {
 #     "default":{
 #         "ENGINE" : "django.db.backends.mysql",
@@ -88,7 +88,7 @@ WSGI_APPLICATION = "django_trip_webserver.wsgi.application"
 #     }
 # }
 
-# 집
+# 집 (doha_home)
 DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
