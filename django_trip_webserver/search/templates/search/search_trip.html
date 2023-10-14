@@ -1,0 +1,345 @@
+{% extends './base_temp.html' %} {% block main %}
+
+<div style="max-width: 100%; display: flex; justify-content: flex-start">
+  <h2 class="ant-typography css-amq5gd">상세검색</h2>
+</div>
+
+<!-- 검색종류선택 -->
+<!-- 검색종류선택 끝 -->
+
+<!-- 상세검색옵션-->
+<div>
+  <form
+    id="basic"
+    autocomplete="off"
+    class="ant-form ant-form-horizontal css-amq5gd"
+    style="max-width: 600px"
+  >
+    <!-- 지역선택 -->
+    <div class="ant-form-item css-amq5gd">
+      <div class="ant-row ant-form-item-row css-amq5gd">
+        <div class="ant-col ant-col-8 ant-form-item-label css-amq5gd">
+          <label class="" title="Select">지역 선택</label>
+        </div>
+
+        <!-- 선택끼리 일정 간격 유지 -->
+        <div
+          class="ant-col ant-col-16 css-amq5gd"
+          style="
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+          "
+        >
+          <!--대규모지역 선택-->
+          <div class="ant-col ant-col-7 ant-form-item-control css-amq5gd">
+            <div class="ant-form-item-control-input">
+              <div class="ant-form-item-control-input-content">
+                <div
+                  class="ant-select ant-select-in-form-item css-amq5gd ant-select-single ant-select-show-arrow"
+                >
+                  <div class="ant-select-selector">
+                    <span class="ant-select-selection-search"
+                      ><input
+                        type="search"
+                        autocomplete="off"
+                        class="ant-select-selection-search-input"
+                        role="combobox"
+                        aria-label="Search"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-owns="rc_select_0_list"
+                        aria-autocomplete="list"
+                        aria-controls="rc_select_0_list"
+                        readonly=""
+                        unselectable="on"
+                        value=""
+                        id="rc_select_0"
+                        style="opacity: 0" /></span
+                    ><span class="ant-select-selection-item" title="Demo"
+                      >레저</span
+                    >
+                  </div>
+                  <span
+                    class="ant-select-arrow"
+                    unselectable="on"
+                    aria-hidden="true"
+                    style="user-select: none"
+                    ><span
+                      role="img"
+                      aria-label="down"
+                      class="anticon anticon-down ant-select-suffix"
+                      ><svg
+                        viewBox="64 64 896 896"
+                        focusable="false"
+                        data-icon="down"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                        ></path></svg></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--중규모지역 선택-->
+          <div class="ant-col ant-col-7 ant-form-item-control css-amq5gd">
+            <div class="ant-form-item-control-input">
+              <div class="ant-form-item-control-input-content">
+                <div
+                  class="ant-select ant-select-in-form-item css-amq5gd ant-select-single ant-select-show-arrow"
+                >
+                  <div class="ant-select-selector">
+                    <span class="ant-select-selection-search"
+                      ><input
+                        type="search"
+                        autocomplete="off"
+                        class="ant-select-selection-search-input"
+                        role="combobox"
+                        aria-label="Search"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-owns="rc_select_0_list"
+                        aria-autocomplete="list"
+                        aria-controls="rc_select_0_list"
+                        readonly=""
+                        unselectable="on"
+                        value=""
+                        id="rc_select_0"
+                        style="opacity: 0" /></span
+                    ><span class="ant-select-selection-item" title="Demo"
+                      >레저</span
+                    >
+                  </div>
+                  <span
+                    class="ant-select-arrow"
+                    unselectable="on"
+                    aria-hidden="true"
+                    style="user-select: none"
+                    ><span
+                      role="img"
+                      aria-label="down"
+                      class="anticon anticon-down ant-select-suffix"
+                      ><svg
+                        viewBox="64 64 896 896"
+                        focusable="false"
+                        data-icon="down"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                        ></path></svg></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 지역선택 끝-->
+
+    <!-- 관광카테고리 선택 -->
+    <div class="ant-form-item css-amq5gd">
+      <div class="ant-row ant-form-item-row css-amq5gd">
+        <div class="ant-col ant-col-8 ant-form-item-label css-amq5gd">
+          <label class="" title="Select">관광 유형</label>
+        </div>
+
+        <!-- 선택끼리 일정 간격 유지 -->
+        <div
+          class="ant-col ant-col-16 css-amq5gd"
+          style="
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+          "
+        >
+          <!--관광카테고리 선택-->
+          <div class="ant-col ant-col-7 ant-form-item-control css-amq5gd">
+            <div class="ant-form-item-control-input">
+              <div class="ant-form-item-control-input-content">
+                <div
+                  class="ant-select ant-select-in-form-item css-amq5gd ant-select-single ant-select-show-arrow"
+                >
+                  <div class="ant-select-selector">
+                    <span class="ant-select-selection-search"
+                      ><input
+                        type="search"
+                        autocomplete="off"
+                        class="ant-select-selection-search-input"
+                        role="combobox"
+                        aria-label="Search"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-owns="rc_select_0_list"
+                        aria-autocomplete="list"
+                        aria-controls="rc_select_0_list"
+                        readonly=""
+                        unselectable="on"
+                        value=""
+                        id="rc_select_0"
+                        style="opacity: 0" /></span
+                    ><span class="ant-select-selection-item" title="Demo"
+                      >레저</span
+                    >
+                  </div>
+                  <span
+                    class="ant-select-arrow"
+                    unselectable="on"
+                    aria-hidden="true"
+                    style="user-select: none"
+                    ><span
+                      role="img"
+                      aria-label="down"
+                      class="anticon anticon-down ant-select-suffix"
+                      ><svg
+                        viewBox="64 64 896 896"
+                        focusable="false"
+                        data-icon="down"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                        ></path></svg></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 관광카테고리 선택 끝 -->
+
+    <!-- 평균별점 선택 -->
+    <!-- 평균별점 선택 끝 -->
+
+    <!-- 리뷰개수 선택 -->
+    <!-- 리뷰개수 선택 끝 -->
+
+    <!-- 검색어입력 -->
+    <div class="ant-form-item css-amq5gd">
+      <div class="ant-row ant-form-item-row css-amq5gd">
+        <div class="ant-col ant-col-8 ant-form-item-label css-amq5gd">
+          <label class="" title="Select">검색어 입력</label>
+        </div>
+
+        <!-- 선택끼리 일정 간격 유지 -->
+        <div
+          class="ant-col ant-col-16 css-amq5gd"
+          style="
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+          "
+        >
+          <!--검색어분류 선택-->
+          <div class="ant-col ant-col-7 ant-form-item-control css-amq5gd">
+            <div class="ant-form-item-control-input">
+              <div class="ant-form-item-control-input-content">
+                <div
+                  class="ant-select ant-select-in-form-item css-amq5gd ant-select-single ant-select-show-arrow"
+                >
+                  <div class="ant-select-selector">
+                    <span class="ant-select-selection-search"
+                      ><input
+                        type="search"
+                        autocomplete="off"
+                        class="ant-select-selection-search-input"
+                        role="combobox"
+                        aria-label="Search"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-owns="rc_select_0_list"
+                        aria-autocomplete="list"
+                        aria-controls="rc_select_0_list"
+                        readonly=""
+                        unselectable="on"
+                        value=""
+                        id="rc_select_0"
+                        style="opacity: 0" /></span
+                    ><span class="ant-select-selection-item" title="Demo"
+                      >레저</span
+                    >
+                  </div>
+                  <span
+                    class="ant-select-arrow"
+                    unselectable="on"
+                    aria-hidden="true"
+                    style="user-select: none"
+                    ><span
+                      role="img"
+                      aria-label="down"
+                      class="anticon anticon-down ant-select-suffix"
+                      ><svg
+                        viewBox="64 64 896 896"
+                        focusable="false"
+                        data-icon="down"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                        ></path></svg></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 검색어분류 선택 끝 -->
+
+    <!-- 검색어입력영역 -->
+    <div class="ant-col ant-col-16 ant-form-item-control css-amq5gd">
+      <div class="ant-form-item-control-input">
+        <div class="ant-form-item-control-input-content">
+          <input
+            id="basic_username"
+            aria-required="true"
+            class="ant-input css-amq5gd"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- 검색어입력영역 끝 -->
+
+    <!--제출 : 검색버튼-->
+    <div class="ant-form-item css-amq5gd">
+      <div class="ant-row ant-form-item-row css-amq5gd">
+        <div
+          class="ant-col ant-col-16 ant-col-offset-8 ant-form-item-control css-amq5gd"
+        >
+          <div class="ant-form-item-control-input">
+            <div class="ant-form-item-control-input-content">
+              <button type="submit" class="ant-btn css-amq5gd ant-btn-primary">
+                <span>검색</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--검색버튼 끝-->
+
+    <!-- 검색어입력 끝 -->
+  </form>
+</div>
+<!-- 상세검색옵션 끝-->
+{% endblock %}
