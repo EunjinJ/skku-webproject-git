@@ -57,3 +57,17 @@ nav.navbar > div.container-fluid > ul.main_nav > li:hover > ul.dropdown > li > a
 nav.navbar > div.container-fluid > ul.main_nav > li:hover > ul.dropdown > li > a:active {
     background: #F7F2E0;
 }
+
+div.container > div.map_large {
+    width: 50%;
+    margin: auto;
+}
+
+div.container > div.map_large > path {
+    fill: #cc1100;
+    stroke: #dece0c;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: fill 0.3s;
+}
