@@ -1,12 +1,3 @@
-{% extends './base_temp.html' %} {% block main %}
-
-<div style="max-width: 100%; display: flex; justify-content: flex-start">
-  <h2 class="ant-typography css-amq5gd">상세검색</h2>
-</div>
-
-<!-- 검색종류선택 -->
-<!-- 검색종류선택 끝 -->
-
 <!-- 상세검색옵션-->
 <div>
   <form
@@ -25,11 +16,7 @@
         <!-- 선택끼리 일정 간격 유지 -->
         <div
           class="ant-col ant-col-16 css-amq5gd"
-          style="
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-          "
+          style="display: flex; flex-wrap: nowrap; justify-content: flex-start"
         >
           <!--대규모지역 선택-->
           <div class="ant-col ant-col-7 ant-form-item-control css-amq5gd">
@@ -57,7 +44,7 @@
                         id="rc_select_0"
                         style="opacity: 0" /></span
                     ><span class="ant-select-selection-item" title="Demo"
-                      >레저</span
+                      >서울</span
                     >
                   </div>
                   <span
@@ -86,6 +73,8 @@
               </div>
             </div>
           </div>
+          <!--padding-->
+          <div style="padding-right: 20px"></div>
           <!--중규모지역 선택-->
           <div class="ant-col ant-col-7 ant-form-item-control css-amq5gd">
             <div class="ant-form-item-control-input">
@@ -112,7 +101,7 @@
                         id="rc_select_0"
                         style="opacity: 0" /></span
                     ><span class="ant-select-selection-item" title="Demo"
-                      >레저</span
+                      >종로구</span
                     >
                   </div>
                   <span
@@ -223,16 +212,360 @@
     <!-- 관광카테고리 선택 끝 -->
 
     <!-- 평균별점 선택 -->
+    <div class="ant-form-item css-amq5gd">
+      <div class="ant-row ant-form-item-row css-amq5gd">
+        <div class="ant-col ant-col-8 ant-form-item-label css-amq5gd">
+          <label class="" title="Select">별점 </label>
+        </div>
+        <!-- 별- -->
+        <div>
+          <ul class="ant-rate css-amq5gd" tabindex="0" role="radiogroup">
+            <!-- 첫번째 별-->
+            <li class="ant-rate-star ant-rate-star-full">
+              <div
+                role="radio"
+                aria-checked="true"
+                aria-posinset="1"
+                aria-setsize="5"
+                tabindex="0"
+              >
+                <div class="ant-rate-star-first">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+                <div class="ant-rate-star-second">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+              </div>
+            </li>
+            <!-- 두번째 별-->
+            <li class="ant-rate-star ant-rate-star-full">
+              <div
+                role="radio"
+                aria-checked="true"
+                aria-posinset="2"
+                aria-setsize="5"
+                tabindex="0"
+              >
+                <div class="ant-rate-star-first">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+                <div class="ant-rate-star-second">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+              </div>
+            </li>
+            <!-- 세번째 별-->
+            <li class="ant-rate-star ant-rate-star-full">
+              <div
+                role="radio"
+                aria-checked="true"
+                aria-posinset="3"
+                aria-setsize="5"
+                tabindex="0"
+              >
+                <div class="ant-rate-star-first">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+                <div class="ant-rate-star-second">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+              </div>
+            </li>
+            <!-- 네번째 별-->
+            <li class="ant-rate-star ant-rate-star-full">
+              <div
+                role="radio"
+                aria-checked="true"
+                aria-posinset="4"
+                aria-setsize="5"
+                tabindex="0"
+              >
+                <div class="ant-rate-star-first">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+                <div class="ant-rate-star-second">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+              </div>
+            </li>
+            <!-- 다섯번째 별-->
+            <li class="ant-rate-star ant-rate-star-zero">
+              <div
+                role="radio"
+                aria-checked="true"
+                aria-posinset="5"
+                aria-setsize="5"
+                tabindex="0"
+              >
+                <div class="ant-rate-star-first">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+                <div class="ant-rate-star-second">
+                  <span
+                    role="img"
+                    aria-label="star"
+                    class="anticon anticon-star"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      data-icon="star"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                      ></path></svg
+                  ></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 별 끝 -->
+        <div>&nbsp; 점 이상</div>
+      </div>
+    </div>
     <!-- 평균별점 선택 끝 -->
 
     <!-- 리뷰개수 선택 -->
+    <div class="ant-form-item css-amq5gd">
+      <div class="ant-row ant-form-item-row css-amq5gd">
+        <div class="ant-col ant-col-8 ant-form-item-label css-amq5gd">
+          <label class="" title="InputNumber">게시글 수</label>
+        </div>
+        <!-- 선택끼리 일정 간격 유지 -->
+        <div
+          class="ant-col ant-col-16 css-amq5gd"
+          style="
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: flex-star;t"
+        >
+          <div class="ant-col ant-col-6 ant-form-item-control css-amq5gd">
+            <div class="ant-form-item-control-input">
+              <div class="ant-form-item-control-input-content">
+                <!-- 이부분이 input 크기 조절하는 div인듯-->
+                <div
+                  class="ant-input-number ant-input-number-in-form-item css-amq5gd"
+                >
+                  <div class="ant-input-number-handler-wrap">
+                    <span
+                      unselectable="on"
+                      role="button"
+                      aria-label="Increase Value"
+                      aria-disabled="false"
+                      class="ant-input-number-handler ant-input-number-handler-up"
+                      ><span
+                        role="img"
+                        aria-label="up"
+                        class="anticon anticon-up ant-input-number-handler-up-inner"
+                        ><svg
+                          viewBox="64 64 896 896"
+                          focusable="false"
+                          data-icon="up"
+                          width="1em"
+                          height="1em"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                          ></path></svg></span></span
+                    ><span
+                      unselectable="on"
+                      role="button"
+                      aria-label="Decrease Value"
+                      aria-disabled="false"
+                      class="ant-input-number-handler ant-input-number-handler-down"
+                      ><span
+                        role="img"
+                        aria-label="down"
+                        class="anticon anticon-down ant-input-number-handler-down-inner"
+                        ><svg
+                          viewBox="64 64 896 896"
+                          focusable="false"
+                          data-icon="down"
+                          width="1em"
+                          height="1em"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                          ></path></svg></span
+                    ></span>
+                  </div>
+                  <div class="ant-input-number-input-wrap">
+                    <input
+                      autocomplete="off"
+                      role="spinbutton"
+                      step="1"
+                      class="ant-input-number-input"
+                      value="4"
+                      aria-valuenow="4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>&nbsp; 개 이상</div>
+        </div>
+      </div>
+    </div>
     <!-- 리뷰개수 선택 끝 -->
 
     <!-- 검색어입력 -->
     <div class="ant-form-item css-amq5gd">
       <div class="ant-row ant-form-item-row css-amq5gd">
         <div class="ant-col ant-col-8 ant-form-item-label css-amq5gd">
-          <label class="" title="Select">검색어 입력</label>
+          <label class="" title="Select">검색어</label>
         </div>
 
         <!-- 선택끼리 일정 간격 유지 -->
@@ -270,7 +603,7 @@
                         id="rc_select_0"
                         style="opacity: 0" /></span
                     ><span class="ant-select-selection-item" title="Demo"
-                      >레저</span
+                      >제목+내용</span
                     >
                   </div>
                   <span
@@ -299,26 +632,25 @@
               </div>
             </div>
           </div>
+          <!-- 검색어입력영역 -->
+          <div class="ant-col ant-col-16 ant-form-item-control css-amq5gd">
+            <div class="ant-form-item-control-input">
+              <div class="ant-form-item-control-input-content">
+                <input
+                  id="basic_username"
+                  aria-required="true"
+                  class="ant-input css-amq5gd"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <!-- 검색어입력영역 끝 -->
         </div>
       </div>
     </div>
     <!-- 검색어분류 선택 끝 -->
-
-    <!-- 검색어입력영역 -->
-    <div class="ant-col ant-col-16 ant-form-item-control css-amq5gd">
-      <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content">
-          <input
-            id="basic_username"
-            aria-required="true"
-            class="ant-input css-amq5gd"
-            type="text"
-            value=""
-          />
-        </div>
-      </div>
-    </div>
-    <!-- 검색어입력영역 끝 -->
 
     <!--제출 : 검색버튼-->
     <div class="ant-form-item css-amq5gd">
@@ -342,4 +674,469 @@
   </form>
 </div>
 <!-- 상세검색옵션 끝-->
-{% endblock %}
+
+<!-- javascript : 별점 (검사해서 복사함)-->
+{% comment %}
+<script
+  async=""
+  src="https://ant.design/umi.c20a44b4.js"
+  crossorigin="anonymous"
+></script>
+<script async="">
+  (function createMirrorModal() {
+    if (
+      (navigator.languages.includes("zh") ||
+        navigator.languages.includes("zh-CN")) &&
+      /-cn\/?$/.test(window.location.pathname) &&
+      !["ant-design.gitee.io", "ant-design.antgroup.com"].includes(
+        window.location.hostname
+      ) &&
+      !window.location.host.includes("surge")
+    ) {
+      const ANTD_DOT_NOT_SHOW_MIRROR_MODAL =
+        "ANT_DESIGN_DO_NOT_OPEN_MIRROR_MODAL";
+
+      const lastShowTime = window.localStorage.getItem(
+        ANTD_DOT_NOT_SHOW_MIRROR_MODAL
+      );
+      if (
+        lastShowTime &&
+        lastShowTime !== "true" &&
+        Date.now() - new Date(lastShowTime).getTime() < 7 * 24 * 60 * 60 * 1000
+      ) {
+        return;
+      }
+
+      const style = document.createElement("style");
+      style.innerHTML = `
+    @keyframes mirror-fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes mirror-zoom-in {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  
+    .mirror-modal-mask {
+      position: fixed;
+      inset: 0;
+      height: '100vh';
+      width: '100vw';
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      animation: mirror-fade-in 0.3s forwards;
+    }
+  
+    .mirror-modal-dialog {
+      position: fixed;
+      inset: 0;
+      top: 120px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      background: #fff;
+      padding: 20px 24px;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+      animation: mirror-zoom-in 0.3s forwards;
+    }
+  
+    .mirror-modal-title {
+      font-size: 16px;
+      font-weight: 500;
+      align-self: flex-start;
+      margin-bottom: 8px;
+    }
+  
+    .mirror-modal-content {
+      font-size: 14px;
+      align-self: flex-start;
+      margin-bottom: 16px;
+    }
+  
+    .mirror-modal-btns {
+      align-self: flex-end;
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+    }
+  
+    .mirror-modal-btn {
+      border-radius: 6px;
+      cursor: pointer;
+      height: 32px;
+      box-sizing: border-box;
+      font-size: 14px;
+      padding: 4px 16px;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+  
+    .mirror-modal-confirm-btn {
+      background: #1677ff;
+      color: #fff;
+    }
+  
+    .mirror-modal-confirm-btn:hover {
+      background: #4096ff;
+    }
+  
+    .mirror-modal-confirm-btn:active {
+      background: #0958d9;
+    }
+  
+    .mirror-modal-cancel-btn {
+      border: 1px solid #eee;
+      color: #000;
+      margin-right: 8px;
+    }
+  
+    .mirror-modal-cancel-btn:hover {
+      border-color: #4096ff;
+      color: #4096ff
+    }
+  
+    .mirror-modal-cancel-btn:active {
+      border-color: #0958d9;
+      color: #0958d9;
+    }
+      `;
+      document.head.append(style);
+
+      const modal = document.createElement("div");
+      modal.className = "mirror-modal-mask";
+
+      const dialog = document.createElement("div");
+      dialog.className = "mirror-modal-dialog";
+      modal.append(dialog);
+
+      const title = document.createElement("div");
+      title.className = "mirror-modal-title";
+      title.innerText = "提示";
+      dialog.append(title);
+
+      const content = document.createElement("div");
+      content.className = "mirror-modal-content";
+      content.innerText = "国内用户推荐访问国内镜像以获得极速体验～";
+      dialog.append(content);
+
+      const btnWrapper = document.createElement("div");
+      btnWrapper.className = "mirror-modal-btns";
+      dialog.append(btnWrapper);
+
+      const cancelBtn = document.createElement("a");
+      cancelBtn.className = "mirror-modal-cancel-btn mirror-modal-btn";
+      cancelBtn.innerText = "7 天内不再显示";
+      btnWrapper.append(cancelBtn);
+      cancelBtn.addEventListener("click", () => {
+        window.localStorage.setItem(
+          ANTD_DOT_NOT_SHOW_MIRROR_MODAL,
+          new Date().toISOString()
+        );
+        document.body.removeChild(modal);
+        document.head.removeChild(style);
+        document.body.style.overflow = "";
+      });
+
+      const confirmBtn = document.createElement("a");
+      confirmBtn.className = "mirror-modal-confirm-btn mirror-modal-btn";
+      confirmBtn.href = window.location.href.replace(
+        window.location.host,
+        "ant-design.antgroup.com"
+      );
+      confirmBtn.innerText = "🚀 立刻前往";
+      btnWrapper.append(confirmBtn);
+
+      document.body.append(modal);
+      document.body.style.overflow = "hidden";
+    }
+  })();
+</script>
+{% endcomment %}
+
+<!-- 소스코드보기에서 복사함-->
+<script>
+  (function () {
+    function isLocalStorageNameSupported() {
+      const testKey = "test";
+      const storage = window.localStorage;
+      try {
+        storage.setItem(testKey, "1");
+        storage.removeItem(testKey);
+        return true;
+      } catch (error) {
+        return false;
+      }
+    }
+    // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
+    const pathname = location.pathname;
+
+    function isZhCN(pathname) {
+      return /-cn\/?$/.test(pathname);
+    }
+    function getLocalizedPathname(path, zhCN) {
+      const pathname = path.indexOf("/") === 0 ? path : "/" + path;
+      if (!zhCN) {
+        // to enUS
+        return /\/?index(-cn)?/.test(pathname)
+          ? "/"
+          : pathname.replace("-cn", "");
+      } else if (pathname === "/") {
+        return "/index-cn";
+      } else if (pathname.indexOf("/") === pathname.length - 1) {
+        return pathname.replace(/\/$/, "-cn/");
+      }
+      return pathname + "-cn";
+    }
+
+    // 兼容旧的 URL， `?locale=...`
+    const queryString = location.search;
+    if (queryString) {
+      const isZhCNConfig = queryString.indexOf("zh-CN") > -1;
+      if (isZhCNConfig && !isZhCN(pathname)) {
+        location.pathname = getLocalizedPathname(pathname, isZhCNConfig);
+      }
+    }
+
+    // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
+    if (
+      isLocalStorageNameSupported() &&
+      (pathname === "/" || pathname === "/index-cn")
+    ) {
+      const lang =
+        (window.localStorage && localStorage.getItem("locale")) ||
+        ((navigator.language || navigator.browserLanguage).toLowerCase() ===
+        "zh-cn"
+          ? "zh-CN"
+          : "en-US");
+      // safari is 'zh-cn', while other browser is 'zh-CN';
+      if ((lang === "zh-CN") !== isZhCN(pathname)) {
+        location.pathname = getLocalizedPathname(pathname, lang === "zh-CN");
+      }
+    }
+    document.documentElement.className += isZhCN(pathname) ? "zh-cn" : "en-us";
+  })();
+</script>
+<script
+  async
+  src="//www.googletagmanager.com/gtag/js?id=UA-72788897-1"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "UA-72788897-1");
+</script>
+
+<script
+  async
+  src="https://ant.design/umi.c20a44b4.js"
+  crossorigin="anonymous"
+></script>
+<script async>
+  (function createMirrorModal() {
+    if (
+      (navigator.languages.includes("zh") ||
+        navigator.languages.includes("zh-CN")) &&
+      /-cn\/?$/.test(window.location.pathname) &&
+      !["ant-design.gitee.io", "ant-design.antgroup.com"].includes(
+        window.location.hostname
+      ) &&
+      !window.location.host.includes("surge")
+    ) {
+      const ANTD_DOT_NOT_SHOW_MIRROR_MODAL =
+        "ANT_DESIGN_DO_NOT_OPEN_MIRROR_MODAL";
+
+      const lastShowTime = window.localStorage.getItem(
+        ANTD_DOT_NOT_SHOW_MIRROR_MODAL
+      );
+      if (
+        lastShowTime &&
+        lastShowTime !== "true" &&
+        Date.now() - new Date(lastShowTime).getTime() < 7 * 24 * 60 * 60 * 1000
+      ) {
+        return;
+      }
+
+      const style = document.createElement("style");
+      style.innerHTML = `
+  @keyframes mirror-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mirror-zoom-in {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .mirror-modal-mask {
+    position: fixed;
+    inset: 0;
+    height: '100vh';
+    width: '100vw';
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: mirror-fade-in 0.3s forwards;
+  }
+
+  .mirror-modal-dialog {
+    position: fixed;
+    inset: 0;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 20px 24px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    animation: mirror-zoom-in 0.3s forwards;
+  }
+
+  .mirror-modal-title {
+    font-size: 16px;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .mirror-modal-content {
+    font-size: 14px;
+    align-self: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .mirror-modal-btns {
+    align-self: flex-end;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .mirror-modal-btn {
+    border-radius: 6px;
+    cursor: pointer;
+    height: 32px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 4px 16px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .mirror-modal-confirm-btn {
+    background: #1677ff;
+    color: #fff;
+  }
+
+  .mirror-modal-confirm-btn:hover {
+    background: #4096ff;
+  }
+
+  .mirror-modal-confirm-btn:active {
+    background: #0958d9;
+  }
+
+  .mirror-modal-cancel-btn {
+    border: 1px solid #eee;
+    color: #000;
+    margin-right: 8px;
+  }
+
+  .mirror-modal-cancel-btn:hover {
+    border-color: #4096ff;
+    color: #4096ff
+  }
+
+  .mirror-modal-cancel-btn:active {
+    border-color: #0958d9;
+    color: #0958d9;
+  }
+    `;
+      document.head.append(style);
+
+      const modal = document.createElement("div");
+      modal.className = "mirror-modal-mask";
+
+      const dialog = document.createElement("div");
+      dialog.className = "mirror-modal-dialog";
+      modal.append(dialog);
+
+      const title = document.createElement("div");
+      title.className = "mirror-modal-title";
+      title.innerText = "提示";
+      dialog.append(title);
+
+      const content = document.createElement("div");
+      content.className = "mirror-modal-content";
+      content.innerText = "国内用户推荐访问国内镜像以获得极速体验～";
+      dialog.append(content);
+
+      const btnWrapper = document.createElement("div");
+      btnWrapper.className = "mirror-modal-btns";
+      dialog.append(btnWrapper);
+
+      const cancelBtn = document.createElement("a");
+      cancelBtn.className = "mirror-modal-cancel-btn mirror-modal-btn";
+      cancelBtn.innerText = "7 天内不再显示";
+      btnWrapper.append(cancelBtn);
+      cancelBtn.addEventListener("click", () => {
+        window.localStorage.setItem(
+          ANTD_DOT_NOT_SHOW_MIRROR_MODAL,
+          new Date().toISOString()
+        );
+        document.body.removeChild(modal);
+        document.head.removeChild(style);
+        document.body.style.overflow = "";
+      });
+
+      const confirmBtn = document.createElement("a");
+      confirmBtn.className = "mirror-modal-confirm-btn mirror-modal-btn";
+      confirmBtn.href = window.location.href.replace(
+        window.location.host,
+        "ant-design.antgroup.com"
+      );
+      confirmBtn.innerText = "🚀 立刻前往";
+      btnWrapper.append(confirmBtn);
+
+      document.body.append(modal);
+      document.body.style.overflow = "hidden";
+    }
+  })();
+</script>
+<!-- javascript 끝 -->
