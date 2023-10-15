@@ -1,3 +1,72 @@
-from django.db import models
+# ~~~ DB 입력 시 제한사항 ~~~
 
-# Create your models here.
+# 별점을 1~5 사이로 제한
+from django.core.exceptions import ValidationError
+def validate_star_range(value):
+    if 1 > value and value < 5:
+        raise ValidationError('별점은 1에서 5 사이의 값이어야 합니다')
+
+
+
+# ~~~ 데이터 베이스 ~~~
+from django.db import models
+from main.models import TripCategory
+from main.models import AreaM
+from user.models import User
+
+class Trip(models.Model):
+    id = models.AutoField(primary_key=True)
+    trip_category_id = models.ForeignKey(TripCategory, on_delete=models.SET_NULL, null=True)
+    trip_category_detail = models.CharField(max_length=255)
+    trip_name = models.CharField(max_length=255)
+    trip_address = models.TextField()
+    area_m_id = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
+    trip_time = models.TimeField() # 영업시간, 브레이크타임, 라스트오더
+    trip_phone = models.CharField(max_length=255) # 031-000-0000 이렇게 문자열로
+    trip_homepage = models.TextField()
+    is_deleted = models.BooleanField()
+
+
+class Menu(models.Model):
+    id = models.AutoField(primary_key=True)
+    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True)
+    menu_content = models.CharField(max_length=255) # 메뉴 이름이 255자를 넘어가진 않겠지
+    menu_price = models.IntegerField()
+
+class Info(models.Model):
+    id = models.AutoField(primary_key=True)
+    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True)
+    info_content = models.TextField()
+
+class TripComment(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True)
+    trip_comment_content = models.TextField()
+    trip_commnet_time = models.DateTimeField(auto_now_add=True)
+    trip_comment_star = models.IntegerField(validators=[validate_star_range]) # 1 2 3 4 5 정수로 넣을 수 있음
+    is_deleted = models.BooleanField()
+
+class Review(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True)
+    review_title = models.CharField(max_length=255)
+    review_content = models.TextField()
+    review_time = models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField()
+
+class ReviewComment(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    review_id = models.ForeignKey(Review, on_delete=models.SET_NULL, null=True)
+    review_comment_content = models.TextField()
+    review_commnet_time = models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField()
+
+class ReviewRecommend(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    review_id = models.ForeignKey(Review, on_delete=models.SET_NULL, null=True)
+    review_recommend = models.BooleanField()
+    is_deleted = models.BooleanField()

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "board.apps.BoardConfig",
     "main.apps.MainConfig",
     "user.apps.UserConfig",
+    "search.apps.SearchConfig",
 ]
 
 MIDDLEWARE = [
