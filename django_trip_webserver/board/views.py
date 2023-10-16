@@ -13,9 +13,13 @@ from django.shortcuts import render
 
 from .models import Trip, TripComment
 
+# def index(request):
+#     trip_page =  
+
 def trip_list(request):
     trip_data = Trip.objects.all()
-    return render(request, "board/trip_list.html",{'trip_data': trip_data})
+    trip_comment = TripComment.objects.all()
+    return render(request, "board/trip_list.html",{'trip_data': trip_data, 'trip_comment': trip_comment})
 
 
 def trip_detail(request, board_id):
@@ -50,10 +54,23 @@ def trip_detail(request, board_id):
 
     # comment_list = Trip.get_active_list().prefetch_related('TripComment_set').all()
     trip_comment = TripComment.objects.all()
-    trip_data = Trip.objects.all()
-    return render(request, 'trip_detail.html', {'trip_comment': trip_comment, 'trip_data': trip_data})
+    return render(request, 'trip_detail.html', {'trip_comment': trip_comment})
 
+# # 여행지 리스트
+# def trip_list(request):
+#     return render(request, 'board/trip_list.html', {})
+
+# # 여행지 상세
+# def trip_detail(request, trip_id):
+#     return render(request, 'board/trip_detail.html', {})
 
 #여행지 새 글
 def trip_write(request):
-    return render(request, 'board/trip_write.html', {})
+    form = BoardForm()
+    if request.method == 'POST':
+        form = BoardForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('board:trip_list'))
+
+    return render(request, "board/trip_write.html", {'form': form})
