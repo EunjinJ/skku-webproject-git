@@ -1,108 +1,109 @@
-{% extends './base_temp.html' %} {% block main %}
+{% extends 'board/base.html' %} {% block main %}
 
-<h2>상세검색</h2>
-<!-- 검색 카테고리 -->
-<!-- 검색 카테고리 이름 -->
-<ul class="nav nav-underline" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button
-      class="nav-link active"
-      id="search_trip-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#search_trip"
-      type="button"
-      role="tab"
-      aria-controls="search_trip"
-      aria-selected="true"
-    >
-      관광지 검색
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button
-      class="nav-link"
-      id="search_trip_comment-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#search_trip_comment"
-      type="button"
-      role="tab"
-      aria-controls="search_trip_comment"
-      aria-selected="false"
-    >
-      관광지 댓글 검색
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button
-      class="nav-link"
-      id="search_review-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#search_review"
-      type="button"
-      role="tab"
-      aria-controls="search_review"
-      aria-selected="false"
-    >
-      관광지 리뷰 검색
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button
-      class="nav-link"
-      id="search_review_comment-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#search_review_comment"
-      type="button"
-      role="tab"
-      aria-controls="search_review_comment"
-      aria-selected="false"
-    >
-      관광지 리뷰 댓글 검색
-    </button>
-  </li>
-</ul>
-<!-- 검색 카테고리 이름 끝 -->
+<div class="container">
+  <h2>상세검색</h2>
+  <!-- 검색 카테고리 -->
+  <!-- 검색 카테고리 이름 -->
+  <ul class="nav nav-underline" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="search_trip-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#search_trip"
+        type="button"
+        role="tab"
+        aria-controls="search_trip"
+        aria-selected="true"
+      >
+        관광지 검색
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="search_trip_comment-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#search_trip_comment"
+        type="button"
+        role="tab"
+        aria-controls="search_trip_comment"
+        aria-selected="false"
+      >
+        관광지 댓글 검색
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="search_review-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#search_review"
+        type="button"
+        role="tab"
+        aria-controls="search_review"
+        aria-selected="false"
+      >
+        관광지 리뷰 검색
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="search_review_comment-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#search_review_comment"
+        type="button"
+        role="tab"
+        aria-controls="search_review_comment"
+        aria-selected="false"
+      >
+        관광지 리뷰 댓글 검색
+      </button>
+    </li>
+  </ul>
+  <!-- 검색 카테고리 이름 끝 -->
 
-<!-- 검색 카테고리 내용-->
-<div class="tab-content">
-  <div
-    class="tab-pane active"
-    id="search_trip"
-    role="tabpanel"
-    aria-labelledby="search_trip-tab"
-    tabindex="0"
-  >
-    {% include './search_trip.html' %}
+  <!-- 검색 카테고리 내용-->
+  <div class="tab-content">
+    <div
+      class="tab-pane active"
+      id="search_trip"
+      role="tabpanel"
+      aria-labelledby="search_trip-tab"
+      tabindex="0"
+    >
+      {% include './search_trip.html' %}
+    </div>
+    <div
+      class="tab-pane"
+      id="search_trip_comment"
+      role="tabpanel"
+      aria-labelledby="search_trip-tab"
+      tabindex="0"
+    >
+      {% include './search_trip_comment.html' %}
+    </div>
+    <div
+      class="tab-pane"
+      id="search_review"
+      role="tabpanel"
+      aria-labelledby="search_review-tab"
+      tabindex="0"
+    >
+      {% include './search_review.html' %}
+    </div>
+    <div
+      class="tab-pane"
+      id="search_review_comment"
+      role="tabpanel"
+      aria-labelledby="search_review_comment-tab"
+      tabindex="0"
+    >
+      {% include './search_review_comment.html' %}
+    </div>
   </div>
-  <div
-    class="tab-pane"
-    id="search_trip_comment"
-    role="tabpanel"
-    aria-labelledby="search_trip-tab"
-    tabindex="0"
-  >
-    {% include './search_trip_comment.html' %}
-  </div>
-  <div
-    class="tab-pane"
-    id="search_review"
-    role="tabpanel"
-    aria-labelledby="search_review-tab"
-    tabindex="0"
-  >
-    {% include './search_review.html' %}
-  </div>
-  <div
-    class="tab-pane"
-    id="search_review_comment"
-    role="tabpanel"
-    aria-labelledby="search_review_comment-tab"
-    tabindex="0"
-  >
-    {% include './search_review_comment.html' %}
-  </div>
+  <!-- 검색 카테고리 내용 끝-->
+  <!-- 검색 카테고리 끝 -->
 </div>
-<!-- 검색 카테고리 내용 끝-->
-<!-- 검색 카테고리 끝 -->
-
 {% endblock %}

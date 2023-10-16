@@ -1,5 +1,6 @@
 <!-- 검색 세부설정 -->
-<form>
+<form action="" method="post">
+  {% csrf_token %}
   <!-- padding -->
   <div style="padding: 10px"></div>
 
@@ -16,7 +17,11 @@
       >지역 선택</label
     >
     <div style="display: flex; flex-wrap: nowrap">
-      <select class="form-select" aria-label="Default select example">
+      <select
+        name="area_l"
+        class="form-select"
+        aria-label="Default select example"
+      >
         <option selected>지역</option>
         <option value="1">서울</option>
         <option value="2">경기도</option>
@@ -27,7 +32,11 @@
       <div style="padding: 10px"></div>
 
       <!-- 서울은 종로구, 경기도는 성남시 뜨게 어떻게 하지-->
-      <select class="form-select" aria-label="Default select example">
+      <select
+        name="area_m"
+        class="form-select"
+        aria-label="Default select example"
+      >
         <option selected>세부지역</option>
         <option value="1">종로구</option>
         <option value="2">중구</option>
@@ -54,7 +63,11 @@
       >관광카테고리 선택</label
     >
     <div style="display: flex; flex-wrap: nowrap">
-      <select class="form-select" aria-label="Default select example">
+      <select
+        name="trip_category"
+        class="form-select"
+        aria-label="Default select example"
+      >
         <option selected>선택</option>
         <option value="1">레저</option>
         <option value="2">맛집</option>
@@ -81,7 +94,13 @@
     >
     <div class="col-4">
       <!-- 별- -->
-      <input id="input-rating" type="text" class="rating" data-size="ms" />
+      <input
+        name="star"
+        id="input-rating"
+        type="text"
+        class="rating"
+        data-size="ms"
+      />
     </div>
     <div
       style="
@@ -112,7 +131,7 @@
       >리뷰 수</label
     >
     <div class="col-4">
-      <input type="text" class="form-control" />
+      <input name="review_num" type="text" class="form-control" />
     </div>
     <div
       style="
@@ -137,7 +156,11 @@
     <div class="col-6">
       <!-- 검색어 카테고리 및 입력 -->
       <div class="input-group mb-3">
-        <select class="form-select" aria-label="Default select example">
+        <select
+          name="search_category"
+          class="form-select"
+          aria-label="Default select example"
+        >
           <option selected>선택</option>
           <option value="1">제목</option>
           <option value="2">제목+내용</option>
