@@ -3,7 +3,6 @@ from board.models import Trip, Review
 
 import json
 
-<<<<<<< HEAD
 from django.http import Http404
 from .forms import CommentForm
 from .forms import BoardForm
