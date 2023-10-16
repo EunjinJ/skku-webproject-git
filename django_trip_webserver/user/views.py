@@ -6,9 +6,9 @@ from django.shortcuts import redirect
 from user.models import User
 from main.models import TripCategory
 
-# 로그인
-def login(request):
-    return render(request, 'user/login.html', {})
+# # 로그인
+# def login(request):
+#     return render(request, 'user/login.html', {})
 
 # 회원가입
 def signup(request):

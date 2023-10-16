@@ -1,0 +1,123 @@
+[33mcommit b363740563db833e3ec5168c59b6a8cf3bdc93da[m[33m ([m[1;36mHEAD -> [m[1;32mej[m[33m, [m[1;31morigin/ej[m[33m)[m
+Author: EunjinJ <eunjinjung13@gmail.com>
+Date:   Mon Oct 16 18:53:36 2023 +0900
+
+    trip_list, trip_write update
+
+[33mcommit 52cbba3dc5c8f2ce19cd9d1868b92f9e9b7b1284[m
+Author: Eunjin <eunjinjung13@gmail.com>
+Date:   Mon Oct 16 10:51:38 2023 +0900
+
+    수정사항 업뎃 [Update]
+
+[33mcommit 8ad5939f2fb18e53ab6fab471affabcec38850ee[m
+Merge: 4b717a38 a0e52b20
+Author: Eunjin <eunjinjung13@gmail.com>
+Date:   Sat Oct 14 10:42:52 2023 +0900
+
+    충돌 해결2 [Add]
+
+[33mcommit 4b717a380a3925eedbe54f629488536a50685960[m
+Author: Eunjin <eunjinjung13@gmail.com>
+Date:   Sat Oct 14 10:35:12 2023 +0900
+
+    충돌 해결 [Add]
+
+[33mcommit a0e52b205e8ebf89faf0a8e927cf8ef6ee3be35f[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: 5f19562c c1ec68b9
+Author: EunjinJ <140464980+EunjinJ@users.noreply.github.com>
+Date:   Sat Oct 14 07:44:01 2023 +0900
+
+    Merge pull request #6 from EunjinJ/jy
+    
+    주소지가 '서울 종로구'로 표기된 정보만 필터링 한 후 모든 내용 데이터프레임화
+
+[33mcommit c1ec68b94ee4693135aefc243b3f567098dce3e2[m
+Author: GitJYoung <unbgil88@skkukdp.re.kr>
+Date:   Sat Oct 14 00:59:41 2023 +0900
+
+    ** 로컬에서 서버가 열리지 않는 문제 해결했습니다.
+    ** 해당 문제는 로컬마다 데이터베이스의 아이디와 패스워드가 어떻게 설정되어 있는지에 따라서 변경이 필요할 것으로 보입니다.
+    ** 각자 확인 후 작업 진행 바랍니다:)
+
+[33mcommit f48bfe1a1baef231ded8b59dfd83108dc687f062[m
+Author: GitJYoung <unbgil88@skkukdp.re.kr>
+Date:   Fri Oct 13 22:19:56 2023 +0900
+
+    파일 정리를 했습니다.:)
+
+[33mcommit 80f608e6f5c2a030945050a91d2dada580c32172[m
+Author: GitJYoung <unbgil88@skkukdp.re.kr>
+Date:   Fri Oct 13 22:15:30 2023 +0900
+
+    카카오 맵에서 종로 관련 검색을 크롤링한 결과를 하나의 데이터프레임으로 만든 것.
+    그 중 주소지가 '서울 종로구'로 시작하지 않는 장소는 모두 제거함.
+
+[33mcommit 5f19562c7e48269fb4a82902c1e39f189f458712[m
+Merge: c591d276 113467fd
+Author: EunjinJ <140464980+EunjinJ@users.noreply.github.com>
+Date:   Fri Oct 13 17:32:17 2023 +0900
+
+    Merge pull request #3 from EunjinJ/jy
+    
+    통합 데이터_카카오맵
+
+[33mcommit 113467fdfd7204c5fbea6d6c4bef48a2cfe81acf[m
+Author: GitJYoung <unbgil88@skkukdp.re.kr>
+Date:   Fri Oct 13 17:29:41 2023 +0900
+
+    카카오 맵 크롤링 파일 통합 데이터_(1)
+
+[33mcommit c591d2764c4e3761051390488fc6176f67f4f835[m
+Merge: 2ee6e123 84c31da6
+Author: EunjinJ <140464980+EunjinJ@users.noreply.github.com>
+Date:   Fri Oct 13 16:44:05 2023 +0900
+
+    Merge pull request #2 from EunjinJ/jy
+    
+    카카오맵 크롤링 코드와 자료입니다.
+
+[33mcommit 84c31da6147f7e5e77b4e2eb5a99cba1d5c8bb80[m
+Author: GitJYoung <unbgil88@skkukdp.re.kr>
+Date:   Fri Oct 13 16:40:38 2023 +0900
+
+    카카오맵 크롤링 코드와 자료입니다.
+
+[33mcommit 2ee6e123a1562b4c180d486d106956e3c0138dd5[m
+Merge: 5e0cbeae 838204f3
+Author: EunjinJ <140464980+EunjinJ@users.noreply.github.com>
+Date:   Fri Oct 13 16:02:12 2023 +0900
+
+    Merge pull request #1 from EunjinJ/doha
+    
+    doha first commit practice
+
+[33mcommit 838204f36903af076db08c3d49881b6b68e027aa[m
+Author: earthnaut <earthnaut999@gmail.com>
+Date:   Fri Oct 13 15:39:49 2023 +0900
+
+    doha first commit practice
+
+[33mcommit 5e0cbeae37bb6a4f90e1b603fa9d616fdc3deb88[m
+Author: earthnaut <earthnaut999@gmail.com>
+Date:   Fri Oct 13 15:22:10 2023 +0900
+
+    Database and urls setting
+
+[33mcommit e7c2c47837ea6311ad1787da9b747a8aedfc367a[m[33m ([m[1;32mmain[m[33m)[m
+Author: earthnaut <earthnaut999@gmail.com>
+Date:   Thu Oct 12 16:52:16 2023 +0900
+
+    database connect
+
+[33mcommit 0b10fae4e103952897512b315252dcda426bbbb3[m
+Author: earthnaut <earthnaut999@gmail.com>
+Date:   Thu Oct 12 15:48:04 2023 +0900
+
+    django_create [NEW]
+
+[33mcommit cf540929cfc5f17a11bb3509b70c7cbebf1c9351[m
+Author: Eunjin <eunjinjung13@gmail.com>
+Date:   Wed Oct 11 17:02:31 2023 +0900
+
+    Add Text File [document.txt]
