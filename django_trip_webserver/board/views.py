@@ -21,7 +21,7 @@ def review_list(request, trip_id):
     )
 
 # 리뷰 상세
-def review_detail(request, review_id):
+def review_detail(request, trip_id, review_id):
     review = Review.objects.get(pk=review_id)
     return render(
         request,
@@ -32,7 +32,7 @@ def review_detail(request, review_id):
     )
 
 # 리뷰 작성
-def review_write(request):
+def review_write(request, trip_id):
     return render(
         request,
         'board/review_write.html',
