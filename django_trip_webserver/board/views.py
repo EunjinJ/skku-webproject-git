@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from board.models import Trip
+from board.models import Trip, Review
 
 import json
 
+<<<<<<< HEAD
 from django.http import Http404
 from .forms import CommentForm
 from .forms import BoardForm
@@ -74,3 +75,36 @@ def trip_write(request):
             return redirect(reverse('board:trip_list'))
 
     return render(request, "board/trip_write.html", {'form': form})
+
+
+# 리뷰 리스트
+def review_list(request, trip_id):
+    trip = Trip.objects.get(pk=trip_id)
+    return render(
+        request,
+        'board/review_list.html',
+        {
+            'trip': trip
+        }
+    )
+
+# 리뷰 상세
+def review_detail(request, trip_id, review_id):
+    review = Review.objects.get(pk=review_id)
+    return render(
+        request,
+        'board/review_detail.html',
+        {
+            'review': review
+        }
+    )
+
+# 리뷰 작성
+def review_write(request, trip_id):
+    return render(
+        request,
+        'board/review_write.html',
+        {
+
+        }
+    )
