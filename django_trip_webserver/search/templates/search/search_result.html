@@ -1,0 +1,54 @@
+
+<style>
+  @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css');
+  body, *, div, nav, main {
+    font-family: 'NanumBarunPen';
+  }
+  .row {
+      background-color: #FAFAFA;
+      padding: 30px;
+      border: 1px;
+  }
+      .table {
+    text-align: center;
+  }
+</style>
+
+  <div class="container">
+
+    <table class="table" data-row-key="{{ item.trip_id }}">
+      <thead>
+        <tr>
+          <th scope="col" style = >상세 카테고리</th>
+          <th scope="col">관광지별</th>
+          <th scope="col">별점</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% if trip_data %}
+        {% for item in trip_data %}
+        <tr class="table" data-row-key="{{ item.trip_id }}">
+          <th scope="row"><a>{{ item.trip_category_detial }}</a></th>
+          <th scope="row">{{ item.trip_name }}</th>
+          <th scope="row">
+          {% for comment in trip_comment %}
+              {% if comment.trip_comment_star >= 100 %}
+              {% elif comment.trip_comment_star >= 80 %}
+              {% elif comment.trip_comment_star >= 60 %}
+              {% elif comment.trip_comment_star >= 40 %}
+              {% elif comment.trip_comment_star >= 20 %}
+              {% endif %}
+          {% endfor %}
+          별점</th>
+        </tr>
+      </tbody>
+    </table>
+  {% endfor %}
+  {% else %}
+            <tr class="table">
+              <td class="table" colspan="3">데이터가 없습니다.</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+  </div>

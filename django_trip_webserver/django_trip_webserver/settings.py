@@ -82,9 +82,9 @@ DATABASES = {
         "ENGINE" : "django.db.backends.mysql",
         "NAME" : "django_trip_webserver",
         "USER" : "root",
-        "PASSWORD" : 'alstjr326',
+        "PASSWORD" : '9999',
         "HOST" : '127.0.0.1',
-        "PORT" : '3306'
+        "PORT" : '9999'
     }
 }
 

@@ -1,177 +1,108 @@
 {% extends './base_temp.html' %} {% block main %}
 
-<div style="max-width: 100%; display: flex; justify-content: flex-start">
-  <h2 class="ant-typography css-amq5gd">상세검색</h2>
-</div>
+<h2>상세검색</h2>
+<!-- 검색 카테고리 -->
+<!-- 검색 카테고리 이름 -->
+<ul class="nav nav-underline" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link active"
+      id="search_trip-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#search_trip"
+      type="button"
+      role="tab"
+      aria-controls="search_trip"
+      aria-selected="true"
+    >
+      관광지 검색
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="search_trip_comment-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#search_trip_comment"
+      type="button"
+      role="tab"
+      aria-controls="search_trip_comment"
+      aria-selected="false"
+    >
+      관광지 댓글 검색
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="search_review-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#search_review"
+      type="button"
+      role="tab"
+      aria-controls="search_review"
+      aria-selected="false"
+    >
+      관광지 리뷰 검색
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="search_review_comment-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#search_review_comment"
+      type="button"
+      role="tab"
+      aria-controls="search_review_comment"
+      aria-selected="false"
+    >
+      관광지 리뷰 댓글 검색
+    </button>
+  </li>
+</ul>
+<!-- 검색 카테고리 이름 끝 -->
 
-<!-- 검색종류선택 -->
-<div>
-  <div class="ant-tabs ant-tabs-top css-amq5gd">
-    <div role="tablist" class="ant-tabs-nav">
-      <div class="ant-tabs-nav-wrap">
-        <div class="ant-tabs-nav-list" style="transform: translate(0px, 0px)">
-          <div data-node-key="1" class="ant-tabs-tab ant-tabs-tab-active">
-            <div
-              role="tab"
-              aria-selected="true"
-              class="ant-tabs-tab-btn"
-              tabindex="0"
-              id="rc-tabs-0-tab-1"
-              aria-controls="rc-tabs-0-panel-1"
-            >
-              관광지 검색
-            </div>
-          </div>
-          <div data-node-key="2" class="ant-tabs-tab">
-            <div
-              role="tab"
-              aria-selected="false"
-              class="ant-tabs-tab-btn"
-              tabindex="0"
-              id="rc-tabs-0-tab-2"
-              aria-controls="rc-tabs-0-panel-2"
-            >
-              관광지 댓글 검색
-            </div>
-          </div>
-          <div data-node-key="3" class="ant-tabs-tab">
-            <div
-              role="tab"
-              aria-selected="false"
-              class="ant-tabs-tab-btn"
-              tabindex="0"
-              id="rc-tabs-0-tab-3"
-              aria-controls="rc-tabs-0-panel-3"
-            >
-              관광지 리뷰 검색
-            </div>
-          </div>
-          <div data-node-key="3" class="ant-tabs-tab">
-            <div
-              role="tab"
-              aria-selected="false"
-              class="ant-tabs-tab-btn"
-              tabindex="0"
-              id="rc-tabs-0-tab-3"
-              aria-controls="rc-tabs-0-panel-3"
-            >
-              관광지 리뷰 댓글 검색
-            </div>
-          </div>
-          <div
-            class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
-            style="left: 16.5px; transform: translateX(-50%); width: 33px"
-          ></div>
-        </div>
-      </div>
-      <div class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden">
-        <button
-          type="button"
-          class="ant-tabs-nav-more"
-          tabindex="-1"
-          aria-hidden="true"
-          aria-haspopup="listbox"
-          aria-controls="rc-tabs-0-more-popup"
-          id="rc-tabs-0-more"
-          aria-expanded="false"
-          style="visibility: hidden; order: 1"
-        >
-          <span
-            role="img"
-            aria-label="ellipsis"
-            class="anticon anticon-ellipsis"
-            ><svg
-              viewBox="64 64 896 896"
-              focusable="false"
-              data-icon="ellipsis"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"
-              ></path></svg
-          ></span>
-        </button>
-      </div>
-    </div>
-    <div class="ant-tabs-content-holder">
-      <div class="ant-tabs-content ant-tabs-content-top">
-        <div
-          role="tabpanel"
-          tabindex="0"
-          aria-hidden="false"
-          class="ant-tabs-tabpane ant-tabs-tabpane-active"
-          id="rc-tabs-0-panel-1"
-          aria-labelledby="rc-tabs-0-tab-1"
-        >
-          {% include './search_trip.html' %}
-        </div>
-        <div
-          id="rc-tabs-0-panel-2"
-          role="tabpanel"
-          tabindex="-1"
-          aria-labelledby="rc-tabs-0-tab-2"
-          aria-hidden="true"
-          class="ant-tabs-tabpane ant-tabs-tabpane-hidden"
-        >
-          {% include './search_trip_comment.html' %}
-        </div>
-        <div
-          id="rc-tabs-0-panel-3"
-          role="tabpanel"
-          tabindex="-1"
-          aria-labelledby="rc-tabs-0-tab-3"
-          aria-hidden="true"
-          class="ant-tabs-tabpane ant-tabs-tabpane-hidden"
-        >
-          {% include './search_review.html' %}
-        </div>
-        <div
-          id="rc-tabs-0-panel-3"
-          role="tabpanel"
-          tabindex="-1"
-          aria-labelledby="rc-tabs-0-tab-3"
-          aria-hidden="true"
-          class="ant-tabs-tabpane ant-tabs-tabpane-hidden"
-        >
-          {% include './search_review_comment.html' %}
-        </div>
-      </div>
-    </div>
+<!-- 검색 카테고리 내용-->
+<div class="tab-content">
+  <div
+    class="tab-pane active"
+    id="search_trip"
+    role="tabpanel"
+    aria-labelledby="search_trip-tab"
+    tabindex="0"
+  >
+    {% include './search_trip.html' %}
+  </div>
+  <div
+    class="tab-pane"
+    id="search_trip_comment"
+    role="tabpanel"
+    aria-labelledby="search_trip-tab"
+    tabindex="0"
+  >
+    {% include './search_trip_comment.html' %}
+  </div>
+  <div
+    class="tab-pane"
+    id="search_review"
+    role="tabpanel"
+    aria-labelledby="search_review-tab"
+    tabindex="0"
+  >
+    {% include './search_review.html' %}
+  </div>
+  <div
+    class="tab-pane"
+    id="search_review_comment"
+    role="tabpanel"
+    aria-labelledby="search_review_comment-tab"
+    tabindex="0"
+  >
+    {% include './search_review_comment.html' %}
   </div>
 </div>
-<!-- 검색종류선택 끝 -->
+<!-- 검색 카테고리 내용 끝-->
+<!-- 검색 카테고리 끝 -->
 
-<!-- javascript -->
-<script>
-  import React from "react";
-  import { Tabs } from "antd";
-  const onChange = (key) => {
-    console.log(key);
-  };
-  const items = [
-    {
-      key: "1",
-      label: "Tab 1",
-      children: "Content of Tab Pane 1",
-    },
-    {
-      key: "2",
-      label: "Tab 2",
-      children: "Content of Tab Pane 2",
-    },
-    {
-      key: "3",
-      label: "Tab 3",
-      children: "Content of Tab Pane 3",
-    },
-  ];
-  const App = () => (
-    <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-  );
-  export default App;
-</script>
-<!-- javascript 끝 -->
 {% endblock %}
