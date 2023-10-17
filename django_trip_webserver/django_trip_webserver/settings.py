@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "board.apps.BoardConfig",
     "main.apps.MainConfig",
     "user.apps.UserConfig",
+    "search.apps.SearchConfig",
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,7 @@ WSGI_APPLICATION = "django_trip_webserver.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# 각 로컬계정에서 접속 시
 DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
@@ -86,6 +88,19 @@ DATABASES = {
         "PORT" : '9999'
     }
 }
+
+
+# # GCP에서 접속 시
+# DATABASES = {
+#     "default":{
+#         "ENGINE" : "django.db.backends.mysql",
+#         "NAME" : "django_trip_webserver",
+#         "USER" : "admin",
+#         "PASSWORD" : '0000',
+#         "HOST" : '34.64.114.78',
+#         "PORT" : '3306'
+#     }
+# }
 
 
 
@@ -129,3 +144,17 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# # 로그인 및 로그아웃
+# LOGIN_REDIRECT_URL = '/user'
+# LOGOUT_REDIRECT_URL = '/user'
+
+
+
+# Django의 내장된 사용자 모델을 기반으로 한 인증을 사용
+# --> 로그인 및 회원가입 시 ModelBackend를 사용해 인증 처리함
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]

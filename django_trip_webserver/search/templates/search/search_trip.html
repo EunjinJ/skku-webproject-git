@@ -1,0 +1,192 @@
+<!-- 검색 세부설정 -->
+<form action="" method="post">
+  {% csrf_token %}
+  <!-- padding -->
+  <div style="padding: 10px"></div>
+
+  <!-- 지역 -->
+  <div style="display: flex; flex-wrap: nowrap">
+    <label
+      class="col-4"
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      "
+      >지역 선택</label
+    >
+    <div style="display: flex; flex-wrap: nowrap">
+      <select
+        name="area_l"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option selected>지역</option>
+        <option value="1">서울</option>
+        <option value="2">경기도</option>
+        <option value="3">인천</option>
+      </select>
+
+      <!-- padding -->
+      <div style="padding: 10px"></div>
+
+      <!-- 서울은 종로구, 경기도는 성남시 뜨게 어떻게 하지-->
+      <select
+        name="area_m"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option selected>세부지역</option>
+        <option value="1">종로구</option>
+        <option value="2">중구</option>
+        <option value="3">어쩌구</option>
+      </select>
+    </div>
+  </div>
+  <!-- 지역 끝 -->
+
+  <!-- padding -->
+  <div style="padding: 10px"></div>
+
+  <!-- 관광카테고리 선택 -->
+  <!-- 지역 -->
+  <div style="display: flex; flex-wrap: nowrap">
+    <label
+      class="col-4"
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      "
+      >관광카테고리 선택</label
+    >
+    <div style="display: flex; flex-wrap: nowrap">
+      <select
+        name="trip_category"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option selected>선택</option>
+        <option value="1">레저</option>
+        <option value="2">맛집</option>
+        <option value="3">자연</option>
+      </select>
+    </div>
+  </div>
+  <!-- 관광카테고리 선택 끝 -->
+
+  <!-- padding -->
+  <div style="padding: 10px"></div>
+
+  <!-- 별점 선택 -->
+  <div style="display: flex; flex-wrap: nowrap">
+    <label
+      class="col-4"
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      "
+      >별점</label
+    >
+    <div class="col-4">
+      <!-- 별- -->
+      <input
+        name="star"
+        id="input-rating"
+        type="text"
+        class="rating"
+        data-size="ms"
+      />
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 10px;
+      "
+    >
+      점 이상
+    </div>
+  </div>
+  <!-- 별점 선택 끝 -->
+
+  <!-- padding -->
+  <div style="padding: 10px"></div>
+
+  <!-- 리뷰 개수 선택 -->
+  <div style="display: flex; flex-wrap: nowrap">
+    <label
+      class="col-4"
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      "
+      >리뷰 수</label
+    >
+    <div class="col-4">
+      <input name="review_num" type="text" class="form-control" />
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 10px;
+      "
+    >
+      개 이상
+    </div>
+  </div>
+  <!-- 리뷰 개수 선택 끝 -->
+
+  <!-- padding -->
+  <div style="padding: 10px"></div>
+
+  <!-- 검색어 -->
+  <div style="display: flex; flex-wrap: nowrap">
+    <!-- padding -->
+    <div class="col-3"></div>
+    <div class="col-6">
+      <!-- 검색어 카테고리 및 입력 -->
+      <div class="input-group mb-3">
+        <select
+          name="search_category"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>선택</option>
+          <option value="1">제목</option>
+          <option value="2">제목+내용</option>
+        </select>
+        <input
+          name="search_keyword"
+          type="text"
+          class="form-control"
+          aria-label="Text input with dropdown button"
+        />
+
+        <div></div>
+        <!-- 검색어 카테고리 및 입력 끝 -->
+
+        <!-- 검색 버튼 -->
+        <!-- name 들어간 이유: form 구분 하려고-->
+        <button type="submit" class="btn btn-primary" name="search_trip">
+          검색
+        </button>
+        <!-- 검색 버튼 끝 -->
+      </div>
+      <!-- 검색어 끝 -->
+
+      <!-- 검색 세부설정 끝 -->
+    </div>
+  </div>
+</form>
+
+{% include './search_result.html' %}

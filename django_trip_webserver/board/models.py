@@ -11,7 +11,9 @@ def validate_star_range(value):
 # ~~~ 데이터 베이스 ~~~
 from django.db import models
 from main.models import TripCategory
+from main.models import AreaM
 from user.models import User
+from main.models import AreaM
 
 class Trip(models.Model):
     id = models.AutoField(primary_key=True)
@@ -19,15 +21,25 @@ class Trip(models.Model):
     trip_category_detail = models.CharField(max_length=255)
     trip_name = models.CharField(max_length=255)
     trip_address = models.TextField()
-    trip_open = models.TimeField() # 영업 시작시간
-    trip_closed = models.TimeField() # 영업 종료시간
-    trip_break_start = models.TimeField()
-    trip_break_end = models.TimeField()
-    trip_last_order = models.TimeField()
+
+    # trip_open = models.TimeField() # 영업 시작시간
+    # trip_closed = models.TimeField() # 영업 종료시간
+    # trip_break_start = models.TimeField()
+    # trip_break_end = models.TimeField()
+    # trip_last_order = models.TimeField()
+    area_m_id = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
+    trip_time = models.CharField(max_length=512, null=True)
     trip_phone = models.CharField(max_length=255) # 031-000-0000 이렇게 문자열로
     trip_homepage = models.TextField()
-    is_deleted = models.BooleanField()
+    is_deleted = models.BooleanField(default=False)
 
+    @classmethod
+    def get_active_list(cls):
+        return cls.objects.filter(is_deleted=False)
+
+    @property
+    def is_active(self):
+        return not self.is_deleted
 
 class Menu(models.Model):
     id = models.AutoField(primary_key=True)
@@ -43,16 +55,16 @@ class Info(models.Model):
 class TripComment(models.Model):
     id = models.AutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True)
+    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True, related_name='tripcomment_set') # related_name은 역참조 용도
     trip_comment_content = models.TextField()
     trip_commnet_time = models.DateTimeField(auto_now_add=True)
-    trip_comment_star = models.IntegerField(validators=[validate_star_range]) # 1 2 3 4 5 정수로 넣을 수 있음
+    trip_comment_star = models.IntegerField(validators=[validate_star_range])
     is_deleted = models.BooleanField()
 
 class Review(models.Model):
     id = models.AutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True)
+    trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True, related_name='review_set') # related_name은 역참조 용도
     review_title = models.CharField(max_length=255)
     review_content = models.TextField()
     review_time = models.DateTimeField(auto_now_add=True)

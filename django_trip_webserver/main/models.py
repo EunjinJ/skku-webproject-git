@@ -17,5 +17,5 @@ class AreaL(models.Model):
 
 class AreaM(models.Model):
     id = models.AutoField(primary_key=True)
-    area_l_id = models.ForeignKey(AreaL, on_delete=models.SET_NULL, null=True)
+    area_l_id = models.ForeignKey(AreaL, on_delete=models.SET_NULL, null=True, related_name='aream_set') # related_name은 역참조 용도
     area_m_name = models.CharField(max_length=255) # 과천시, 종로구 ...

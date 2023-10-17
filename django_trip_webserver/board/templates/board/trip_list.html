@@ -1,15 +1,105 @@
+{% extends "./base.html" %}
+{% block main %}
 
-{% comment %} html, css, js 연습 {% endcomment %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="./style.css" type="text/css">
-  </head>
-  <body>
-    <div id="container" style="padding: 24px" />
-    <script src="script.js"></script>
-  </body>
-</html>
+<style>
+  @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css');
+  body, *, div, nav, main {
+    font-family: 'NanumBarunPen';
+  }
+  .row {
+      background-color: #FAFAFA;
+      padding: 30px;
+      border: 1px;
+  }
+      .table {
+    text-align: center;
+  }
+  
+</style>
+
+<body>
+  <div class="container">
+      <div class='my-5' style='display:flex; justify-content:flex-start;'>
+          <a href='/board/trip/write' style='float:left; align-items: center; height: 5vh; margin: 0; padding-top: 0px;'>
+            <button type="button" class="btn btn-light">등록하기</button>
+          </a>
+  </div>
+
+  
+
+
+    <table class="table" data-row-key="{{ item.trip_id }}">
+      <thead>
+        <tr>
+          <th scope="col" style = >상세 카테고리</th>
+          <th scope="col">관광지별</th>
+          <th scope="col">별점</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% if trip_data %}
+        {% for item in trip_data %}
+        <tr class="table" data-row-key="{{ item.trip_id }}">
+          <th scope="row"><a>{{ item.trip_category_detial }}</a></th>
+          <th scope="row">{{ item.trip_name }}</th>
+          <th scope="row">
+          {% for comment in trip_comment %}
+              {% if comment.trip_comment_star >= 100 %}
+                  
+              {% elif comment.trip_comment_star >= 80 %}
+                  
+              {% elif comment.trip_comment_star >= 60 %}
+                  
+              {% elif comment.trip_comment_star >= 40 %}
+                  
+              {% elif comment.trip_comment_star >= 20 %}
+                  
+              {% endif %}
+          {% endfor %}
+          별점</th>
+        </tr>
+      </tbody>
+    </table>
+  {% endfor %}
+  {% else %}
+            <tr class="table">
+              <td class="table" colspan="3">데이터가 없습니다.</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+  </div>
+</body>
+
+                
+    
+
+
+
+  {% comment %} <ol class="list-group list-group-numbered">
+    {% for trip in trip_list %}
+        <a href="/board/trip/{{trip.id}}">
+          <th class="ant-table-cell" scope="col">상세 카테고리</th>
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{ trip.trip_name }}</div>
+                    {{trip.TripComment_set.all|length}}
+                </div>
+        <span class="badge bg-primary rounded-pill">{{trip.TripComment_set.all|length}}</span>
+    {% endfor %}
+    </ol> {% endcomment %}
+
+{% endblock %}
+
+{% comment %} <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        상세 카테고리
+      </div>
+      <div class="col">
+        상호명
+      </div>
+      <div class="col">
+        별점
+      </div>
+    </div>
+  </div> {% endcomment %}
