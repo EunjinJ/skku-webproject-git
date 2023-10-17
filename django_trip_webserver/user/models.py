@@ -12,7 +12,7 @@ class User(models.Model):
     id = models.CharField(max_length=255, primary_key=True)
     user_name = models.CharField(max_length=255)
     user_password = models.CharField(max_length=255)
-    user_type = models.CharField(max_length=20)
+    # user_type = models.CharField(max_length=20)
     trip_category_1_id = models.ForeignKey(TripCategory, on_delete=models.SET_NULL, null=True, related_name='trip_category_1')
     trip_category_2_id = models.ForeignKey(TripCategory, on_delete=models.SET_NULL, null=True, related_name='trip_category_2')
     trip_category_3_id = models.ForeignKey(TripCategory, on_delete=models.SET_NULL, null=True, related_name='trip_category_3')

@@ -2,6 +2,11 @@
 {% block main %}
 
 <style>
+
+  @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css');
+    body, *, div, nav, main {
+      font-family: 'NanumBarunPen';
+    }
   .detail_form  {
     {% comment %} display: flex;  {% endcomment %}
     justify-content: center;
@@ -13,15 +18,22 @@
     margin-top:30px;
     
   }
-  
+  .my-4{
+    margin-left:30px;
+    margin-right:30px;
+    font-size:24px;
+  }
+
   .my-2{
     margin-left:30px;
+    font-size:20px;
   }
 
   div.detail_form > h3{
     margin-top:30px;
     margin-left:30px;
   }
+
 
   {% comment %} body > main > div > div > div.my-5 > div:nth-child(6) > a{
     display: flex;
@@ -30,6 +42,41 @@
     max-width: 30px;
     justify-content: space-evenly;
   } {% endcomment %}
+
+  .button{
+    margin-left:30px;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .rating > input{ display:none;}
+  
+  .rating > label {
+    position: relative;
+      width: 1em;
+      font-size: 6vw;
+      color: #FFD600;
+      cursor: pointer;
+  }
+  .rating > label::before{ 
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+  }
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before {
+    opacity: 1 !important;
+  }
+  
+  .rating > input:checked ~ label:before{
+    opacity:1;
+  }
+  
+  .rating:hover > input:checked ~ label:before{ opacity: 0.4; }
 
 </style>
 
@@ -41,8 +88,8 @@
       <h3>{{trip_data.trip_name}}</h3>
 
       <div class="my-5">
-        <div class="my-2">
-          <h5>{{ trip_data.trip_category_detail}}</h5>
+        <div class="my-4" style="font-size:30px;">
+          <h5> {{ trip_data.trip_category_detail}}</h5>
         </div>
 
         <div class="my-2" style="padding:2px; min-height:20px;">
@@ -61,66 +108,73 @@
           {{ trip_data.trip_homepage }}</a>
         </div>
 
-        <div button>
-          <a href="{% url 'board:trip_edit' trip_id=trip_data.id %}" class='btn btn-success'>
-            수정
-          </a>
+        <div class="my-5" style="padding:2px; min-height:20px;">
         </div>
-        {% comment %} <a href="{% url 'board:trip_delete' board.trip_id %}" class='btn btn-primary'>삭제</a> {% endcomment %}
+
+
+        <div class="mt-1 d-flex justify-content:flex-end align-items-center">
+          <div class="button">
+            <a href="{% url 'board:trip_edit' trip_id=trip_data.id %}" class='btn btn-success'>
+              수정
+            </a>
+          </div>
+          <div class="button">
+            <a href="{% url 'board:trip_delete' trip_id=trip_data.id %}" class='btn btn-success'>삭제</a>
+          </div>
+        </div>
       </div>
 
-      <div class="mv-4">
-        <p>댓글</p>
-        <form action="" method="POST" style="display:flex; flex-direction:row;">
-          {% csrf_token %}
-          <input type="text" name="comment" id="" class='form-control'>
-          {% for field in form %}
-              {{ field }}
+
+      <div class="my-4" style="font-size:18px;">
+        <div>
+          <p>댓글</p>
+          <form action="" method="POST" style="display:flex; flex-direction:row;">
+            {% csrf_token %}
+            <input type="text" name="content" id="" class='form-control'>
+            <div class="rating">
+              <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+              <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+              <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+              <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+              <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+            </div>
+            {% for field in form %}
+                {{ field }}
+            {% endfor %}
+            <button type="submit" class="btn btn-primary" style="min-width:100px;">
+              댓글작성
+            </button>
+          </form>
+
+          {% for error in field.errors %}
+            <div id="content-help" class="form-text text-danger">
+              {{ field.errors }}
+            </div>
           {% endfor %}
-          <button type="submit" class="btn btn-primary" style="min-width:100px;">
-            댓글작성
-          </button>
-        </form>
-
-        {% for error in field.errors %}
-          <div id="content-help" class="form-text text-danger">
-            {{ field.errors }}
-          </div>
-        {% endfor %}
-
+        </div>
       </div>
 
       <div class="my-4">
         <ul class="list-group">
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
-          <p>코멘트 있어요 </p>
 
-          {% for comment in comment_list.comment_set.all %}
+          {% comment %} {% for comment in comment_list.comment_set.all %}
+            <li class="list-group-item">{{comment.trip_comment_content}}</li>
+          
           {{comment.user_id }}
-          {{comment.user_id.user_name }}
+          {{comment.user_id.user_name }} {% endcomment %}
+        
+        {% for comment in comment_list.comment_set.all %}
+          {% if comment.user_id == request.user %}
+            <li class="list-group-item">{{comment.trip_comment_content}}</li>
+          {% endif %}
+        {% endfor %}
 
 
             {% comment %} {% for user in user_data %}
               
             <li class="list-group-item">{{ user.user_name }}</li>
             <li class="list-group-item">{{ comment.trip_comment_content }}</li> {% endcomment %}
-          {% endfor %}
+          {% comment %} {% endfor %} {% endcomment %}
         </ul>
       </div>
     </div>

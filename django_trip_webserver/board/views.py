@@ -16,25 +16,34 @@ from main.models import TripCategory, AreaL, AreaM
 from user.models import User
 
 from django.core.paginator import Paginator
+from django.views.generic import ListView
+
+from django.utils import timezone
 
 # def index(request):
 #     trip_page =  
 
+
+class ContactListView(ListView):
+    paginate_by = 10
+    model = Trip
+
 def trip_list(request):
-    trip_data = Trip.objects.all()
+    trip_data = Trip.objects.filter(is_deleted=0)
     trip_comment = TripComment.objects.all()
 
     posts_per_page = 10
 
     paginator = Paginator(trip_data, posts_per_page)
 
-    page_number = 1  # 가져올 페이지 번호
+    page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
     context = {
         'trip_data': trip_data,
         'trip_comment': trip_comment,
         'paginator' : paginator,
+        'page_number': page_number,
         'page_obj' : page_obj,
     }
 
@@ -44,31 +53,22 @@ def trip_list(request):
 def trip_detail(request, trip_id):
     trip_data = Trip.objects.get(pk=trip_id)
     user_data = User.objects.all()
-
-    # board_history = request.session.get('board_history')
-    # if not board_history:
-    #     request.session['board_history'] = []
-    # request.session['board_history'] += [trip_id]
-
-    # if not (board and board.is_active):
-    #     return Http404("요청하신 페이지가 없습니다.")
-
-    form = CommentForm()
+    trip_category = TripCategory.objects.all()
 
     if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            data = form.cleaned_data
-            TripComment(
-                content=data['content'],
-                trip_id=trip_id
-            ).save()
-            return redirect(reverse('board:trip_detail',
-                                    kwargs={'trip_id': trip_id}))
-
-    resp = render(request,
-                "board/trip_detail.html",
-                {'trip_data': trip_data, 'form': form})
+        data = request.POST
+        comment_content = data.get('content')
+        comment_star = data.get('rating')
+        TripComment.objects.create(
+            # user_id = request.headers.get('HTTP_USER_ID'),
+            trip_id = Trip.objects.get(id=trip_id),
+            user_id = User.objects.get(id = 1), # 로그인 기능 구현 후 바꾸기
+            trip_comment_content = comment_content,
+            trip_comment_star = comment_star,
+            trip_commnet_time = timezone.localtime(),
+            is_deleted = False
+        )
+        return redirect(reverse(f'board:trip_detail', args=[trip_id]))
 
     comment_list = Trip.get_active_list().prefetch_related('TripComment_set').all()
     trip_comment = TripComment.objects.all()
@@ -76,6 +76,7 @@ def trip_detail(request, trip_id):
     context = {
         'user_data' : user_data,
         'trip_data': trip_data,
+        'trip_category' : trip_category,
         'comment_list': comment_list,
         'trip_comment': trip_comment,
     }
@@ -161,9 +162,9 @@ def trip_write(request):
 
 def trip_edit(request, trip_id):
     trip = Trip.objects.get(id=trip_id)
-    tripctg = TripCategory.objects.get(trip_category_name=tripctg.trip_category_name)
-    areal = AreaL.objects.get(area_l_name=areal.area_l_name)
-    aream = AreaM.objects.get(area_m_name=aream.area_m_name)
+    # tripctg = TripCategory.objects.get(id=category_id)
+    # areal = AreaL.objects.get(id=l_id)
+    # aream = AreaM.objects.get(id=m_id)
 
     if request.method == 'POST':
         data = request.POST
@@ -178,9 +179,9 @@ def trip_edit(request, trip_id):
         trip_time = data.get('trip_time')
         trip_homepage = data.get('trip_homepage')
 
-        areal.area_l_name = area_l_name
-        aream.area_m_name = area_m_name
-        tripctg.trip_category_name = trip_category_name
+        # areal.area_l_name = area_l_name
+        # aream.area_m_name = area_m_name
+        # tripctg.trip_category_name = trip_category_name
         trip.trip_description = trip_description
         trip.trip_category_detail = trip_category_detail
         trip.trip_address = trip_address
@@ -188,12 +189,11 @@ def trip_edit(request, trip_id):
         trip.trip_homepage = trip_homepage
 
         trip.save()
-        tripctg.save()
-        areal.save()
-        aream.save()
+        # tripctg.save()
+        # areal.save()
+        # aream.save()
 
         return redirect(reverse('board:detail', kwargs={'board_id': trip_id}))
-    
 
     return render(request, "board/edit.html", {
             'trip': trip,
@@ -204,9 +204,10 @@ def trip_edit(request, trip_id):
 
 def trip_delete(request, trip_id):
     trip = Trip.objects.get(id=trip_id)
-    trip.is_delete = True
+    trip.is_deleted = True
     trip.save()
-    return redirect(reverse('board:index'))
+    return redirect(reverse('board:trip_list'))
+
 
 #comment 리스트
 def comment_list(request):
