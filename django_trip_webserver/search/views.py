@@ -2,7 +2,12 @@ from django.shortcuts import render
 
 from board.models import Trip, TripComment, Review, ReviewComment
 
-from django.db.models import Q
+from django.db.models import Q # 단어 포함 쿼리문 날릴 때 사용
+from django.db.models import Count # 데이터 개수 셀 때 사용
+from django.db.models import Avg # 평균낼 때 사용
+
+from django.urls import reverse
+from django.shortcuts import redirect 
 
 
 # 상세검색 (여행지검색+여행지댓글검색+여행지리뷰검색+여행지리뷰댓글검색)
@@ -23,43 +28,60 @@ def search(request):
         search_category = data.get('search_category') # 1 = 제목 / 2 = 제목+내용
         search_keyword = data.get('search_keyword')
         
+
+            
     
         # 여행지 검색 쿼리문
         if 'search_trip' in data:
-            area_category_Q = Trip.objects.filter(
-                area_m_id = area_m,
-                trip_category_id = trip_category)
-            query = Q(trip_name__icontains=search_keyword) | Q(trip_category_detail__icontains=search_keyword)
 
-            keyword_Q = area_category_Q.filter(query)
-            print(keyword_Q)
-                # 여행지에 서치키워드가 포함된 경우 |또는 세부유형에 서치키워드가 포함된 경우
-
-
-            # 해당 관광지의 별점 평점이 star점 이상인 관광지
+            # 지역 l
+            if area_l != '지역':
+                area_m_ids = Trip.objects.filter(area_m_id=area_m).values_list('id', flat=True)
+                # area_l에 해당하는 모든 area_m들의 id를 1차원(flat) 리스트
+                area_l_Q = Trip.objects.filter(area_m_id__in=area_m_ids) # area_m_ids인 데이터
+            else:
+                area_l_Q = Trip.objects.all()
             
-            # 해당 관광지의 리뷰 개수가 review_num개 이상인 관광지
-            return keyword_Q
+            # 지역 m
+            if area_m != '세부지역':
+                area_m_Q = area_l_Q.filter(area_m_id = area_m,)
+            else:
+                area_m_Q = area_l_Q
+
+            # 관광카테고리
+            if trip_category != '선택':
+                category_Q = area_m_Q.filter(trip_category_id = trip_category,)
+            else:
+                category_Q = area_m_Q
+
+            # 검색키워드
+            if search_keyword:
+                if search_category == '1': # 제목
+                    query = Q(trip_name__icontains=search_keyword)
+                elif search_category == '2': # 제목+내용
+                    query = Q(trip_name__icontains=search_keyword) | Q(trip_category_detail__icontains=search_keyword)
+                keyword_Q = category_Q.filter(query)
+            else:
+                keyword_Q = category_Q
+
+            # 리뷰개수
+            if review_num:
+                review_count_Q = keyword_Q.annotate(review_count=Count('review_set')) # 리뷰 개수 세기 + review_count라는 컬럼에 일시적 저장
+                review_Q = review_count_Q.filter(review_count__gte=5) # 개수 필터링 __gte는 이상이라는 뜻
+            else:
+                review_Q = keyword_Q
+
+            # 별점
+            if star:
+                star_avg_Q = review_Q.annotate(avg_score=Avg('tripcomment_set__trip_comment_star'))
+                # TripComment라는 DB테이블에 trip_comment_star라는 컬럼--> 의 평균 --> 을 새 컬럼에 일시저장
+                star_Q = star_avg_Q.filter(avg_score__gte=star)
+            else:
+                star_Q = review_Q
 
 
-        
-        # 데이터베이스 Trip table에서
-        # area_l = 1 이고
-        # area_m = 1 이고
-        # trip_category = 1 이고
-        # star = 4 이상이고
-        # 인 게시글의 title과 content를 모두 포함하는 데이터를 찾는 쿼리문을 짜줘
-
-        # SELECT title, content
-        # FROM Trip
-        # WHERE area_l = area_l
-        #   AND area_m = area_m
-        #   AND trip_category = trip_category
-        #   AND star >= star
-        #   AND (title LIKE 'search_keyword' OR content LIKE 'search_keyword');
-        #   이 쿼리에서 %검색할문자열% 부분을 실제로 찾고자 하는 문자열로 대체해야 합니다. 이 쿼리는 title 또는 content 중 하나라도 지정한 문자열을 포함하는 게시물을 반환합니다.
-
-        # 위 쿼리문 결과의 개수가 
+            print('아아아악', star_Q)
+            return render(request, 'search/search.html', {'search_results': star_Q})
 
     
        
