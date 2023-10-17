@@ -13,21 +13,84 @@
         .table {
       text-align: center;
     }
+    .custom-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+}
     
   </style>
 
   <div class="container">
     <h1>{{ review.review_title }}</h1>
+    <ul style="padding: 5px;">
+      <li class="list-group-item">작성자: {{ review.user_id.user_name }}</li>
+      <li class="list-group-item">시간: {{ review.review_time }}</li>
+    </ul>
+    <div class="my-4">
+      <h4>
+          리뷰 이미지
+      </h4>
+    </div>
+      <div class="row">
+        <div class="col-md-2">
+          {% if review.review_image1 %}
+            <img src="{{ review.review_image1.url }}" class="img-thumbnail" alt="..." class="custom-img">
+          {% else %}
+            <p>no image1</p>
+          {% endif %}
+        </div>
+        <div class="col-md-2">
+          {% if review.review_image2 %}
+            <img src="{{ review.review_image2.url }}" class="img-thumbnail" alt="..." class="custom-img">
+          {% else %}
+            <p>no image2</p>
+          {% endif %}
+        </div>
+        <div class="col-md-2">
+          {% if review.review_image3 %}
+            <img src="{{ review.review_image3.url }}" class="img-thumbnail" alt="..." class="custom-img">
+          {% else %}
+            <p>no image3</p>
+          {% endif %}
+        </div>
+        <div class="col-md-2">
+          {% if review.review_image4 %}
+            <img src="{{ review.review_image4.url }}" class="img-thumbnail" alt="..." class="custom-img">
+          {% else %}
+            <p>no image4</p>
+          {% endif %}
+        </div>
+        <div class="col-md-2">
+          {% if review.review_image5 %}
+            <img src="{{ review.review_image5.url }}" class="img-thumbnail" alt="..." class="custom-img">
+          {% else %}
+            <p>no image5</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="my-4">
+          <h4>
+              내용
+          </h4>
+      </div>
     <div class="my-5">
       <div style="border:1px solid black; padding:2px; min-height:200px;">
         {{ review.review_content }}
       </div>
     </div>
     <div class="my-4">
-        <h4>
-            댓글 목록
-        </h4>
+      <h4>
+        댓글 목록
+      </h4>
     </div>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="input-group mb-3">
+        <input type="text" name = "content" class="form-control" placeholder="댓글 작성" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">작성</button>
+      </div>
+    </form>
     <div class="my-4">
       <ul class="list-group">
         {% for comment in review.reviewcomment_set.all %}

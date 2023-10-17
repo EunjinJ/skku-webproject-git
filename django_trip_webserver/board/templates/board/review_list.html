@@ -6,14 +6,13 @@
     font-family: 'NanumBarunPen';
   }
   .row {
-      background-color: #FAFAFA;
+      background-color: #9b4a4a;
       padding: 30px;
       border: 1px;
   }
       .table {
     text-align: center;
   }
-  
 </style>
 
 <div class="container">
@@ -26,8 +25,9 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">대표 사진</th>
+          <th scope="col">리뷰id</th>
           <th scope="col">제목</th>
+          <th scope="col">글 작성자</th>
           <th scope="col">날짜</th>
           <th scope="col">도움이 돼요</th>
         </tr>
@@ -35,12 +35,15 @@
       <tbody class="table-group-divider">
         {% for review in trip.review_set.all %}
         <tr>
-          <th scope="row">image</th>
+          <th scope="row">
+            {{ review.id }}
+          </th>
           <td>
             <a href = "{% url 'board:review_detail' trip_id=trip.id review_id=review.id %}">
               {{ review.review_title }}
             </a>
           </td>
+          <td>{{ review.user_id.user_name }}</td>
           <td>{{ review.review_time }}</td>
           <td>{{ review.reviewcomment_set.all | length }}</td>
         </tr>

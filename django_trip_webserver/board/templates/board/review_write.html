@@ -17,7 +17,7 @@
   </style>
 
 <div class="container">
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">
@@ -29,25 +29,25 @@
             파일 첨부 (최대 5장)
         </div>
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" name="image1" class="form-control" id="inputGroupFile01">
-        </div>
+            <input type="file" name="image1" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" name="image2" class="form-control" id="inputGroupFile01">
-        </div>
+            <input type="file" name="image2" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" name="image3" class="form-control" id="inputGroupFile01">
-        </div>
+            <input type="file" name="image3" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" name="image4" class="form-control" id="inputGroupFile01">
-        </div>
+            <input type="file" name="image4" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" name="image5" class="form-control" id="inputGroupFile01">
-        </div>
+            <input type="file" name="image5" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">
                 내용

@@ -13,5 +13,5 @@ urlpatterns = [
     # path('<int:board_id>/edit/', views.board_edit, name="edit"), # trip_edit 뷰에 대한 URL 경로 추가
     # path('<int:board_id>/del/', views.board_delete, name='delete'), # trip_delete 뷰에 대한 URL 경로 추가
     # path('comments/',views.comment_list, name="comment_list") # trip_comment 뷰에 대한 URL 경로 추가
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 
