@@ -94,7 +94,14 @@
     <div class="my-4">
       <ul class="list-group">
         {% for comment in review.reviewcomment_set.all %}
-          <li class="list-group-item">{{ comment.review_comment_content }}</li>
+          <li class="list-group-item">
+            <div style="font-size: small">
+              {{ comment.user_id.user_name }} | {{ comment.review_comment_time }}
+            </div>
+            <div style="padding: 5px;">
+              {{ comment.review_comment_content }}
+            </div>
+          </li>
         {% endfor %}
       </ul>
     </div>

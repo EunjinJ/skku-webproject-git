@@ -89,6 +89,7 @@ def review_list(request, trip_id):
 
 # 리뷰 상세
 def review_detail(request, trip_id, review_id):
+    review = Review.objects.get(pk=review_id)
     if request.method == 'POST':
         data = request.POST
         comment_content = data.get('content')
@@ -101,7 +102,6 @@ def review_detail(request, trip_id, review_id):
             is_deleted = False
         )
         return redirect(reverse(f'board:review_detail', args=[trip_id, review_id]))
-    review = Review.objects.get(pk=review_id)
     return render(
         request,
         'board/review_detail.html',
