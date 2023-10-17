@@ -27,52 +27,52 @@
       <li class="list-group-item">작성자: {{ review.user_id.user_name }}</li>
       <li class="list-group-item">시간: {{ review.review_time }}</li>
     </ul>
-    <div class="my-4">
-      <h4>
-          리뷰 이미지
-      </h4>
-    </div>
-      <div class="row">
-        <div class="col-md-2">
-          {% if review.review_image1 %}
-            <img src="{{ review.review_image1.url }}" class="img-thumbnail" alt="..." class="custom-img">
-          {% else %}
-            <p>no image1</p>
-          {% endif %}
-        </div>
-        <div class="col-md-2">
-          {% if review.review_image2 %}
-            <img src="{{ review.review_image2.url }}" class="img-thumbnail" alt="..." class="custom-img">
-          {% else %}
-            <p>no image2</p>
-          {% endif %}
-        </div>
-        <div class="col-md-2">
-          {% if review.review_image3 %}
-            <img src="{{ review.review_image3.url }}" class="img-thumbnail" alt="..." class="custom-img">
-          {% else %}
-            <p>no image3</p>
-          {% endif %}
-        </div>
-        <div class="col-md-2">
-          {% if review.review_image4 %}
-            <img src="{{ review.review_image4.url }}" class="img-thumbnail" alt="..." class="custom-img">
-          {% else %}
-            <p>no image4</p>
-          {% endif %}
-        </div>
-        <div class="col-md-2">
-          {% if review.review_image5 %}
-            <img src="{{ review.review_image5.url }}" class="img-thumbnail" alt="..." class="custom-img">
-          {% else %}
-            <p>no image5</p>
-          {% endif %}
-        </div>
-      </div>
       <div class="my-4">
-          <h4>
+        <h3>
+            리뷰 이미지
+        </h3>
+      </div>
+        <div class="row">
+          <div class="col-md-2">
+            {% if review.review_image1 %}
+              <img src="{{ review.review_image1.url }}" class="img-thumbnail" alt="..." class="custom-img">
+            {% else %}
+              <p>no image1</p>
+            {% endif %}
+          </div>
+          <div class="col-md-2">
+            {% if review.review_image2 %}
+              <img src="{{ review.review_image2.url }}" class="img-thumbnail" alt="..." class="custom-img">
+            {% else %}
+              <p>no image2</p>
+            {% endif %}
+          </div>
+          <div class="col-md-2">
+            {% if review.review_image3 %}
+              <img src="{{ review.review_image3.url }}" class="img-thumbnail" alt="..." class="custom-img">
+            {% else %}
+              <p>no image3</p>
+            {% endif %}
+          </div>
+          <div class="col-md-2">
+            {% if review.review_image4 %}
+              <img src="{{ review.review_image4.url }}" class="img-thumbnail" alt="..." class="custom-img">
+            {% else %}
+              <p>no image4</p>
+            {% endif %}
+          </div>
+          <div class="col-md-2">
+            {% if review.review_image5 %}
+              <img src="{{ review.review_image5.url }}" class="img-thumbnail" alt="..." class="custom-img">
+            {% else %}
+              <p>no image5</p>
+            {% endif %}
+          </div>
+        </div>
+      <div class="my-4">
+          <h2>
               내용
-          </h4>
+          </h2>
       </div>
     <div class="my-5">
       <div style="border:1px solid black; padding:2px; min-height:200px;">
@@ -80,9 +80,9 @@
       </div>
     </div>
     <div class="my-4">
-      <h4>
+      <h3>
         댓글 목록
-      </h4>
+      </h3>
     </div>
     <form action="" method="POST">
       {% csrf_token %}
@@ -93,7 +93,7 @@
     </form>
     <div class="my-4">
       <ul class="list-group">
-        {% for comment in review.reviewcomment_set.all %}
+        {% for comment in comment_list %}
           <li class="list-group-item">
             <div style="font-size: small">
               {{ comment.user_id.user_name }} | {{ comment.review_comment_time }}
@@ -105,5 +105,43 @@
         {% endfor %}
       </ul>
     </div>
+    <!-- 페이징처리 시작 -->
+    <ul class="pagination justify-content-center">
+      <!-- 이전페이지 -->
+      {% if comment_list.has_previous %}
+      <li class="page-item">
+          <a class="page-link" href="?page={{ comment_list.previous_page_number }}">이전</a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+          <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+      </li>
+      {% endif %}
+      <!-- 페이지리스트 -->
+      {% for page_number in comment_list.paginator.page_range %}
+      {% if page_number >= comment_list.number|add:-5 and page_number <= comment_list.number|add:5 %}
+      {% if page_number == comment_list.number %}
+      <li class="page-item active" aria-current="page">
+          <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+      </li>
+      {% else %}
+      <li class="page-item">
+          <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+      </li>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      <!-- 다음페이지 -->
+      {% if comment_list.has_next %}
+      <li class="page-item">
+          <a class="page-link" href="?page={{ comment_list.next_page_number }}">다음</a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+          <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+      </li>
+      {% endif %}
+      </ul>
+      <!-- 페이징처리 끝 -->
   </div>
 {% endblock %}

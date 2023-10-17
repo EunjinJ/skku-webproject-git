@@ -12,6 +12,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Trip, TripComment, User
+from django.core.paginator import Paginator
 
 # def index(request):
 #     trip_page =  
@@ -79,17 +80,32 @@ def trip_write(request):
 # 리뷰 리스트
 def review_list(request, trip_id):
     trip = Trip.objects.get(pk=trip_id)
+
+    page = request.GET.get('page', '1')  # 페이지
+    review_list = Review.objects.order_by('-review_time')
+    paginator = Paginator(review_list, 20)  # 페이지당 20개씩 보여주기
+    page_obj = paginator.get_page(page)
+
     return render(
         request,
         'board/review_list.html',
         {
-            'trip': trip
+            'trip': trip,
+            'review_list': page_obj
         }
     )
 
 # 리뷰 상세
 def review_detail(request, trip_id, review_id):
     review = Review.objects.get(pk=review_id)
+
+    page = request.GET.get('page', '1')  # 페이지
+    comment_list = ReviewComment.objects\
+            .filter(review_id = Review.objects.get(id = review_id))\
+            .order_by('-review_comment_time')
+    paginator = Paginator(comment_list, 15)  # 페이지당 15개씩 보여주기
+    page_obj = paginator.get_page(page)
+
     if request.method == 'POST':
         data = request.POST
         comment_content = data.get('content')
@@ -101,12 +117,13 @@ def review_detail(request, trip_id, review_id):
             review_comment_time = timezone.localtime(),
             is_deleted = False
         )
-        return redirect(reverse(f'board:review_detail', args=[trip_id, review_id]))
+        return redirect(reverse('board:review_detail', args=[trip_id, review_id]))
     return render(
         request,
         'board/review_detail.html',
         {
-            'review': review
+            'review': review,
+            'comment_list': page_obj
         }
     )
 
