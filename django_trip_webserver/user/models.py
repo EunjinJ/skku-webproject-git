@@ -8,6 +8,8 @@
 from django.db import models
 from main.models import TripCategory
 
+
+
 class User(models.Model):
     id = models.AutoField(primary_key=True)
     user_name = models.CharField(max_length=255)

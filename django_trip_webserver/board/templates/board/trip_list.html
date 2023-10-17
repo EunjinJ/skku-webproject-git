@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {% extends "./base.html" %}
 {% block main %}
 
@@ -12,10 +12,17 @@
       padding: 30px;
       border: 1px;
   }
-      .table {
-    text-align: center;
+  
+  .table {
+  text-align: center;
   }
   
+  .pagination{
+    display: flex;
+    justify-content: center;
+    color: #FFE1EA;
+  }
+
 </style>
 
 <body>
@@ -25,52 +32,73 @@
             <button type="button" class="btn btn-light">등록하기</button>
           </a>
   </div>
-
-  
-
-
-    <table class="table" data-row-key="{{ item.trip_id }}">
+  <div>
+    <table class="table">
       <thead>
         <tr>
-          <th scope="col" style = >상세 카테고리</th>
-          <th scope="col">관광지별</th>
-          <th scope="col">별점</th>
+          <th scope="col">#</th>
+          <th scope="col" style='font-size: 20px; color: #F5A9BC'>상세 카테고리</th>
+          <th scope="col" style='font-size: 20px; color: #F5A9BC'>관광지별</th>
+          <th scope="col" style='font-size: 20px; color: #F5A9BC'>별점</th>
         </tr>
       </thead>
       <tbody>
-      {% if trip_data %}
-        {% for item in trip_data %}
-        <tr class="table" data-row-key="{{ item.trip_id }}">
-          <th scope="row"><a>{{ item.trip_category_detial }}</a></th>
-          <th scope="row">{{ item.trip_name }}</th>
-          <th scope="row">
-          {% for comment in trip_comment %}
-              {% if comment.trip_comment_star >= 100 %}
-                  
-              {% elif comment.trip_comment_star >= 80 %}
-                  
-              {% elif comment.trip_comment_star >= 60 %}
-                  
-              {% elif comment.trip_comment_star >= 40 %}
-                  
-              {% elif comment.trip_comment_star >= 20 %}
-                  
-              {% endif %}
-          {% endfor %}
-          별점</th>
-        </tr>
-      </tbody>
-    </table>
-  {% endfor %}
-  {% else %}
+        {% if trip_data %}
+          {% for item in trip_data %}
             <tr class="table">
-              <td class="table" colspan="3">데이터가 없습니다.</td>
+              <th scope="row">{{item.id}}</th>
+              <th scope="row"><a href="{% url 'board:trip_detail' trip_id=item.id %}">{{ item.trip_category_detail }}</a></th>
+              <th scope="row"><a href="{% url 'board:trip_detail' trip_id=item.id %}">{{ item.trip_name }}</a></th>
+              <th scope="row">
+                {% for comment in trip_comment %}
+                  {% if comment.trip_id == item.trip_id %}
+                    {% if comment.trip_comment_star >= 100 %}
+                      <!-- 별점에 대한 어떤 내용 출력 -->
+                    {% elif comment.trip_comment_star >= 80 %}
+                      <!-- 별점에 대한 어떤 내용 출력 -->
+                    {% elif comment.trip_comment_star >= 60 %}
+                      <!-- 별점에 대한 어떤 내용 출력 -->
+                    {% elif comment.trip_comment_star >= 40 %}
+                      <!-- 별점에 대한 어떤 내용 출력 -->
+                    {% elif comment.trip_comment_star >= 20 %}
+                      <!-- 별점에 대한 어떤 내용 출력 -->
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                별점
+              </th>
             </tr>
-          {% endif %}
-        </tbody>
-      </table>
+          {% endfor %}
+        {% else %}
+          <tr class="table">
+            <td class="table" colspan="3">데이터가 없습니다.</td>
+          </tr>
+        {% endif %}
+      </tbody>
+      
+    </table>
   </div>
-</body>
+
+  <div class ="pagination" style="color: #FFE1EA">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </body>
 
                 
     
@@ -104,27 +132,4 @@
       </div>
     </div>
   </div> {% endcomment %}
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.10.0/dist/antd.min.css">
-    {% comment %} <link rel="stylesheet" href="./style.css" type="text/css"/> {% endcomment %}
-</head>
-<body>
-
-    <!-- 검색창 -->
-    <div class="ant-space-item"><span class="ant-input-group-wrapper ant-input-search css-amq5gd" style="width: 200px;"><span class="ant-input-wrapper ant-input-group css-amq5gd"><input placeholder="input search text" class="ant-input css-amq5gd" type="text" value=""><span class="ant-input-group-addon"><button type="button" class="ant-btn css-amq5gd ant-btn-default ant-btn-icon-only ant-input-search-button"><span class="ant-btn-icon"><span role="img" aria-label="search" class="anticon anticon-search"><svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></span></span></button></span></span></span></div>
-
-
-    <!-- javascript -->
-    <script src="script.js"></script>
-</body>
-</html>
->>>>>>> origin/jm

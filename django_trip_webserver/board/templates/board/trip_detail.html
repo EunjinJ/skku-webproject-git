@@ -1,50 +1,120 @@
 {% extends './base.html' %}
 {% block main %}
+
+<style>
+  .detail_form  {
+    {% comment %} display: flex;  {% endcomment %}
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    border: 1px solid #e9e9e9;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    margin-top:30px;
+    
+  }
+  {% comment %} body > main > div > div > div.my-5 > div:nth-child(6) > a{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    max-width: 30px;
+    justify-content: space-evenly;
+  } {% endcomment %}
+
+</style>
+
+<body>
   <div class="container">
-    <h3>{{trip.name}}</h3>
 
-    <div class="my-5">
-      <div class="my-2">
-        <h5>{{ board.title }}</h5>
-      </div>
+    <div class = "detail_form">
+      {% comment %} if trip_data.id == trip_id {% endcomment %}
+      <h3>{{trip_data.trip_name}}</h3>
 
-      <div style="border:1px solid black; padding:2px; min-height:200px;">
-        {{ board.content }}
-      </div>
-
-      <a href="{% url 'board:edit' board.id %}" class='btn btn-success'>
-        수정
-      </a>
-      <a href="{% url 'board:delete' board.id %}" class='btn btn-primary'>삭제</a>
-    </div>
-
-    <div class="mv-4">
-      <form action="" method="POST" style="display:flex; flex-direction:row;">
-        {% csrf_token %}
-        {% comment %} <input type="text" name="comment" id="" class='form-control'> {% endcomment %}
-        {% for field in form %}
-            {{ field }}
-        {% endfor %}
-        <button type="submit" class="btn btn-primary" style="min-width:100px;">
-          댓글작성
-        </button>
-      </form>
-
-      {% for error in field.errors %}
-        <div id="content-help" class="form-text text-danger">
-          {{ field.errors }}
+      <div class="my-5">
+        <div class="my-2">
+          <h5>{{ trip_data.trip_category_detail}}</h5>
         </div>
-      {% endfor %}
 
-    </div>
+        <div style=" solid black; padding:2px; min-height:200px;">
+          {{ trip_data.address }}
+        </div>
 
-    <div class="my-4">
-      <ul class="list-group">
-        {% for comment in board.comment_set.all %}
-          <li class="list-group-item">{{ comment.content }}</li>
+        <div style="padding:2px; min-height:200px;">
+          {{ trip_data.phone }}
+        </div>
+
+        <div style="padding:2px; min-height:200px;">
+          {{ trip_data.homepage }}
+        </div>
+
+        <div style="padding:2px; min-height:200px;">
+          {{ trip_data.homepage }}
+        </div>
+
+        <div button>
+          <a href="{% url 'board:trip_edit' trip_id=trip_data.id %}" class='btn btn-success'>
+            수정
+          </a>
+        </div>
+        {% comment %} <a href="{% url 'board:trip_delete' board.trip_id %}" class='btn btn-primary'>삭제</a> {% endcomment %}
+      </div>
+
+      <div class="mv-4">
+        <p>댓글</p>
+        <form action="" method="POST" style="display:flex; flex-direction:row;">
+          {% csrf_token %}
+          <input type="text" name="comment" id="" class='form-control'>
+          {% for field in form %}
+              {{ field }}
+          {% endfor %}
+          <button type="submit" class="btn btn-primary" style="min-width:100px;">
+            댓글작성
+          </button>
+        </form>
+
+        {% for error in field.errors %}
+          <div id="content-help" class="form-text text-danger">
+            {{ field.errors }}
+          </div>
         {% endfor %}
-      </ul>
+
+      </div>
+
+      <div class="my-4">
+        <ul class="list-group">
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+          <p>코멘트 있어요 </p>
+
+          {% for comment in comment_list.comment_set.all %}
+          {{comment.user_id }}
+          {{comment.user_id.user_name }}
+
+
+            {% comment %} {% for user in user_data %}
+              
+            <li class="list-group-item">{{ user.user_name }}</li>
+            <li class="list-group-item">{{ comment.trip_comment_content }}</li> {% endcomment %}
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
+</body>
 {% endblock %}
 
