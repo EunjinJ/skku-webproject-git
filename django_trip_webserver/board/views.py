@@ -10,8 +10,8 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.shortcuts import render
-
-from .models import Trip, TripComment
+from django.utils import timezone
+from .models import Trip, TripComment, User
 
 # def index(request):
 #     trip_page =  
@@ -100,6 +100,30 @@ def review_detail(request, trip_id, review_id):
 
 # 리뷰 작성
 def review_write(request, trip_id):
+    if request.method == 'POST':
+        data = request.POST
+        title = data.get('title')
+        image1 = data.get('image1')
+        image2 = data.get('image2')
+        image3 = data.get('image3')
+        image4 = data.get('image4')
+        image5 = data.get('image5')
+        content = data.get('content')
+        Review.objects.create(
+            # user_id = request.headers.get('HTTP_USER_ID'),
+            user_id = User.objects.get(id = 1), # 로그인 기능 구현 후 바꾸기
+            trip_id = Trip.objects.get(id = trip_id),
+            review_title = title,
+            review_content = content,
+            review_time = timezone.localtime(),
+            review_image1 = image1,
+            review_image2 = image2,
+            review_image3 = image3,
+            review_image4 = image4,
+            review_image5 = image5,
+            is_deleted = False
+        )
+        return redirect(reverse('board:review_list', args = [trip_id]))
     return render(
         request,
         'board/review_write.html',

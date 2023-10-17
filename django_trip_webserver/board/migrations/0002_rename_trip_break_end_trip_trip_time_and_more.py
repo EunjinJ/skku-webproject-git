@@ -11,10 +11,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RenameField(
+        migrations.RemoveField(
             model_name="trip",
-            old_name="trip_break_end",
-            new_name="trip_time",
+            name="trip_break_end"
         ),
         migrations.RemoveField(
             model_name="trip",

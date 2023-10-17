@@ -1,0 +1,39 @@
+{% extends './base.html' %}
+{% block main %}
+<style>
+    @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css');
+    body, *, div, nav, main {
+      font-family: 'NanumBarunPen';
+    }
+    .row {
+        background-color: #FAFAFA;
+        padding: 30px;
+        border: 1px;
+    }
+        .table {
+      text-align: center;
+    }
+    
+  </style>
+
+  <div class="container">
+    <h1>{{ review.review_title }}</h1>
+    <div class="my-5">
+      <div style="border:1px solid black; padding:2px; min-height:200px;">
+        {{ review.review_content }}
+      </div>
+    </div>
+    <div class="my-4">
+        <h4>
+            댓글 목록
+        </h4>
+    </div>
+    <div class="my-4">
+      <ul class="list-group">
+        {% for comment in review.reviewcomment_set.all %}
+          <li class="list-group-item">{{ comment.review_comment_content }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

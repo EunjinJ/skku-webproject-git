@@ -1,12 +1,52 @@
-<!-- {% extends "./base.html" %} -->
-<!-- {% block main %} -->
+{% extends "./base.html" %}
+{% block main %}
+<style>
+    @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css');
+    body, *, div, nav, main {
+      font-family: 'NanumBarunPen';
+    }
+    .row {
+        background-color: #FAFAFA;
+        padding: 30px;
+        border: 1px;
+    }
+        .table {
+      text-align: center;
+    }
+    
+  </style>
+
 <div class="container">
     <form action="" method="POST">
+        {% csrf_token %}
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">
                 제목
             </label>
             <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="제목">
+        </div>
+        <div class="mb-3">
+            파일 첨부 (최대 5장)
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" name="image1" class="form-control" id="inputGroupFile01">
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" name="image2" class="form-control" id="inputGroupFile01">
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" name="image3" class="form-control" id="inputGroupFile01">
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" name="image4" class="form-control" id="inputGroupFile01">
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" name="image5" class="form-control" id="inputGroupFile01">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">
@@ -19,4 +59,4 @@
         </button>
     </form>
 </div>
-<!-- {% endblock %} -->
+{% endblock %}

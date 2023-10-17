@@ -1,23 +1,51 @@
+{% extends "./base.html" %}
+{% block main %}
+<style>
+  @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css');
+  body, *, div, nav, main {
+    font-family: 'NanumBarunPen';
+  }
+  .row {
+      background-color: #FAFAFA;
+      padding: 30px;
+      border: 1px;
+  }
+      .table {
+    text-align: center;
+  }
+  
+</style>
+
 <div class="container">
-    <h1>게시글 목록</h1>
+    <h1>{{ trip.trip_name }}</h1>
     <div>
         <a href="{% url 'board:review_write' trip_id=trip.id %}" class="btn btn-primary">
             리뷰 등록하기
         </a>
     </div>
-    <ol class="list-group list-group-numbered">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">대표 사진</th>
+          <th scope="col">제목</th>
+          <th scope="col">날짜</th>
+          <th scope="col">도움이 돼요</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
         {% for review in trip.review_set.all %}
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">
-                <a href = "{% url 'board:review_detail' trip_id=trip.id review_id=review.id %}">
-                  {{ review.review_title }}
-                </a>
-              </div>
-              {{ review.time }}
-            </div>
-            <span class="badge bg-primary rounded-pill">{{ review.review_comment_content_set.all | length }}</span>
-          </li>
+        <tr>
+          <th scope="row">image</th>
+          <td>
+            <a href = "{% url 'board:review_detail' trip_id=trip.id review_id=review.id %}">
+              {{ review.review_title }}
+            </a>
+          </td>
+          <td>{{ review.review_time }}</td>
+          <td>{{ review.reviewcomment_set.all | length }}</td>
+        </tr>
         {% endfor %}
-      </ol>
+      </tbody>
+    </table>
 </div>
+{% endblock %}
