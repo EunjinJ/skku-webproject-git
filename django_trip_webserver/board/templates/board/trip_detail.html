@@ -13,6 +13,16 @@
     margin-top:30px;
     
   }
+  
+  .my-2{
+    margin-left:30px;
+  }
+
+  div.detail_form > h3{
+    margin-top:30px;
+    margin-left:30px;
+  }
+
   {% comment %} body > main > div > div > div.my-5 > div:nth-child(6) > a{
     display: flex;
     justify-content: flex-start;
@@ -35,20 +45,20 @@
           <h5>{{ trip_data.trip_category_detail}}</h5>
         </div>
 
-        <div style=" solid black; padding:2px; min-height:200px;">
-          {{ trip_data.address }}
+        <div class="my-2" style="padding:2px; min-height:20px;">
+          {{ trip_data.trip_address }}
         </div>
 
-        <div style="padding:2px; min-height:200px;">
-          {{ trip_data.phone }}
+        <div class="my-2" style="padding:2px; min-height:20px;">
+          {{ trip_data.trip_phone }}
         </div>
 
-        <div style="padding:2px; min-height:200px;">
-          {{ trip_data.homepage }}
+        <div class="my-2" style="padding:2px; min-height:20px;">
+          {{ trip_data.trip_time }}
         </div>
 
-        <div style="padding:2px; min-height:200px;">
-          {{ trip_data.homepage }}
+        <div class="my-2" style="padding:2px; min-height:20px;"><a href={{ trip_data.trip_homepage }}>
+          {{ trip_data.trip_homepage }}</a>
         </div>
 
         <div button>

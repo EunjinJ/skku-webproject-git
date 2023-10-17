@@ -17,15 +17,21 @@
   text-align: center;
   }
   
-  .pagination{
+  {% comment %} .pagination{
     display: flex;
     justify-content: center;
     color: #FFE1EA;
+  } {% endcomment %}
+
+  .page-link {
+    background-color: #FFE1EA;
+    max-width:300px;
   }
 
 </style>
 
 <body>
+
   <div class="container">
       <div class='my-5' style='display:flex; justify-content:flex-start;'>
           <a href='/board/trip/write' style='float:left; align-items: center; height: 5vh; margin: 0; padding-top: 0px;'>
@@ -79,11 +85,11 @@
     </table>
   </div>
 
-  <div class ="pagination" style="color: #FFE1EA">
+  {% comment %} <div class ="pagination" style="color: #FFE1EA">
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
+          <a class="page-link" href="#" >
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
@@ -97,10 +103,49 @@
         </li>
       </ul>
     </nav>
-  </div>
-  </body>
+  </div> {% endcomment %}
 
-                
+  <div class="page_pass">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center" style="color: #FFE1EA">
+            
+            <!-- 이전페이지 -->
+            {% if paginator.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ paginator.previous_page_number }}" aria-label="Previous">이전
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            {% endif %}
+
+            <!-- 페이지리스트 -->
+            {% for trip in page_obj %}
+                {% if page_number == paginator.posts_per_page %}
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+
+            <!-- 다음페이지 -->
+            {% if paginator.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ paginator.next_page_number }}">다음</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+</body>
+
+<script>
+  
+</script>      
     
 
 

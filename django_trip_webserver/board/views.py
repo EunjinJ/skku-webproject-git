@@ -15,6 +15,8 @@ from .models import Trip, TripComment
 from main.models import TripCategory, AreaL, AreaM
 from user.models import User
 
+from django.core.paginator import Paginator
+
 # def index(request):
 #     trip_page =  
 
@@ -22,9 +24,18 @@ def trip_list(request):
     trip_data = Trip.objects.all()
     trip_comment = TripComment.objects.all()
 
+    posts_per_page = 10
+
+    paginator = Paginator(trip_data, posts_per_page)
+
+    page_number = 1  # 가져올 페이지 번호
+    page_obj = paginator.get_page(page_number)
+
     context = {
         'trip_data': trip_data,
         'trip_comment': trip_comment,
+        'paginator' : paginator,
+        'page_obj' : page_obj,
     }
 
     return render(request, "board/trip_list.html", context)
@@ -95,6 +106,7 @@ def trip_write(request):
         trip_category_detail = data.get('trip_category_detail')
         trip_address = data.get('trip_address')
         trip_time = data.get('trip_time')
+        trip_phone = data.get('trip_phone')
         trip_homepage = data.get('trip_homepage')
 
         # random_id = uuid.uuid4()
@@ -105,6 +117,7 @@ def trip_write(request):
             trip_category_detail = trip_category_detail,
             trip_address = trip_address,
             trip_time = trip_time,
+            trip_phone = trip_phone,
             trip_homepage = trip_homepage
         )
 

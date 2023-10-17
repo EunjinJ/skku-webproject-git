@@ -79,10 +79,12 @@
             <h6>여행 카테고리 선택</h6>
             <span class="select-container">
               <select name="trip_category_name" class="form-select" aria-label="Default select example">
-                <option selected>맛집</option>
+                <option selected>식사</option>
                 <option value="1">카페</option>
                 <option value="2">명소</option>
-                <option value="3">숙박</option>
+                <option value="3">숙소</option>
+                <option value="4">관광</option>
+                <option value="5">쇼핑</option>
               </select>
             </span>
           </div>
@@ -124,25 +126,10 @@
       <ul>
         <div class="row">
             <h6>전화번호 입력</h6>
-              <div class="col-2">
-                <input type="tel" class="form-control" id="phoneNumber1" placeholder="010" maxlength="3">
+              <div class="mb-2">
+                <textarea name="trip_phone" class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="010-1234-5678
+            "></textarea>
               </div>
-              <div class="col-1" style='width:10px;'>
-                <span>-</span>
-              </div>
-              <div class="col-2">
-                <input type="tel" class="form-control" id="phoneNumber2" placeholder="1234" maxlength="4">
-              </div>
-              <div class="col-1" style='width:10px;'>
-                <span>-</span>
-              </div>
-              <div class="col-2">
-                <input type="tel" class="form-control" id="phoneNumber3" placeholder="5678" maxlength="4">
-              </div>
-              {% comment %} <div class="mb-3">
-                <textarea name="trip_address" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="010-123-4567
-                "></textarea>
-              </div> {% endcomment %}
         </div>
       </ul>
 
