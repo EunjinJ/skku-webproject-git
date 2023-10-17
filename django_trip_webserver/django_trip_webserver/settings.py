@@ -89,6 +89,19 @@ DATABASES = {
 }
 
 
+# # GCP에서 접속 시
+# DATABASES = {
+#     "default":{
+#         "ENGINE" : "django.db.backends.mysql",
+#         "NAME" : "django_trip_webserver",
+#         "USER" : "admin",
+#         "PASSWORD" : '0000',
+#         "HOST" : '34.64.114.78',
+#         "PORT" : '3306'
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
