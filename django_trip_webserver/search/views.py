@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 from board.models import Trip, TripComment, Review, ReviewComment
 
+from django.db.models import Q
+
+
 # 상세검색 (여행지검색+여행지댓글검색+여행지리뷰검색+여행지리뷰댓글검색)
 def search(request):
     print(request.POST)
@@ -23,12 +26,22 @@ def search(request):
     
         # 여행지 검색 쿼리문
         if 'search_trip' in data:
-            trip_Q = Trip.objects.filter(
-                area_l = area_l,
-                area_m = area_m,
-                trip_category_id = trip_category,
-            )
-            print(1)
+            area_category_Q = Trip.objects.filter(
+                area_m_id = area_m,
+                trip_category_id = trip_category)
+            query = Q(trip_name__icontains=search_keyword) | Q(trip_category_detail__icontains=search_keyword)
+
+            keyword_Q = area_category_Q.filter(query)
+            print(keyword_Q)
+                # 여행지에 서치키워드가 포함된 경우 |또는 세부유형에 서치키워드가 포함된 경우
+
+
+            # 해당 관광지의 별점 평점이 star점 이상인 관광지
+            
+            # 해당 관광지의 리뷰 개수가 review_num개 이상인 관광지
+            return keyword_Q
+
+
         
         # 데이터베이스 Trip table에서
         # area_l = 1 이고
