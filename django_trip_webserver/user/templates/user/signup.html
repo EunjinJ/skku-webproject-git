@@ -1,0 +1,92 @@
+{% extends './base_temp.html' %} {% block main %}
+
+<h2>회원가입</h2>
+<div class="col-8">
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">아이디</label>
+      <div class="col-sm-10">
+        <input name="user_id" class="form-control" id="inputEmail3" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label"
+        >비밀번호</label
+      >
+      <div class="col-sm-10">
+        <input
+          name="user_password"
+          type="password"
+          class="form-control"
+          id="inputPassword3"
+        />
+      </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">회원유형</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="user_type"
+            id="gridRadios1"
+            value="normal"
+            checked
+          />
+          <label class="form-check-label" for="gridRadios1"> 일반회원 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="user_type"
+            id="gridRadios2"
+            value="business"
+          />
+          <label class="form-check-label" for="gridRadios2"> 사업자회원 </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >선호 관광 유형</label
+      >
+      <div style="display: flex; flex-wrap: nowrap" class="col-10">
+        <select
+          name="trip_category_1_id"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>선택 1</option>
+          <option value="1">레저</option>
+          <option value="2">맛집</option>
+          <option value="3">자연</option>
+        </select>
+        <select
+          name="trip_category_2_id"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>선택 2</option>
+          <option value="1">레저</option>
+          <option value="2">맛집</option>
+          <option value="3">자연</option>
+        </select>
+        <select
+          name="trip_category_3_id"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>선택 3</option>
+          <option value="1">레저</option>
+          <option value="2">맛집</option>
+          <option value="3">자연</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">회원가입</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "./base.html" %}
 {% block main %}
 
@@ -371,4 +372,195 @@
         </body>
 
 
+=======
+{% extends "./base.html" %}
+{% block main %}
+
+<style>
+  .write_form {
+    {% comment %} display: flex;  {% endcomment %}
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    border: 1px solid #e9e9e9;
+    padding-top:10px !important;
+    margin-top:30px;
+    
+  }
+
+  .write_form_area{
+    align-items: stretch;
+  }
+
+  .write_form_name{
+    align-items: stretch;
+  }
+
+  .form-select {
+    width: 100%;
+  }
+
+  #citySelect {
+    width: 30%;
+    display: inline-block;
+    padding
+  }
+
+  .select-container {
+    width: 30%;
+    display: inline-block;
+    padding: 0px;
+  }
+
+</style>
+
+<body>
+  <div class='container write_form'>
+    <ul>
+      <div class='write_form_area' style = 'margin-top:40px; margin-bottom:30px;' >
+        <div class="row">
+          <div class="col-6">
+            <h6>지역 선택</h6>
+            <select class="form-select" id="citySelect" aria-label="Default select example" onchange="changeText(this.value)">
+              <option value="서울" selected>서울</option>
+              <option value="경기">경기</option>
+              <option value="인천">인천</option>
+              <option value="부산">부산</option>
+            </select>
+            <span class="select-container" id="districtContainer">
+              <select class="form-select" id="districtSelect" aria-label="Default select example">
+                <option value="종로구" selected>종로구</option>
+                <option value="마포구">마포구</option>
+                <option value="송파구">송파구</option>
+                <option value="용산구">용산구</option>
+              </select>
+            </span>
+          </div>
+          <div  class="col-6">
+            <h6>여행 카테고리 선택</h6>
+            <span class="select-container">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>맛집</option>
+                <option value="1">카페</option>
+                <option value="2">명소</option>
+                <option value="3">숙박</option>
+              </select>
+            </span>
+          </div>
+          </div>
+        </div>
+      </ul>
+    
+    
+    <ul>
+      <div class='write_form_name' style = 'margin-top:30px; margin-bottom:30px;'>
+        <h6>관광지 이름</h6>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="관광지 이름을 입력하세요 (예: 혜화베이커리)"></textarea>
+        </div>
+      </div>
+    </ul>
+
+    <ul>
+      <div class='write_form_category' style = 'margin-top:30px; margin-bottom:30px;'>
+        <h6>상세 카테고리</h6>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="상세 카테고리를 쉼표로 구분해 입력하세요 (예: 빵집, 카페)
+          "></textarea>
+        </div>
+      </div>
+    </ul>
+
+    <ul>
+      <div class='write_form_address' style = 'margin-top:30px; margin-bottom:30px;'>
+        <h6>관광지 주소</h6>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="관광지 주소를 입력하세요
+          (예: 서울 종로구 창경궁로 236 이화빌딩 1층 (우)03079)
+          "></textarea>
+        </div>
+      </div>
+    </ul>
+
+    <ul>
+      <h6>전화번호 입력</h6>
+      <div class="mb-3 phone-number-container">
+        <input type="tel" class="form-control" id="phoneNumber1" placeholder="010" maxlength="3">
+        <span>-</span>
+        <input type="tel" class="form-control" id="phoneNumber2" placeholder="1234" maxlength="4">
+        <span>-</span>
+        <input type="tel" class="form-control" id="phoneNumber3" placeholder="5678" maxlength="4">
+      </div>
+    </ul>
+
+    <ul>
+      <div class='write_form_time' style = 'margin-top:30px; margin-bottom:30px;'>
+        <h6>영업시간</h6>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="영업시간, 브레이크타임, 라스트오더 시간을 입력하세요
+          (예: 월~금 09:00-22:00 토~일 휴무
+          브레이크타임 15:00-17:00 라스트오더 21:00)          
+          "></textarea>
+        </div>
+      </div>
+    </ul>
+
+    <ul>
+      <div class='write_form_url' style = 'margin-top:30px; margin-bottom:30px;'>
+        <h6>홈페이지 url</h6>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="홈페이지 url을 입력하세요
+          (예: https://www.naver.com/)        
+          "></textarea>
+        </div>
+      </div>
+    </ul>
+
+
+
+  </div>
+
+
+
+
+
+
+  <script>
+    function changeText(selectedCity) {
+      var districtSelect = document.getElementById("districtSelect");
+      if (selectedCity === "서울") {
+        districtSelect.innerHTML = `
+          <option value="종로구" selected>종로구</option>
+          <option value="강남구">강남구</option>
+          <option value="송파구">송파구</option>
+          <option value="용산구">용산구</option>
+        `;
+      } else if (selectedCity === "경기") {
+        districtSelect.innerHTML = `
+          <option value="수원시" selected>수원시</option>
+          <option value="용인시">용인시</option>
+          <option value="성남시">성남시</option>
+          <option value="부천시">부천시</option>
+        `;
+      } else if (selectedCity === "인천") {
+        districtSelect.innerHTML = `
+          <option value="중구" selected>중구</option>
+          <option value="남동구">남동구</option>
+          <option value="부평구">부평구</option>
+          <option value="미추홀구">미추홀구</option>
+        `;
+      } else if (selectedCity === "부산") {
+        districtSelect.innerHTML = `
+          <option value="해운대구" selected>해운대구</option>
+          <option value="남구">중구</option>
+          <option value="진구">서구</option>
+          <option value="동래구">동래구</option>
+        `;
+      }
+    }
+  </script>
+</body>
+
+
+>>>>>>> origin/main
 {% endblock %}

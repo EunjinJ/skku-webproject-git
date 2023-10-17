@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
     jQuery(document).ready(function(){
         $(".dropdown").hover(
@@ -7,3 +8,14 @@ $(document).ready(function() {
         });
     });
 })
+=======
+$(document).ready(function() {
+    jQuery(document).ready(function(){
+        $(".dropdown").hover(
+        function() { $('.dropdown-menu', this).stop().fadeIn("fast");
+            },
+        function() { $('.dropdown-menu', this).stop().fadeOut("fast");
+        });
+    });
+});
+>>>>>>> origin/main
