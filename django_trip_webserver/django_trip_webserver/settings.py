@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-_9!gt+ymcgvct6!%=yyic+!+w!#3cj!$an*#z6!sq#!r$5&x41
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.64.114.78']
 
 
 # Application definition
@@ -77,29 +77,29 @@ WSGI_APPLICATION = "django_trip_webserver.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default":{
-        "ENGINE" : "django.db.backends.mysql",
-        "NAME" : "django_trip_webserver",
-        "USER" : "root",
-        "PASSWORD" : '9999',
-        "HOST" : '127.0.0.1',
-        "PORT" : '9999'
-    }
-}
-
-
-# # GCP에서 접속 시
 # DATABASES = {
 #     "default":{
 #         "ENGINE" : "django.db.backends.mysql",
 #         "NAME" : "django_trip_webserver",
-#         "USER" : "admin",
-#         "PASSWORD" : '0000',
-#         "HOST" : '34.64.114.78',
-#         "PORT" : '3306'
+#         "USER" : "root",
+#         "PASSWORD" : '9999',
+#         "HOST" : '127.0.0.1',
+#         "PORT" : '9999'
 #     }
 # }
+
+
+# GCP에서 접속 시
+DATABASES = {
+    "default":{
+        "ENGINE" : "django.db.backends.mysql",
+        "NAME" : "django_trip_webserver",
+        "USER" : "admin",
+        "PASSWORD" : '0000',
+        "HOST" : '34.64.114.78',
+        "PORT" : '3306'
+    }
+}
 
 
 
@@ -149,3 +149,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # 로그인 및 로그아웃
 LOGIN_REDIRECT_URL = '/user'
 LOGOUT_REDIRECT_URL = '/user'
+
+# GCP에서 추가함
+import os
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+
