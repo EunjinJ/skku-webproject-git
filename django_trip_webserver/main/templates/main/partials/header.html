@@ -1,70 +1,468 @@
-<header>
+<nav>
+    <div class="navbar">
+        <div class="logo"><a href="{% url 'main:main' %}">TRIPFUL</a></li></div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <ul class="main_nav">
-                <li class="home">
-                    <a href="#">TRIPFUL</a>
-                </li>
-                <li class="lovations">
-                    <a href="#">LOCATIONS ▿</a>
-<!-- 
-                    <ul class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px" data-bs-theme="light">
-                        <li><a class="dropdown-item rounded-2" href="#">서울특별시</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">경기도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">강원도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">충청도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">경상도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">전라도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">제주도</a></li>
-                    </ul> -->
+        <div class="nav-links">
+            <ul class="links">
+                <li><a href="{% url 'main:main' %}">HOME</a></li>
+                <li>
+                    <a href="#">LOCATIONS</a>
+                    <svg class="arrow bi-caret-down-fill location-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                    <ul class="location-sub-menu sub-menu">
 
-                    <ul class="dropdown" data-bs-theme="light">
-                        <li><a class="dropdown-item rounded-2" href="#">서울특별시</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">경 기 도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">강 원 도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">충 청 도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">경 상 도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">전 라 도</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">제 주 도</a></li>
-                    </ul> 
-                </li>
+                        <li class="more">
+                            <a href="#">강 원 도</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">강릉시</a></li>
+                                <li><a class="location_m" href="">고성군</a></li>
+                                <li><a class="location_m" href="">동해시</a></li>
+                                <li><a class="location_m" href="">삼척시</a></li>
+                                <li><a class="location_m" href="">속초시</a></li>
+                                <li><a class="location_m" href="">양구군</a></li>
+                                <li><a class="location_m" href="">양양군</a></li>
+                                <li><a class="location_m" href="">영월군</a></li>
+                                <li><a class="location_m" href="">원주시</a></li>
+                                <li><a class="location_m" href="">인제군</a></li>
+                                <li><a class="location_m" href="">정선군</a></li>
+                                <li><a class="location_m" href="">철원군</a></li>
+                                <li><a class="location_m" href="">춘천시</a></li>
+                                <li><a class="location_m" href="">태백시</a></li>
+                                <li><a class="location_m" href="">평창군</a></li>
+                                <li><a class="location_m" href="">홍천군</a></li>
+                                <li><a class="location_m" href="">화천군</a></li>
+                                <li><a class="location_m" href="">횡성군</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="more">
+                            <a href="#">경 기 도</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">가평군</a></li>
+                                <li><a class="location_m" href="">고양시</a></li>
+                                <li><a class="location_m" href="">과천시</a></li>
+                                <li><a class="location_m" href="">광명시</a></li>
+                                <li><a class="location_m" href="">광주시</a></li>
+                                <li><a class="location_m" href="">구리시</a></li>
+                                <li><a class="location_m" href="">군포시</a></li>
+                                <li><a class="location_m" href="">김포시</a></li>
+                                <li><a class="location_m" href="">남양주시</a></li>
+                                <li><a class="location_m" href="">동두천시</a></li>
+                                <li><a class="location_m" href="">부천시</a></li>
+                                <li><a class="location_m" href="">성남시</a></li>
+                                <li><a class="location_m" href="">수원시</a></li>
+                                <li><a class="location_m" href="">시흥시</a></li>
+                                <li><a class="location_m" href="">안산시</a></li>
+                                <li><a class="location_m" href="">안성시</a></li>
+                                <li><a class="location_m" href="">안양시</a></li>
+                                <li><a class="location_m" href="">양주시</a></li>
+                                <li><a class="location_m" href="">양평군</a></li>
+                                <li><a class="location_m" href="">여주시</a></li>
+                                <li><a class="location_m" href="">연천군</a></li>
+                                <li><a class="location_m" href="">오산시</a></li>
+                                <li><a class="location_m" href="">용인시</a></li>
+                                <li><a class="location_m" href="">의왕시</a></li>
+                                <li><a class="location_m" href="">의정부시</a></li>
+                                <li><a class="location_m" href="">이천시</a></li>
+                                <li><a class="location_m" href="">파주시</a></li>
+                                <li><a class="location_m" href="">평택시</a></li>
+                                <li><a class="location_m" href="">포천시</a></li>
+                                <li><a class="location_m" href="">하남시</a></li>
+                                <li><a class="location_m" href="">화성시</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="more">
+                            <a href="#">경 상 도</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">경상남도</li>
+                                <li><a class="location_m" href="">거제시</a></li>
+                                <li><a class="location_m" href="">거창군</a></li>
+                                <li><a class="location_m" href="">고성군</a></li>
+                                <li><a class="location_m" href="">김해시</a></li>
+                                <li><a class="location_m" href="">남해군</a></li>
+                                <li><a class="location_m" href="">밀양시</a></li>
+                                <li><a class="location_m" href="">사천시</a></li>
+                                <li><a class="location_m" href="">산청군</a></li>
+                                <li><a class="location_m" href="">양산시</a></li>
+                                <li><a class="location_m" href="">의령군</a></li>
+                                <li><a class="location_m" href="">진주시</a></li>
+                                <li><a class="location_m" href="">창녕군</a></li>
+                                <li><a class="location_m" href="">창원시</a></li>
+                                <li><a class="location_m" href="">통영시</a></li>
+                                <li><a class="location_m" href="">하동군</a></li>
+                                <li><a class="location_m" href="">함안군</a></li>
+                                <li><a class="location_m" href="">함양군</a></li>
+                                <li><a class="location_m" href="">함천군</a></li>
+                                <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">경상북도</li>
+                                <li><a class="location_m" href="">경산시</a></li>
+                                <li><a class="location_m" href="">경주시</a></li>
+                                <li><a class="location_m" href="">고령군</a></li>
+                                <li><a class="location_m" href="">구미시</a></li>
+                                <li><a class="location_m" href="">김천시</a></li>
+                                <li><a class="location_m" href="">문경시</a></li>
+                                <li><a class="location_m" href="">봉화군</a></li>
+                                <li><a class="location_m" href="">상주시</a></li>
+                                <li><a class="location_m" href="">성주군</a></li>
+                                <li><a class="location_m" href="">안동시</a></li>
+                                <li><a class="location_m" href="">영덕군</a></li>
+                                <li><a class="location_m" href="">영양군</a></li>
+                                <li><a class="location_m" href="">영주시</a></li>
+                                <li><a class="location_m" href="">영천시</a></li>
+                                <li><a class="location_m" href="">예천군</a></li>
+                                <li><a class="location_m" href="">울릉군</a></li>
+                                <li><a class="location_m" href="">울진군</a></li>
+                                <li><a class="location_m" href="">의성군</a></li>
+                                <li><a class="location_m" href="">청도군</a></li>
+                                <li><a class="location_m" href="">청송군</a></li>
+                                <li><a class="location_m" href="">칠곡군</a></li>
+                                <li><a class="location_m" href="">포항시</a></li>
+                            </ul>
+                        </li>
 
-                <li class="categories"  data-bs-theme="light">
-                    <a href="#">CATEGORIES ▿</a>
-                    <ul class="dropdown">
-                        <li><a class="dropdown-item rounded-2" href="#">명  소</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">관  광</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">쇼  핑</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">식  사</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">카  페</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">숙  소</a></li>
+                        <li class="more">
+                            <a href="#">광주광역시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">광산구</a></li>
+                                <li><a class="location_m" href="">남구</a></li>
+                                <li><a class="location_m" href="">동구</a></li>
+                                <li><a class="location_m" href="">북구</a></li>
+                                <li><a class="location_m" href="">서구</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="more">
+                            <a href="#">대구광역시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">남구</a></li>
+                                <li><a class="location_m" href="">달서구</a></li>
+                                <li><a class="location_m" href="">달성군</a></li>
+                                <li><a class="location_m" href="">동구</a></li>
+                                <li><a class="location_m" href="">북구</a></li>
+                                <li><a class="location_m" href="">서구</a></li>
+                                <li><a class="location_m" href="">수성구</a></li>
+                                <li><a class="location_m" href="">중구</a></li>
+                                <li><a class="location_m" href="">군위군</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="#">대전광역시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">대덕구</a></li>
+                                <li><a class="location_m" href="">동구</a></li>
+                                <li><a class="location_m" href="">유성구</a></li>
+                                <li><a class="location_m" href="">중구</a></li>
+                                <li><a class="location_m" href="">서구</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="#">부산광역시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">강서구</a></li>
+                                <li><a class="location_m" href="">금정구</a></li>
+                                <li><a class="location_m" href="">기장군</a></li>
+                                <li><a class="location_m" href="">남구</a></li>
+                                <li><a class="location_m" href="">동구</a></li>
+                                <li><a class="location_m" href="">동래구</a></li>
+                                <li><a class="location_m" href="">부산진구</a></li>
+                                <li><a class="location_m" href="">북구</a></li>
+                                <li><a class="location_m" href="">사상구</a></li>
+                                <li><a class="location_m" href="">사하구</a></li>
+                                <li><a class="location_m" href="">서구</a></li>
+                                <li><a class="location_m" href="">수영구</a></li>
+                                <li><a class="location_m" href="">연제구</a></li>
+                                <li><a class="location_m" href="">영도구</a></li>
+                                <li><a class="location_m" href="">중구</a></li>
+                                <li><a class="location_m" href="">해운대구</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="{% url 'main:seoul' %}">서울특별시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">강남구</a></li>
+                                <li><a class="location_m" href="">강동구</a></li>
+                                <li><a class="location_m" href="">강북구</a></li>
+                                <li><a class="location_m" href="">강서구</a></li>
+                                <li><a class="location_m" href="">관악구</a></li>
+                                <li><a class="location_m" href="">광진구</a></li>
+                                <li><a class="location_m" href="">구로구</a></li>
+                                <li><a class="location_m" href="">금천구</a></li>
+                                <li><a class="location_m" href="">노원구</a></li>
+                                <li><a class="location_m" href="">도봉구</a></li>
+                                <li><a class="location_m" href="">동대문구</a></li>
+                                <li><a class="location_m" href="">동작구</a></li>
+                                <li><a class="location_m" href="">마포구</a></li>
+                                <li><a class="location_m" href="">서대문구</a></li>
+                                <li><a class="location_m" href="">서초구</a></li>
+                                <li><a class="location_m" href="">성동구</a></li>
+                                <li><a class="location_m" href="">성북구</a></li>
+                                <li><a class="location_m" href="">송파구</a></li>
+                                <li><a class="location_m" href="">양천구</a></li>
+                                <li><a class="location_m" href="">영등포구</a></li>
+                                <li><a class="location_m" href="">은평구</a></li>
+                                <li><a class="location_m" href="">종로구</a></li>
+                                <li><a class="location_m" href="">중구</a></li>
+                                <li><a class="location_m" href="">중랑구</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="#">세 종 시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">고운동</a></li>
+                                <li><a class="location_m" href="">다정동</a></li>
+                                <li><a class="location_m" href="">대평동</a></li>
+                                <li><a class="location_m" href="">도담동</a></li>
+                                <li><a class="location_m" href="">반곡동</a></li>
+                                <li><a class="location_m" href="">보람동</a></li>
+                                <li><a class="location_m" href="">새롬동</a></li>
+                                <li><a class="location_m" href="">소담동</a></li>
+                                <li><a class="location_m" href="">아름동</a></li>
+                                <li><a class="location_m" href="">종촌동</a></li>
+                                <li><a class="location_m" href="">한솔동</a></li>
+                                <li><a class="location_m" href="">해밀동</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="#">울산광역시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">남구</a></li>
+                                <li><a class="location_m" href="">동구</a></li>
+                                <li><a class="location_m" href="">북구</a></li>
+                                <li><a class="location_m" href="">을주군</a></li>
+                                <li><a class="location_m" href="">중구</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="#">인천광역시</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li><a class="location_m" href="">강화군</a></li>
+                                <li><a class="location_m" href="">계양구</a></li>
+                                <li><a class="location_m" href="">남동구</a></li>
+                                <li><a class="location_m" href="">동구</a></li>
+                                <li><a class="location_m" href="">미추홀구</a></li>
+                                <li><a class="location_m" href="">부평구</a></li>
+                                <li><a class="location_m" href="">서구</a></li>
+                                <li><a class="location_m" href="">연수구</a></li>
+                                <li><a class="location_m" href="">웅진군</a></li>
+                                <li><a class="location_m" href="">중구</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="more">
+                            <a href="#">전 라 도</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">전라남도</li>
+                                <li><a class="location_m" href="">강진군</a></li>
+                                <li><a class="location_m" href="">고흥군</a></li>
+                                <li><a class="location_m" href="">곡성군</a></li>
+                                <li><a class="location_m" href="">광양시</a></li>
+                                <li><a class="location_m" href="">구례군</a></li>
+                                <li><a class="location_m" href="">나주시</a></li>
+                                <li><a class="location_m" href="">담양군</a></li>
+                                <li><a class="location_m" href="">목포시</a></li>
+                                <li><a class="location_m" href="">무안군</a></li>
+                                <li><a class="location_m" href="">보성군</a></li>
+                                <li><a class="location_m" href="">순천시</a></li>
+                                <li><a class="location_m" href="">신안군</a></li>
+                                <li><a class="location_m" href="">여수시</a></li>
+                                <li><a class="location_m" href="">영광군</a></li>
+                                <li><a class="location_m" href="">영암군</a></li>
+                                <li><a class="location_m" href="">완도군</a></li>
+                                <li><a class="location_m" href="">장성군</a></li>
+                                <li><a class="location_m" href="">장흥군</a></li>
+                                <li><a class="location_m" href="">진도군</a></li>
+                                <li><a class="location_m" href="">함평군</a></li>
+                                <li><a class="location_m" href="">해남군</a></li>
+                                <li><a class="location_m" href="">화순군</a></li>
+                                <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">전라북도</li>
+                                <li><a class="location_m" href="">고창군</a></li>
+                                <li><a class="location_m" href="">군산시</a></li>
+                                <li><a class="location_m" href="">김제시</a></li>
+                                <li><a class="location_m" href="">남원시</a></li>
+                                <li><a class="location_m" href="">무주군</a></li>
+                                <li><a class="location_m" href="">부안군</a></li>
+                                <li><a class="location_m" href="">순창군</a></li>
+                                <li><a class="location_m" href="">완주군</a></li>
+                                <li><a class="location_m" href="">익산시</a></li>
+                                <li><a class="location_m" href="">임실군</a></li>
+                                <li><a class="location_m" href="">장수군</a></li>
+                                <li><a class="location_m" href="">전주시</a></li>
+                                <li><a class="location_m" href="">정읍시</a></li>
+                                <li><a class="location_m" href="">진안군</a></li>
+                            </ul>
+                        </li>                       
+
+                        <li class="more">
+                            <a href="#">제 주 도</a>
+                            <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                            </svg>
+                            <ul class="more-sub-menu sub-menu">
+                                <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">제주시</li>
+                                <li><a class="location_m" href="">건입동</a></li>
+                                <li><a class="location_m" href="">구좌읍</a></li>
+                                <li><a class="location_m" href="">노형동</a></li>
+                                <li><a class="location_m" href="">도두동</a></li>
+                                <li><a class="location_m" href="">봉개동</a></li>
+                                <li><a class="location_m" href="">삼도1동</a></li>
+                                <li><a class="location_m" href="">삼도3동</a></li>
+                                <li><a class="location_m" href="">삼양동</a></li>
+                                <li><a class="location_m" href="">아라동</a></li>
+                                <li><a class="location_m" href="">애월읍</a></li>
+                                <li><a class="location_m" href="">연동</a></li>
+                                <li><a class="location_m" href="">오라동</a></li>
+                                <li><a class="location_m" href="">외도동</a></li>
+                                <li><a class="location_m" href="">용담1동</a></li>
+                                <li><a class="location_m" href="">용담2동</a></li>
+                                <li><a class="location_m" href="">우도면</a></li>
+                                <li><a class="location_m" href="">이도1동</a></li>
+                                <li><a class="location_m" href="">이도2동</a></li>
+                                <li><a class="location_m" href="">이호동</a></li>
+                                <li><a class="location_m" href="">일도1동</a></li>
+                                <li><a class="location_m" href="">일도2동</a></li>
+                                <li><a class="location_m" href="">조천읍</a></li>
+                                <li><a class="location_m" href="">추자면</a></li>
+                                <li><a class="location_m" href="">한경면</a></li>
+                                <li><a class="location_m" href="">한림읍</a></li>
+                                <li><a class="location_m" href="">화북동</a></li>
+                                <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">서귀포시</li>
+                                <li><a class="location_m" href="">남원읍</a></li>
+                                <li><a class="location_m" href="">대륜동</a></li>
+                                <li><a class="location_m" href="">대정읍</a></li>
+                                <li><a class="location_m" href="">대천동</a></li>
+                                <li><a class="location_m" href="">동흥동</a></li>
+                                <li><a class="location_m" href="">서흥동</a></li>
+                                <li><a class="location_m" href="">성산읍</a></li>
+                                <li><a class="location_m" href="">송산동</a></li>
+                                <li><a class="location_m" href="">안덕면</a></li>
+                                <li><a class="location_m" href="">영천동</a></li>
+                                <li><a class="location_m" href="">예래동</a></li>
+                                <li><a class="location_m" href="">정방동</a></li>
+                                <li><a class="location_m" href="">중문동</a></li>
+                                <li><a class="location_m" href="">중앙동</a></li>
+                                <li><a class="location_m" href="">천지동</a></li>
+                                <li><a class="location_m" href="">표선면</a></li>
+                                <li><a class="location_m" href="">효돈동</a></li>
+                            </ul>
+                        </li>
+
+                    <li class="more">
+                        <a href="#">충 청 도</a>
+                        <svg class="arrow bi-caret-right more-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                        </svg>
+                        <ul class="more-sub-menu sub-menu">
+                            <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">충청남도</li>
+                            <li><a class="location_m" href="">계룡시</a></li>
+                            <li><a class="location_m" href="">공주시</a></li>
+                            <li><a class="location_m" href="">금산군</a></li>
+                            <li><a class="location_m" href="">논산시</a></li>
+                            <li><a class="location_m" href="">당진시</a></li>
+                            <li><a class="location_m" href="">보령시</a></li>
+                            <li><a class="location_m" href="">부여군</a></li>
+                            <li><a class="location_m" href="">서산시</a></li>
+                            <li><a class="location_m" href="">서천군</a></li>
+                            <li><a class="location_m" href="">아산시</a></li>
+                            <li><a class="location_m" href="">예산군</a></li>
+                            <li><a class="location_m" href="">천안시</a></li>
+                            <li><a class="location_m" href="">청양군</a></li>
+                            <li><a class="location_m" href="">태안군</a></li>
+                            <li><a class="location_m" href="">홍성군</a></li>
+                            <li style="background-color: darksalmon; font-size: 15px; color: #fff; text-align: center; align-items: center;">충청북도</li>
+                            <li><a class="location_m" href="">괴산군</a></li>
+                            <li><a class="location_m" href="">단양군</a></li>
+                            <li><a class="location_m" href="">보은군</a></li>
+                            <li><a class="location_m" href="">영동군</a></li>
+                            <li><a class="location_m" href="">옥천군</a></li>
+                            <li><a class="location_m" href="">음성군</a></li>
+                            <li><a class="location_m" href="">제천시</a></li>
+                            <li><a class="location_m" href="">층평군</a></li>
+                            <li><a class="location_m" href="">진천군</a></li>
+                            <li><a class="location_m" href="">청주시</a></li>
+                            <li><a class="location_m" href="">충주시</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <li>
+                    <a href="#">CATEGORIES</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="arrow bi-caret-down-fill category-arrow" viewBox="0 0 16 16" style="vertical-align:middle;">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                    <ul class="category-sub-menu sub-menu">
+                        <li>
+                            <a class="more" href="#">명  소</a>
+                        </li>
+                        <li><a class="more" href="#">관  광</a></li>
+                        <li><a class="more" href="#">쇼  핑</a></li>
+                        <li><a class="more" href="#">식  사</a></li>
+                        <li><a class="more" href="#">카  페</a></li>
+                        <li><a class="more" href="#">숙  소</a></li>
                     </ul>
                 </li>
             </ul>
-
-            <div class="col-4 d-flex justify-content-end align-items-center">
-                <a class="btn btn-sm btn-outline-secondary" href="#" style="margin-right: 15px;">
-                    Log in
-                </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#" style="margin-right: 15px;">
-                    Sign up
-                </a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline" type="submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
-                            <title>Search</title>
-                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                            <path d="M21 21l-5.2-5.2"></path>
-                        </svg>
-                    </button>
-                </form>
-                
-            </div>
-
         </div>
-    </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-</header>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control" placeholder="search" aria-label="Search">
+        </form>
+        <div class="search-box">
+            <button class="btn btn-outline-light me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+    </div>
+</nav>
+
+
+{% load static %}
+<script src="{% static 'main/script.js' %}"></script>
