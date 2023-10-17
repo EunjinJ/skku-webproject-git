@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ~~~ DB 입력 시 제한사항 ~~~
 
 # 별점을 1~5 사이로 제한
@@ -82,7 +81,7 @@ class ReviewRecommend(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     review_id = models.ForeignKey(Review, on_delete=models.SET_NULL, null=True)
     review_recommend = models.BooleanField()
-=======
+
 # ~~~ DB 입력 시 제한사항 ~~~
 
 # 별점을 1~5 사이로 제한
@@ -168,5 +167,3 @@ class ReviewRecommend(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     review_id = models.ForeignKey(Review, on_delete=models.SET_NULL, null=True)
     review_recommend = models.BooleanField()
->>>>>>> origin/main
-    is_deleted = models.BooleanField()

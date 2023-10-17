@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from django.shortcuts import render
 from board.models import Trip
 
@@ -58,7 +58,6 @@ def trip_detail(request, board_id):
 #여행지 새 글
 def trip_write(request):
     return render(request, 'board/trip_write.html', {})
-=======
 from django.shortcuts import render
 from board.models import Trip, Review
 
@@ -168,4 +167,3 @@ def review_write(request, trip_id):
 
         }
     )
->>>>>>> origin/main
