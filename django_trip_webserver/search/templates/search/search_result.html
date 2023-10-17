@@ -3,16 +3,16 @@
     <thead>
       <tr>
         <th scope="col">상세 카테고리</th>
-        <th scope="col">관광지별</th>
+        <th scope="col">관광지</th>
         <th scope="col">별점</th>
       </tr>
     </thead>
     <tbody>
       {% if search_results %} {% for i in search_results %}
       <tr>
-        <td>{{ i.trip_name }}</td>
-        <!-- 다른 열들 추가 -->
         <td>{{ i.trip_category_detail }}</td>
+        <td>{{ i.trip_name }}</td>
+        <td>{{ i.trip_name }}</td>
       </tr>
       {% endfor %} {% endif %}
     </tbody>
