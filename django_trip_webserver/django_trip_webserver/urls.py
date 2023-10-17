@@ -24,4 +24,5 @@ urlpatterns = [
     path("board/", include('board.urls')),
     path("main/", include('main.urls')),
     path("user/", include('user.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path("search/", include('search.urls'))
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 

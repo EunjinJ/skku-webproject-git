@@ -82,11 +82,24 @@ DATABASES = {
         "ENGINE" : "django.db.backends.mysql",
         "NAME" : "django_trip_webserver",
         "USER" : "root",
-        "PASSWORD" : '0000',
+        "PASSWORD" : '9999',
         "HOST" : '127.0.0.1',
-        "PORT" : '3306'
+        "PORT" : '9999'
     }
 }
+
+
+# # GCP에서 접속 시
+# DATABASES = {
+#     "default":{
+#         "ENGINE" : "django.db.backends.mysql",
+#         "NAME" : "django_trip_webserver",
+#         "USER" : "admin",
+#         "PASSWORD" : '0000',
+#         "HOST" : '34.64.114.78',
+#         "PORT" : '3306'
+#     }
+# }
 
 
 
@@ -130,3 +143,9 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# 로그인 및 로그아웃
+LOGIN_REDIRECT_URL = '/user'
+LOGOUT_REDIRECT_URL = '/user'
