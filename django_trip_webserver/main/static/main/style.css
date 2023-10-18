@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    list-style: none;
+    background: rgb(247, 201, 201);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav .navbar {
+    height: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+nav .navbar .logo a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav .navbar .nav-links {
+    height: 100%;
+    line-height: 70px;
+}
+
+nav .navbar .nav-links .links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .navbar .nav-links .links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding:  0 25px;
+}
+
+nav .navbar .nav-links .links li a {
+    font-size: 18px;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav .navbar .nav-links .links li .arrow {
+    height: 100%;
+    width: 15px;
+    text-align: center;
+    color: #fff;
+    line-height: 70px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-links .links li:hover .location-arrow,
+.navbar .nav-links .links li:hover .category-arrow {
+    transform: rotate(180deg);
+}
+
+.navbar .nav-links .links .sub-menu {
+    position: absolute;
+    text-align: center;
+    top: 70px;
+    left: 10px;
+    background: rgb(247, 201, 201);
+    line-height: 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 0px;
+    width: 180px;
+}
+
+.navbar .nav-links .links .sub-menu li {
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.navbar .nav-links .links .sub-menu li:hover {
+    background-color: rgb(255, 225, 155);
+}
+
+.navbar .nav-links .links .sub-menu .more a {
+    color: #fff;
+    font-size: 15px;
+    font: 500;
+    text-align: center;
+    align-items: center;
+}
+
+
+.navbar .nav-links .links .sub-menu .more .more-arrow {
+    line-height: 40px;
+}
+
+
+.navbar .nav-links .links li:hover .location-sub-menu,
+.navbar .nav-links .links li:hover .category-sub-menu {
+    display: block;
+}
+
+.navbar .nav-links .links .more:hover .more-sub-menu {
+    display: block;
+
+}
+
+.navbar .nav-links .links .more .more-sub-menu {
+    position: absolute;
+    background: rgb(254, 189, 189);
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
+    display: none;
+    overflow-y: scroll;
+    height: 150px;
+}
+
+.navbar .search-box .bi-search {
+    color: #fff;
+}
+
+main .container {
+    padding-top: 100px;
+}

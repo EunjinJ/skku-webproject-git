@@ -22,7 +22,7 @@ class Trip(models.Model):
     trip_category_detail = models.CharField(max_length=255)
     trip_name = models.CharField(max_length=255)
     trip_address = models.TextField()
-    area_m_ID = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
+    area_m_id = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
     trip_time = models.CharField(max_length=512, null=True)
     trip_phone = models.CharField(max_length=255) # 031-000-0000 이렇게 문자열로
     trip_homepage = models.TextField()
