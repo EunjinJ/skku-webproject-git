@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-_9!gt+ymcgvct6!%=yyic+!+w!#3cj!$an*#z6!sq#!r$5&x41
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.64.114.78']
 
 
 # Application definition
@@ -79,7 +79,7 @@ WSGI_APPLICATION = "django_trip_webserver.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# 각 로컬계정에서 접속 시
+# GCP에서 접속 시
 DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
@@ -154,6 +154,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 
+
+
+# GCP에서 추가함
+import os
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+
+
 # # 로그인 및 로그아웃
 # LOGIN_REDIRECT_URL = '/user'
 # LOGOUT_REDIRECT_URL = '/user'
@@ -162,6 +169,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Django의 내장된 사용자 모델을 기반으로 한 인증을 사용
 # --> 로그인 및 회원가입 시 ModelBackend를 사용해 인증 처리함
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-]
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+# ]
