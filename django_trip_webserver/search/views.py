@@ -9,6 +9,8 @@ from django.db.models import Avg # 평균낼 때 사용
 from django.urls import reverse
 from django.shortcuts import redirect 
 
+from django import forms # 입력값 누락 시 경고 처리할 때 사용
+
 
 # 상세검색 (여행지검색+여행지댓글검색+여행지리뷰검색+여행지리뷰댓글검색)
 def search(request):
@@ -55,13 +57,22 @@ def search(request):
                 category_Q = area_m_Q
 
             # 검색키워드
+            popup = ''
             if search_keyword:
-                if search_category == '1': # 제목
+                # 제목
+                if search_category == '1': 
                     query = Q(trip_name__icontains=search_keyword)
-                elif search_category == '2': # 제목+내용
+                    keyword_Q = category_Q.filter(query)
+                # 제목+내용
+                elif search_category == '2': 
                     query = Q(trip_name__icontains=search_keyword) | Q(trip_category_detail__icontains=search_keyword)
-                keyword_Q = category_Q.filter(query)
-            else:
+                    keyword_Q = category_Q.filter(query)
+                # 검색카테고리를 안정했는데 검색키워드는 입력한경우
+                else: 
+                    popup='data-bs-toggle="modal" data-bs-target="#myModal"' # search/search.html의 버튼창을 모달로 바꿈
+                    # return render(request, 'search/popup.html', {'error_title': '입력값 누락!', 'error_detail' : '제목 혹은 제목+선택을 입력하세요'})
+                
+            else: # 검색카테고리도 없고 검색 키워드도 없음
                 keyword_Q = category_Q
 
             # 리뷰개수
@@ -82,7 +93,7 @@ def search(request):
                 # star_Q = star_avg_Q.filter(avg_score__gte=0)
                 star_Q = review_Q
 
-            return render(request, 'search/search.html', {'search_results': star_Q})
+            return render(request, 'search/search.html', {'search_results': star_Q, 'popup':popup})
 
     
        

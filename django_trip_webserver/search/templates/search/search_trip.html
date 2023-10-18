@@ -85,9 +85,12 @@
         aria-label="Default select example"
       >
         <option selected>선택</option>
-        <option value="1">레저</option>
-        <option value="2">맛집</option>
-        <option value="3">자연</option>
+        <option value="1">명소</option>
+        <option value="2">관광</option>
+        <option value="3">쇼핑</option>
+        <option value="4">식사</option>
+        <option value="5">카페</option>
+        <option value="6">숙소</option>
       </select>
     </div>
   </div>
@@ -166,10 +169,20 @@
   <div style="padding: 10px"></div>
 
   <!-- 검색어 -->
-  <div style="display: flex; flex-wrap: nowrap">
-    <!-- padding -->
-    <div class="col-3"></div>
-    <div class="col-6">
+  <div style="display: flex; flex-wrap: nowrap; align-items: center">
+    <label
+      class="col-4"
+      style="
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      "
+      >검색어 입력</label
+    >
+    <div style="display: flex; flex-wrap: nowrap">
+      <!-- padding -->
+
       <!-- 검색어 카테고리 및 입력 -->
       <div class="input-group mb-3">
         <select
@@ -193,7 +206,12 @@
 
         <!-- 검색 버튼 -->
         <!-- name 들어간 이유: form 구분 하려고-->
-        <button type="submit" class="btn btn-primary" name="search_trip">
+        <button
+          type="submit"
+          {{popup}}
+          class="btn btn-primary"
+          name="search_trip"
+        >
           검색
         </button>
         <!-- 검색 버튼 끝 -->
