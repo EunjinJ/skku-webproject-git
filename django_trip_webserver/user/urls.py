@@ -12,22 +12,22 @@ app_name = 'user'
 urlpatterns = [
     path('', views.index, name='index'),
     
-    # path('login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='login'),
-
-    # path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-
-    # path('signup/', views.signup, name='user_signup'),
-
-    # path('signup/complete/', views.signup_complete, name='user_signup_complete'),
-
-    # ~~~ 장고 제공 회원가입 및 로그인 ~~~
-    path('signup/', views.signup, name='signup'),
-
-    #빈칸으로 두면 장고 제공 로그인창 뜨고, template_name 넣으면 내가 넣은 로그인창 뜨나봄
-    # path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('login/', CustomLoginView.as_view(),  name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='login'),
 
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+
+    path('signup/', views.signup, name='user_signup'),
+
+    path('signup/complete/', views.signup_complete, name='user_signup_complete'),
+
+    # # ~~~ 장고 제공 회원가입 및 로그인 ~~~
+    # path('signup/', views.signup, name='signup'),
+
+    # #빈칸으로 두면 장고 제공 로그인창 뜨고, template_name 넣으면 내가 넣은 로그인창 뜨나봄
+    # # path('login/', auth_views.LoginView.as_view(), name='login'),
+    # path('login/', CustomLoginView.as_view(),  name='login'),
+
+    # path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 
 
 ]
