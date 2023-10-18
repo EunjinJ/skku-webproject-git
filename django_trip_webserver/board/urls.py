@@ -1,9 +1,8 @@
 from django.urls import path
-
+from django.conf.urls.static import static
+from django.conf import settings
 from . import views # 현재 경로에 있는 views.py를 가져옴
-
 app_name = 'board'
-
 urlpatterns = [
     path('trip/', views.trip_list, name='trip_list'),  # trip_list 뷰에 대한 URL 경로 추가
     path('trip/<int:board_id>', views.trip_detail, name='trip_detail'),  # trip_detail 뷰에 대한 URL 경로 추가

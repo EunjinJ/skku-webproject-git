@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,12 +84,25 @@ DATABASES = {
     "default":{
         "ENGINE" : "django.db.backends.mysql",
         "NAME" : "django_trip_webserver",
-        "USER" : "admin",
-        "PASSWORD" : '0000',
-        "HOST" : '34.64.114.78',
+        "USER" : "root",
+        "PASSWORD" : '1234',
+        "HOST" : '127.0.0.1',
         "PORT" : '3306'
     }
 }
+
+
+# # GCP에서 접속 시
+# DATABASES = {
+#     "default":{
+#         "ENGINE" : "django.db.backends.mysql",
+#         "NAME" : "django_trip_webserver",
+#         "USER" : "admin",
+#         "PASSWORD" : '0000',
+#         "HOST" : '34.64.114.78',
+#         "PORT" : '3306'
+#     }
+# }
 
 
 
@@ -113,9 +128,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ko-kr"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
@@ -126,6 +141,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+os.makedirs(MEDIA_ROOT, exist_ok=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -149,6 +169,6 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 
 # Django의 내장된 사용자 모델을 기반으로 한 인증을 사용
 # --> 로그인 및 회원가입 시 ModelBackend를 사용해 인증 처리함
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-]
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+# ]

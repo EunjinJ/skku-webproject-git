@@ -27,7 +27,7 @@ class Trip(models.Model):
     # trip_break_start = models.TimeField()
     # trip_break_end = models.TimeField()
     # trip_last_order = models.TimeField()
-    area_m_id = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
+    area_m = models.ForeignKey(AreaM, on_delete=models.SET_NULL, null=True)
     trip_time = models.CharField(max_length=512, null=True)
     trip_phone = models.CharField(max_length=255) # 031-000-0000 이렇게 문자열로
     trip_homepage = models.TextField()
@@ -68,6 +68,11 @@ class Review(models.Model):
     review_title = models.CharField(max_length=255)
     review_content = models.TextField()
     review_time = models.DateTimeField(auto_now_add=True)
+    review_image1 = models.ImageField(upload_to='review_image', null=True, blank=True)
+    review_image2 = models.ImageField(upload_to='review_image', null=True, blank=True)
+    review_image3 = models.ImageField(upload_to='review_image', null=True, blank=True)
+    review_image4 = models.ImageField(upload_to='review_image', null=True, blank=True)
+    review_image5 = models.ImageField(upload_to='review_image', null=True, blank=True)
     is_deleted = models.BooleanField()
 
 class ReviewComment(models.Model):
@@ -75,7 +80,7 @@ class ReviewComment(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     review_id = models.ForeignKey(Review, on_delete=models.SET_NULL, null=True)
     review_comment_content = models.TextField()
-    review_commnet_time = models.DateTimeField(auto_now_add=True)
+    review_comment_time = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
 class ReviewRecommend(models.Model):

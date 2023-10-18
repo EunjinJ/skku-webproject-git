@@ -24,7 +24,7 @@ class User(models.Model):
 
 # 장고 제공 User는 알아서 잘 있음
 # 아래 DB는 장고 제공 User와 연결하는 용도
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 class UserInfo(models.Model):
     id = models.AutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.PROTECT)
