@@ -48,16 +48,16 @@ def signup(request):
 def signup_complete(request):
     return render(request, 'user/signup_complete.html', {})
 
-# # 회원정보
-# def index(request):
-#     print(request.session)
-#     print('session 확인')
-#     for k, v in request.session.items():
-#         print(k, v)
-#     print("Cookie 확인")
-#     history = request.COOKIES.get('board_history')
-#     print(history)
-#     return render(request, 'user/profile.html')
+# 회원정보
+def index(request):
+    print(request.session)
+    print('session 확인')
+    for k, v in request.session.items():
+        print(k, v)
+    print("Cookie 확인")
+    history = request.COOKIES.get('board_history')
+    print(history)
+    return render(request, 'user/profile.html')
 
 
 
