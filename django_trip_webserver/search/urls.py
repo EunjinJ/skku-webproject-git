@@ -2,6 +2,8 @@ from django.urls import path
 
 from . import views # 현재 경로에 있는 views.py를 가져옴
 
+app_name = 'urls'
+
 urlpatterns = [
     path('', views.search, name='search'),
     # path('trip/', views.search_trip, name='search_trip'),

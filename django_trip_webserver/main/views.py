@@ -7,3 +7,7 @@ def main(request):
 # 메인화면(홈-서울)
 def main_seoul(request):
     return render(request, 'main/main_seoul.html', {})
+
+# 메인화면(카테고리)
+def category(request):
+    return render(request, 'main/category.html', {})

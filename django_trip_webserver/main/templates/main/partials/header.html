@@ -7,7 +7,7 @@
             <ul class="links">
                 <li><a href="{% url 'main:main' %}">HOME</a></li>
                 <li>
-                    <a href="#">LOCATIONS</a>
+                    <a href="{% url 'main:main' %}">LOCATIONS</a>
                     <svg class="arrow bi-caret-down-fill location-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                     </svg>
@@ -429,19 +429,19 @@
                 </ul>
 
                 <li>
-                    <a href="#">CATEGORIES</a>
+                    <a href="{% url 'main:category' %}">CATEGORIES</a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="arrow bi-caret-down-fill category-arrow" viewBox="0 0 16 16" style="vertical-align:middle;">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                     </svg>
                     <ul class="category-sub-menu sub-menu">
+                        <li><a class="more" href="#">관  광</a></li>
                         <li>
                             <a class="more" href="#">명  소</a>
                         </li>
-                        <li><a class="more" href="#">관  광</a></li>
                         <li><a class="more" href="#">쇼  핑</a></li>
+                        <li><a class="more" href="#">숙  소</a></li>
                         <li><a class="more" href="#">식  사</a></li>
                         <li><a class="more" href="#">카  페</a></li>
-                        <li><a class="more" href="#">숙  소</a></li>
                     </ul>
                 </li>
             </ul>
@@ -458,7 +458,7 @@
             </button>
         </div>
         <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <a href="{% url 'user:login' %}"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
             <button type="button" class="btn btn-warning">Sign-up</button>
         </div>
     </div>

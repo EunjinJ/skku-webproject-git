@@ -7,4 +7,5 @@ app_name = 'main'
 urlpatterns = [
     path('', views.main, name='main'),
     path('main_seoul', views.main_seoul, name='seoul'),
+    path('category', views.category, name='category'),
 ]

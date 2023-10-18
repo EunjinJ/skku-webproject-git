@@ -1,46 +1,66 @@
-{% extends './base_temp.html' %} {% block main %}
-
-<h2>로그인</h2>
+{% extends 'main/base.html' %} {% block main %}
+<style>
+div.container {
+  margin-left: 350px;
+  margin-top: 80px;
+}
+label.name {
+  font-size: 20px;
+  margin-left: 20px;
+}
+input.getin {
+  margin-left: 20px;
+}
+.btn{
+  margin-left: 20px;
+}
+</style>
 
 <div class="col-8">
-  <form action="{% url 'user:login' %}" method="post">
-    {% csrf_token %}
-    <div class="row mb-3">
-      <label for="username" class="col-sm-2 col-form-label">아이디</label>
-      <div class="col-sm-10">
-        <input
-          name="username"
-          id="username"
-          class="form-control"
-          value="{{ form.username.value|default_if_none:'' }}"
-        />
-        {% for error in form.username.errors %}
-        <div id="content-help" class="form-text text-danger">
-          {{ field.errors }}
+
+  <div class="container">
+    <h2 style="padding-bottom: 50px; font-size: 50px;">로그인</h2>
+
+    <form action="{% url 'user:login' %}" method="post">
+      {% csrf_token %}
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label name">아이디</label>
+        <div class="col-sm-10">
+          <input
+            name="username"
+            id="username"
+            class="form-control getin"
+            value="{{ form.username.value|default_if_none:'' }}"
+          />
+          {% for error in form.username.errors %}
+          <div id="content-help" class="form-text text-danger">
+            {{ field.errors }}
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div>
-    <div class="row mb-3">
-      <label for="inputPassword3" class="col-sm-2 col-form-label"
-        >비밀번호</label
-      >
-      <div class="col-sm-10">
-        <input
-          type="password"
-          class="form-control"
-          name="password"
-          id="password"
-          value="{{ form.password.value|default_if_none:'' }}"
-        />
-        {% for error in form.password.errors %}
-        <div id="content-help" class="form-text text-danger">
-          {{ field.errors }}
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label name"
+          >비밀번호</label
+        >
+        <div class="col-sm-10">
+          <input
+            type="password"
+            class="form-control getin"
+            name="password"
+            id="password"
+            value="{{ form.password.value|default_if_none:'' }}"
+            style="margin-bottom: 50px;"
+          />
+          {% for error in form.password.errors %}
+          <div id="content-help" class="form-text text-danger">
+            {{ field.errors }}
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div>
-    <button type="submit" class="btn btn-primary">로그인</button>
-  </form>
+      <button type="submit" class="btn btn-outline-primary">로그인</button>
+    </form>
+  </div>
 </div>
 {% endblock %}
