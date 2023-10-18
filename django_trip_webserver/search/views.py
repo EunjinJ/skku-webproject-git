@@ -77,10 +77,11 @@ def search(request):
                 # TripComment라는 DB테이블에 trip_comment_star라는 컬럼--> 의 평균 --> 을 새 컬럼에 일시저장
                 star_Q = star_avg_Q.filter(avg_score__gte=star)
             else:
+                # tripcomment가 들어와야 별점 넣는데 아예 tripcomment를 못넣었음
+                # star_avg_Q = review_Q.annotate(avg_score=Avg('tripcomment_set__trip_comment_star'))
+                # star_Q = star_avg_Q.filter(avg_score__gte=0)
                 star_Q = review_Q
 
-
-            print('아아아악', star_Q)
             return render(request, 'search/search.html', {'search_results': star_Q})
 
     
