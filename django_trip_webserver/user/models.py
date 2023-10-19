@@ -12,7 +12,7 @@ from main.models import TripCategory
 # 앞으로 우린 장고 제공 User를 이용할 것이므로 회원가입시 해당 DB 사용하지 않음
 # 웹스크래핑한 결과에 있는 유저만 해당 DB에 넣어둠
 class User(models.Model): 
-    id = models.CharField(max_length=255, primary_key=True)
+    id = models.AutoField(primary_key=True) # =CharField로 직접 넣고싶었는데 그러면 오류가 생김... 왜일까
     user_name = models.CharField(max_length=255)
     user_password = models.CharField(max_length=255)
     user_type = models.CharField(max_length=20)

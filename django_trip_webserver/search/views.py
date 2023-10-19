@@ -57,20 +57,16 @@ def search(request):
                 category_Q = area_m_Q
 
             # 검색키워드
-            popup = ''
+            modal = False # default로 팝업 안띄움
             if search_keyword:
                 # 제목
-                if search_category == '1': 
+                if search_category == '제목': 
                     query = Q(trip_name__icontains=search_keyword)
                     keyword_Q = category_Q.filter(query)
                 # 제목+내용
-                elif search_category == '2': 
+                elif search_category == '제목+내용': 
                     query = Q(trip_name__icontains=search_keyword) | Q(trip_category_detail__icontains=search_keyword)
                     keyword_Q = category_Q.filter(query)
-                # 검색카테고리를 안정했는데 검색키워드는 입력한경우
-                else: 
-                    popup='data-bs-toggle="modal" data-bs-target="#myModal"' # search/search.html의 버튼창을 모달로 바꿈
-                    # return render(request, 'search/popup.html', {'error_title': '입력값 누락!', 'error_detail' : '제목 혹은 제목+선택을 입력하세요'})
                 
             else: # 검색카테고리도 없고 검색 키워드도 없음
                 keyword_Q = category_Q
@@ -93,7 +89,7 @@ def search(request):
                 # star_Q = star_avg_Q.filter(avg_score__gte=0)
                 star_Q = review_Q
 
-            return render(request, 'search/search.html', {'search_results': star_Q, 'popup':popup})
+            return render(request, 'search/search.html', {'search_results': star_Q, 'modal':modal})
 
     
        

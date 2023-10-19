@@ -57,7 +57,7 @@ class TripComment(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     trip_id = models.ForeignKey(Trip, on_delete=models.SET_NULL, null=True, related_name='tripcomment_set') # related_name은 역참조 용도
     trip_comment_content = models.TextField()
-    trip_commnet_time = models.DateTimeField(auto_now_add=True)
+    trip_comment_time = models.CharField(max_length=512, null=True)
     trip_comment_star = models.IntegerField(validators=[validate_star_range])
     is_deleted = models.BooleanField()
 
